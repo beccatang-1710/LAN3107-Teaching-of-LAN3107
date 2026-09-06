@@ -221,6 +221,7 @@ h3 {
   padding: 16px 20px;
   margin: 12px 0;
   border-radius: 0 8px 8px 0;
+  overflow: auto;
 }
 
 .task-box p { margin-bottom: 4px; }
@@ -354,6 +355,130 @@ table.words.tenses.flow td:last-child {
   color: #333;
 }
 
+.learning-objectives {
+  background: #f0f7ff;
+  border: 1px solid #b3d4fc;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.learning-objectives h3 {
+  color: #1a5276;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.learning-objectives p {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.learning-objectives ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.learning-objectives li {
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.oral-practice {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 16px 0;
+  overflow: hidden;
+}
+
+.oral-practice-toggle {
+  width: 100%;
+  padding: 12px 20px;
+  background: #f8f8f8;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.oral-practice-toggle:hover {
+  background: #f0f0f0;
+}
+
+.toggle-icon {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  transition: transform 0.3s;
+}
+
+.oral-practice-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 20px;
+}
+
+.oral-practice.open .oral-practice-content {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+  padding: 12px 20px;
+}
+
+.oral-practice.open .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.oral-practice p {
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.oral-practice ul {
+  padding-left: 20px;
+  margin: 8px 0 0 0;
+}
+
+.oral-practice li {
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.oral-practice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.oral-practice-table th,
+.oral-practice-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.oral-practice-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+}
+
+.oral-practice-table ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.oral-practice-table li {
+  margin-bottom: 3px;
+}
+
 .char-card {
   display: flex;
   align-items: center;
@@ -393,6 +518,17 @@ table.reminder-table td {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.hobby-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 12px;
+  vertical-align: middle;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  float: right;
 }
 
 .char-card .char-caption {
@@ -573,6 +709,13 @@ table.reminder-table td {
   font-size: 14px;
 }
 
+.controls-bar .edge-note {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  white-space: nowrap;
+}
+
 .ctrl-btn {
   display: inline-flex;
   align-items: center;
@@ -697,6 +840,101 @@ table.reminder-table td {
   .tab-btn { padding: 10px 12px; font-size: 13px; }
   .char-card { flex-direction: column; text-align: center; }
 }
+
+/* Accordion Styles */
+.accordion-controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.accordion-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #9370db;
+  color: white;
+  transition: background 0.2s;
+}
+
+.accordion-btn:hover {
+  background: #7b5ec0;
+}
+
+.accordion-item {
+  margin-bottom: 16px;
+  border: 1px solid #e6d8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6a0dad;
+  background: #f8f0ff;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.accordion-header:hover {
+  background: #ece0ff;
+}
+
+.accordion-header:focus {
+  outline: 2px solid #9370db;
+  outline-offset: -2px;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9370db;
+  transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: white;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 5000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-content-inner {
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .accordion-header {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  
+  .accordion-content-inner {
+    padding: 16px;
+  }
+}
 </style>
 </head>
 <body>
@@ -717,8 +955,10 @@ table.reminder-table td {
       <input type="checkbox" onchange="toggleAllCN(this.checked)">
       <span>中文翻译</span>
     </label>
-  </div>
-</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 <div class="banner">
   <img src="banner.png" alt="CA Characters">
@@ -729,6 +969,7 @@ table.reminder-table td {
       <label>Speed:</label>
       <input type="range" id="speedSlider" min="0.25" max="2.0" step="0.25" value="1.0">
       <span class="speed-val" id="speedDisplay">1.0x</span>
+      <span class="edge-note" title="Uses Edge natural sounding voice in Microsoft Edge browser">🔊 Edge voice</span>
       <div class="separator"></div>
       <label>Voice:</label>
       <select id="voiceSelect" style="padding:5px 10px; border-radius:6px; border:1px solid #9370db; background:white; color:#4b0082; font-weight:600;">
@@ -753,15 +994,31 @@ table.reminder-table td {
     <span class="part-badge">Lesson 2</span>
     <h1 data-cn="閒聊：興趣與消遣活動">Making Small Talk — Hobbies & Leisure Activities</h1>
 
-    <div class="char-card">
-      <div>
-        <div class="char-caption" data-cn="學習如何開啟關於興趣和消遣活動的對話">Learn how to start conversations about hobbies and leisure activities</div>
-        <p style="color:#555;" data-cn="用於閒聊興趣、消遣和空閒活動的實用表達方式。">Useful expressions for casual small talk about hobbies, pastimes, and free time activities.</p>
-      </div>
+    <div class="learning-objectives">
+      <h3>Learning Objectives 學習目標</h3>
+      <p>By the end of this lesson, you will be able to:</p>
+      <ul>
+        <li data-cn="使用積極聆聽技巧並在輕鬆對話中做出適當回應">use active listening skills and respond appropriately in casual conversation</li>
+        <li data-cn="參與閒聊">engage in small talk</li>
+        <li data-cn="在問句中使用恰當的語調">use appropriate intonation in questions</li>
+        <li data-cn="使用實用表達方式開啟並維持關於興趣和消遣活動的輕鬆對話">start and maintain a casual conversation about hobbies and leisure activities using useful expressions</li>
+      </ul>
     </div>
 
-    <h2 data-cn="1. 開啟輕鬆對話（休閒破冰話題）">1. Starting a Casual Conversation (Icebreakers for Leisure)</h2>
-    <div class="task-section">
+    <div class="accordion-controls">
+      <button class="accordion-btn" id="expandAll">Expand All</button>
+      <button class="accordion-btn" id="collapseAll">Collapse All</button>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-item active">
+        <button class="accordion-header">
+          <span data-cn="1. 開啟輕鬆對話（休閒破冰話題）">1. Starting a Casual Conversation (Icebreakers for Leisure)</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+            <div class="task-section">
       <div class="task-box">
         <p><strong data-cn="通用開場白：">The Universal Starter:</strong></p>
         <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('How was your weekend? Did you get up to anything fun?', this)"></button><span class="spoken" data-cn="你週末過得怎麼樣？有做什麼有趣的事嗎？">"How was your weekend? Did you get up to anything fun?"</span></span></p>
@@ -775,10 +1032,41 @@ table.reminder-table td {
         <p><strong data-cn="近期消遣：">Recent Pastimes:</strong></p>
         <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Have you had a chance to go hiking or see that new movie lately?', this)"></button><span class="spoken" data-cn="你最近有機會去遠足或看那部新電影嗎？">"Have you had a chance to [activity: go hiking / see that new movie] lately?"</span></span></p>
       </div>
-    </div>
-
-    <h2 data-cn="2. 積極聆聽：表示興趣（簡短回應詞與迴聲詞）">2. Active Listening: Showing Interest (Short Tokens & Echo Words)</h2>
-    <div class="task-section">
+      
+      <div class="oral-practice">
+        <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
+          <strong data-cn="口頭練習：">Oral Practice.</strong>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="oral-practice-content">
+          <p data-cn="結對練習，5分鐘內完成。">Work in pairs in 5 minutes.</p>
+          <p><strong data-cn="學生A：">Student A:</strong> <span data-cn="從上面選擇一個開場白來問你的搭檔。">Choose a starter above to ask your partner.</span></p>
+          <p><strong data-cn="學生B：">Student B:</strong> <span data-cn="使用下面合適的回應句來回答。">Reply using an appropriate response phrase below.</span></p>
+          <p data-cn="輪流開始對話。你有5分鐘的時間練習。">Take turns starting the conversation. You have 5 minutes to practise.</p>
+          
+          <p><strong data-cn="回應句（用於回答）：">Response Phrases (To Answer):</strong></p>
+          <ul>
+            <li data-cn="「相當輕鬆— mostly just caught up on some [reading / shows].」">"It was pretty chill—mostly just caught up on some [reading / shows]."</li>
+            <li data-cn="「我最近其實很迷 [baking / bouldering]。」">"I've actually really been getting into [baking / bouldering] lately."</li>
+            <li data-cn="「進展順利！我盡量每週練習幾次。」">"It's going well! I try to practice a couple of times a week."</li>
+            <li data-cn="「老實說，沒有我希望的那麼多—工作一直很忙。」">"Not as much as I'd like, honestly—work has been pretty busy."</li>
+            <li data-cn="「有啊，我上週末 actually went to [place / event]—很棒！」">"Yeah, I actually went to [place / event] last weekend—it was great!"</li>
+          </ul>
+        </div>
+      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span data-cn="2. 閒聊：使用迴聲詞">2. Making Small Talk: Using Echo Words</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+            <div class="task-section">
       <h3 data-cn="簡短反應詞">Short Reaction Tokens</h3>
       <div class="task-box">
         <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Really?', this)"></button><span class="spoken" data-cn="真的嗎？">"Really?"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('Oh yeah?', this)"></button><span class="spoken" data-cn="哦，是嗎？">"Oh yeah?"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('Wow!', this)"></button><span class="spoken" data-cn="哇！">"Wow!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That is great!', this)"></button><span class="spoken" data-cn="太棒了！">"That's great!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That sounds fun or amazing!', this)"></button><span class="spoken" data-cn="聽起來很有趣或很棒！">"That sounds fun / amazing!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That is impressive!', this)"></button><span class="spoken" data-cn="太厲害了！">"That's impressive!"</span></span></p>
@@ -811,18 +1099,106 @@ table.reminder-table td {
           <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('Yoga every morning? That is a great way to start the day!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="每天早上做瑜伽？那是開始一天的好方法！">"Yoga every morning? That's a great way to start the day!"</span></span>
         </div>
       </div>
-    </div>
-
-    <h2 data-cn="3. 給予正面評論和讚美">3. Giving Positive Comments & Compliments</h2>
-    <div class="task-section">
+      
+      <div class="oral-practice">
+        <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
+          <strong data-cn="口頭練習：">Oral Practice:</strong>
+          <span class="toggle-icon">+</span>
+        </button>
+        <div class="oral-practice-content">
+          <p data-cn="結對練習。你有10分鐘的時間。">Work in pairs. You have 10 minutes.</p>
+          <p><strong data-cn="學生A：">Student A:</strong> <span data-cn="分享一個興趣、近期活動或週末計劃，使用主題提示（或你自己的想法）。">Share a hobby, recent activity, or weekend plan using the Topic Prompts (or your own ideas).</span></p>
+          <p><strong data-cn="學生B：">Student B:</strong> <span data-cn="使用迴聲詞公式回應：">React using an Echo Word Formula:</span></p>
+          <ul>
+            <li data-cn="「[關鍵詞]？聽起來[形容詞]！」">"[Keyword]? That sounds [adjective]!"</li>
+            <li data-cn="「[關鍵詞]？那是[好處]的好方法！」">"[Keyword]? That's a great way to [benefit]!"</li>
+          </ul>
+          <p data-cn="輪流角色並嘗試不同的組合。">Switch roles and try different combinations.</p>
+          
+          <p><strong data-cn="速查表：">Cheat Sheet</strong></p>
+          <table class="oral-practice-table">
+            <thead>
+              <tr>
+                <th data-cn="主題提示（學生A）">Topic Prompts (Student A)</th>
+                <th data-cn="形容詞（學生B）">Adjectives (Student B)</th>
+                <th data-cn="好處（學生B）">Benefits (Student B)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li data-cn="探店咖啡廳">cafe hopping</li>
+                    <li data-cn="深圳一日遊">day trip to Shenzhen</li>
+                    <li data-cn="塔門露營">camping in Tap Mun</li>
+                    <li data-cn="和朋友唱卡拉OK">karaoke with friends</li>
+                    <li data-cn="普拉提課">Pilates class</li>
+                    <li data-cn="去看K-pop演唱會">going to a K-pop concert</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li data-cn="輕鬆的">chill</li>
+                    <li data-cn="振奮的">energizing</li>
+                    <li data-cn="時髦的">trendy</li>
+                    <li data-cn="有趣的">fun</li>
+                    <li data-cn="清爽的">refreshing</li>
+                    <li data-cn="令人興奮的">exciting</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li data-cn="下班/下課後減壓">de-stress after work / class</li>
+                    <li data-cn="找到便宜又好吃的東西">find good food on a budget</li>
+                    <li data-cn="唱出你的壓力">belt out your stress</li>
+                    <li data-cn="遠離人群">get away from the crowd</li>
+                    <li data-cn="充電休息">recharge your batteries</li>
+                    <li data-cn="和朋友出去玩">hang out with friends</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span data-cn="3. 閒聊：給予正面評論或讚美">3. Making Small Talk: Giving Positive Comments or Compliments</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+            <div class="task-section">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That is an excellent way to spend your weekend and recharge.', this)"></button><span class="spoken" data-cn="那是度過週末和充電的絕佳方式。">"That's an excellent way to spend your weekend and recharge."</span></span></div>
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Wow! Training for a marathon takes real dedication. I am sure you will do great!', this)"></button><span class="spoken" data-cn="哇！訓練馬拉松需要真正的奉獻精神。我相信你會做得很好！">"Wow! Training for a marathon takes real dedication. I'm sure you'll do great!"</span></span></div>
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I also love acoustic guitar. It is so soothing after a long day.', this)"></button><span class="spoken" data-cn="我也很喜歡木吉他。在漫長的一天後它非常舒緩。">"I also love acoustic guitar. It's so soothing after a long day."</span></span></div>
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That sounds really therapeutic. I definitely need a creative hobby like that!', this)"></button><span class="spoken" data-cn="聽起來真的很療癒。我絕對需要一個像那樣的創意興趣！">"That sounds really therapeutic—I definitely need a creative hobby like that!"</span></span></div>
-    </div>
-
-    <h2 data-cn="4. 追問問題與語調指南">4. Follow-Up Questions & Intonation Guide</h2>
-    <div class="task-section">
+      
+      <div class="task-box">
+        <p><strong data-cn="結對練習：">Pair Work:</strong></p>
+        <p data-cn="1. A：「我有一個月一直在上吉他課，現在可以彈一首簡單的曲子了。」">1. A: 'I've been taking guitar lessons for the past month and I can now play a simple tune.'</p>
+        <p data-cn="B：「太棒了！我喜歡聽吉他。」" style="color:#6a0dad; font-style:italic;">B: 'That's great! I love listening to the guitar.'</p>
+        <p data-cn="2. A：「我為下個月的馬拉松訓練了三個月。希望我能完成。」">2. A: 'I've been training for next month's marathon for the past three months. I hope I can finish it.'</p>
+        <p data-cn="B：「哇！太厲害了！我相信你比賽會表現得很好。祝你好運！」" style="color:#6a0dad; font-style:italic;">B: 'Wow! That's impressive! I'm sure you'll do great in the race. Good luck!'</p>
+      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span data-cn="4. 閒聊：追問問題並引入新話題">4. Making Small Talk: Asking Follow-Up Questions and Bringing Up New Topics</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+            <div class="task-section">
       <div class="task-box">
         <p><strong data-cn="規則：">Rule:</strong></p>
         <ul style="padding-left:20px;">
@@ -894,10 +1270,19 @@ table.reminder-table td {
           <td data-cn="↘ 同意 / ↗ 詢問">↘ Agree / ↗ Ask</td>
         </tr>
       </table>
-    </div>
-
-    <h2 data-cn="5. 轉換話題和推薦消遣">5. Transitioning & Recommending Pastimes</h2>
-    <div class="task-section">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span data-cn="5. 轉換話題和推薦消遣">5. Transitioning & Recommending Pastimes</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+            <div class="task-section">
       <div class="task-box">
         <p><strong data-cn="「說到[消遣]……">"Speaking of [pastime]..."</strong></strong></p>
         <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Speaking of outdoor activities, have you ever hiked the Dragons Back trail?', this)"></button><span class="spoken" data-cn="說到戶外活動，你爬過龍脊嗎？">"Speaking of outdoor activities, have you ever hiked the Dragon's Back trail?"</span></span></p>
@@ -914,17 +1299,35 @@ table.reminder-table td {
         <p><strong data-cn="量身推薦：">Tailored Suggestion:</strong></p>
         <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('If you like strategy games, you would really love Catan. It is so engaging!', this)"></button><span class="spoken" data-cn="如果你喜歡策略遊戲，你一定會喜歡卡坦島。它非常引人入勝！">"If you like strategy games, you'd really love Catan—it's so engaging!"</span></span></p>
       </div>
-    </div>
-
-    <h2 data-cn="6. 禮貌地結束對話">6. Ending the Conversation Politely</h2>
-    <div class="task-section">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span data-cn="6. 禮貌地結束對話">6. Ending the Conversation Politely</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+            <div class="task-section">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('It was great chatting about your hiking trips! We should organize a hike together sometime.', this)"></button><span class="spoken" data-cn="很高興聊到你的遠足旅行！我們應該找個時間一起組織一次遠足。">"It was great chatting about your hiking trips! We should organize a hike together sometime."</span></span></div>
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I would love to chat more about your photography, but I have got to run to my next meeting. Catch you later!', this)"></button><span class="spoken" data-cn="我很想再多聊聊你的攝影，但我得去開下一個會議了。回頭見！">"I'd love to chat more about your photography, but I've got to run to my next meeting. Catch you later!"</span></span></div>
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Well, it was lovely catching up. Have a great weekend enjoying your guitar practice!', this)"></button><span class="spoken" data-cn="嗯，很高兴能聊聊天。祝你週末愉快，享受你的吉他練習！">"Well, it was lovely catching up. Have a great weekend enjoying your guitar practice!"</span></span></div>
-    </div>
-
-    <h2 data-cn="7. 精簡詞彙與目標形容詞庫">7. Compact Vocabulary & Target Adjectives Bank</h2>
-    <div class="task-section">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span data-cn="7. 精簡詞彙與目標形容詞庫">7. Compact Vocabulary & Target Adjectives Bank</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+            <div class="task-section">
       <h3>Outdoor & Sports 戶外與運動</h3>
       <p style="color:#555;">(Hiking, Running, Cycling, Ball Games)</p>
       <div class="task-box">
@@ -961,6 +1364,10 @@ table.reminder-table td {
         <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('host game nights', this)"></button><span class="spoken">host game nights 舉辦遊戲之夜</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('connect with friends', this)"></button><span class="spoken">connect with friends 與朋友聯繫</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('binge-watch series', this)"></button><span class="spoken">binge-watch series 追劇</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('check out live gigs', this)"></button><span class="spoken">check out live gigs 看現場表演</span></span></p>
       </div>
     </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
 
   <!-- ================= Lesson 2 Activity: Describing a Hobby ================= -->
@@ -988,50 +1395,57 @@ table.reminder-table td {
     <h2 data-cn="範本">Model Samples</h2>
 
     <h3 data-cn="1. 遠足／鄉村步行">1. Hiking / Countryside Walking</h3>
+    <img src="https://images.unsplash.com/photo-1762375212814-21dfcb0bfb38?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hiking" class="hobby-img" loading="lazy">
     <div class="task-box">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Hiking in the countryside is my absolute favourite pastime because it is both refreshing and peaceful. Last Saturday, I hiked the Dragons Back trail. The coastal views were breathtaking, and the cool mountain air was truly invigorating. It is a fantastic way to unwind after a busy week.', this)"></button><span class="spoken" data-cn="在鄉村遠足是我最喜歡的消遣，因為它既清爽又寧靜。上週六，我爬了龍脊。海岸景色令人嘆為觀止，涼爽的山間空氣確實令人振奮。這是忙碌一週後放鬆的好方法。">Hiking in the countryside is my absolute favourite pastime because it is both <u>refreshing</u> and <u>peaceful</u>. Last Saturday, I hiked the Dragon's Back trail. The coastal views were <u>breathtaking</u>, and the cool mountain air was truly <u>invigorating</u>. It is a <u>fantastic</u> way to unwind after a busy week.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(48 words)</p>
     </div>
 
     <h3 data-cn="2. 街頭攝影">2. Street Photography</h3>
+    <img src="https://images.unsplash.com/photo-1756673737035-5203ea23b4e7?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Street Photography" class="hobby-img" loading="lazy">
     <div class="task-box">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I took up street photography last year, and it has been an incredibly creative and fulfilling hobby. Exploring vibrant city streets with my camera is always fascinating. Capturing candid moments makes the whole pastime deeply rewarding and memorable.', this)"></button><span class="spoken" data-cn="我去年開始學街頭攝影，這一直是一個非常有創造力和成就感的興趣。帶著相機探索充滿活力的城市街道總是令人著迷。捕捉自然的時刻使整個消遣活動非常有回報和難忘。">I took up street photography last year, and it has been an incredibly <u>creative</u> and <u>fulfilling</u> hobby. Exploring <u>vibrant</u> city streets with my camera is always <u>fascinating</u>. Capturing candid moments makes the whole pastime deeply <u>rewarding</u> and <u>memorable</u>.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(40 words)</p>
     </div>
 
     <h3 data-cn="3. 木吉他">3. Acoustic Guitar</h3>
+    <img src="https://images.unsplash.com/photo-1564576605444-ad082633c14d?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Acoustic Guitar" class="hobby-img" loading="lazy">
     <div class="task-box">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Playing the acoustic guitar is a deeply calming and therapeutic pastime for me. After a hectic day, practicing simple fingerpicking songs feels very soothing. Learning new chords is sometimes challenging, but mastering a complete song is immensely satisfying.', this)"></button><span class="spoken" data-cn="彈木吉他對我來說是一個非常 calm 和療癒的消遣。在忙碌的一天後，練習簡單的指彈歌曲感覺非常舒緩。學習新和弦有時很有挑戰性，但掌握一首完整的歌曲會帶來巨大的滿足感。">Playing the acoustic guitar is a deeply <u>calming</u> and <u>therapeutic</u> pastime for me. After a hectic day, practicing simple fingerpicking songs feels very <u>soothing</u>. Learning new chords is sometimes <u>challenging</u>, but mastering a complete song is immensely <u>satisfying</u>.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(40 words)</p>
     </div>
 
     <h3 data-cn="4. 早晨瑜伽">4. Morning Yoga</h3>
+    <img src="https://images.unsplash.com/photo-1767611118992-b300c4fb4bee?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Morning Yoga" class="hobby-img" loading="lazy">
     <div class="task-box">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I practice yoga four mornings a week. It is an enjoyable and restorative activity that keeps me physically flexible and mentally focused. The gentle stretches are remarkably calming, providing an energizing boost before work.', this)"></button><span class="spoken" data-cn="我每週四個早晨練習瑜伽。這是一種令人愉快且恢復活力的活動，讓我保持身體靈活和精神集中。溫和的伸展運動非常 calm，為工作前提供振奮的能量。">I practice yoga four mornings a week. It is an <u>enjoyable</u> and <u>restorative</u> activity that keeps me physically flexible and mentally focused. The gentle stretches are remarkably <u>calming</u>, providing an <u>energizing</u> boost before work.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(41 words)</p>
     </div>
 
     <h3 data-cn="5. 桌遊">5. Board Gaming</h3>
+    <img src="https://images.unsplash.com/photo-1661114544971-0aee18c148d4?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Board Gaming" class="hobby-img" loading="lazy">
     <div class="task-box">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Hosting board game nights with my friends is my favourite social pastime. It is always lively, entertaining, and full of laughter. We especially enjoy strategy games because they are intellectually stimulating and engaging. It is a wonderful way to connect.', this)"></button><span class="spoken" data-cn="和朋友舉辦桌遊之夜是我最喜歡的社交消遣。它總是充滿活力、娛樂性和歡笑。我們特別喜歡策略遊戲，因為它們在智力上引人入勝且引人入勝。這是聯繫感情的好方法。">Hosting board game nights with my friends is my favourite social pastime. It is always <u>lively</u>, <u>entertaining</u>, and full of laughter. We especially enjoy strategy games because they are intellectually <u>stimulating</u> and <u>engaging</u>. It is a <u>wonderful</u> way to connect.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(41 words)</p>
     </div>
 
     <h3 data-cn="6. 手工烘焙">6. Artisanal Baking</h3>
+    <img src="https://images.unsplash.com/photo-1767065888075-59d3bf3f02d1?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Artisanal Baking" class="hobby-img" loading="lazy">
     <div class="task-box">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Baking sourdough bread on Sunday mornings is a delightful and hands-on hobby. Kneading dough is surprisingly therapeutic, and the aroma from the oven is completely mouthwatering. Sharing warm, crispy loaves with family makes it an exceptionally gratifying pastime.', this)"></button><span class="spoken" data-cn="在週日早晨烤酸麵團麵包是一個令人愉快且親自動手的興趣。揉麵團非常療発，烤箱散發的香氣非常令人垂涎。與家人分享溫暖、酥脆的麵包使它成為一種非常令人滿意的消遣。">Baking sourdough bread on Sunday mornings is a <u>delightful</u> and <u>hands-on</u> hobby. Kneading dough is surprisingly <u>therapeutic</u>, and the aroma from the oven is completely <u>mouthwatering</u>. Sharing warm, crispy loaves with family makes it an exceptionally <u>gratifying</u> pastime.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(41 words)</p>
     </div>
 
     <h3 data-cn="7. 長跑">7. Distance Running</h3>
+    <img src="https://images.unsplash.com/photo-1760464907224-0a1dda1596b9?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Distance Running" class="hobby-img" loading="lazy">
     <div class="task-box">
       <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I have been training for a 10-kilometer race, which is an active and exhilarating sport. Although long-distance training can be physically demanding and exhausting, crossing the finish line feels completely triumphant and empowering.', this)"></button><span class="spoken" data-cn="我一直在為10公里比賽訓練，這是一項活躍且令人振奮的運動。雖然長跑訓練在體力上要求很高且令人筋疲力盡，但衝過終點線的感覺完全勝利和振奮。">I have been training for a 10-kilometer race, which is an <u>active</u> and <u>exhilarating</u> sport. Although long-distance training can be physically <u>demanding</u> and <u>exhausting</u>, crossing the finish line feels completely <u>triumphant</u> and <u>empowering</u>.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(39 words)</p>
     </div>
 
-    <h2 data-cn="輪到你了">Your Turn</h2>
+    <h2 data-cn="口頭練習">Oral Practice</h2>
     <div class="task-box">
-      <p><strong data-cn="在下面寫下你自己的30-50字描述。記得用底線標示你的形容詞！">Write your own 30-50 word description below. Remember to highlight and underline your adjectives!</strong></p>
+      <p><strong data-cn="在下面寫下你自己的30-50字描述。記得用底線標示你的形容詞！然後，結對練習，輪流告訴搭檔你的興趣或消遣活動。">Write your own 30-50 word description below. Remember to highlight and underline your adjectives! Then, work in pairs and take turns to tell your partner your hobby or leisure activity.</strong></p>
       <div contenteditable="true" style="min-height:120px; border:1px dashed #9370db; border-radius:8px; padding:12px; margin-top:10px; background:#faf5ff; outline:none;" data-ph="Write your description here..."></div>
     </div>
   </div>
@@ -1567,7 +1981,64 @@ document.addEventListener('DOMContentLoaded', function() {
   initTranslations();
   if (synth.getVoices().length) initWordClick();
   else synth.addEventListener('voiceschanged', initWordClick, { once: true });
+  
+  // Accordion functionality
+  initAccordion();
 });
+
+function initAccordion() {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  
+  // Add click handlers to accordion headers
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    if (header) {
+      header.addEventListener('click', () => {
+        toggleAccordionItem(item);
+      });
+    }
+  });
+  
+  // Add click handlers to expand/collapse all buttons
+  const expandAllBtn = document.getElementById('expandAll');
+  const collapseAllBtn = document.getElementById('collapseAll');
+  
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener('click', () => {
+      accordionItems.forEach(item => {
+        if (!item.classList.contains('active')) {
+          item.classList.add('active');
+        }
+      });
+    });
+  }
+  
+  if (collapseAllBtn) {
+    collapseAllBtn.addEventListener('click', () => {
+      accordionItems.forEach(item => {
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+        }
+      });
+    });
+  }
+}
+
+function toggleAccordionItem(item) {
+  const isActive = item.classList.contains('active');
+  
+  // Toggle the clicked item
+  if (isActive) {
+    item.classList.remove('active');
+  } else {
+    item.classList.add('active');
+  }
+}
+
+function toggleOralPractice(btn) {
+  const practice = btn.closest('.oral-practice');
+  practice.classList.toggle('open');
+}
 
 </script>
 
