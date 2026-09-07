@@ -585,6 +585,45 @@ table.reminder-table td {
 .cn-toggle-wrap {
   text-align: right;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.cn-script-toggle {
+  display: none;
+  align-items: center;
+  gap: 2px;
+  background: #f0e6f7;
+  border-radius: 100px;
+  padding: 3px;
+}
+
+.cn-script-toggle.visible {
+  display: inline-flex;
+}
+
+.cn-script-btn {
+  border: none;
+  background: transparent;
+  color: #6a0dad;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cn-script-btn:hover {
+  background: rgba(147,112,219,0.15);
+}
+
+.cn-script-btn.active {
+  background: #9370db;
+  color: white;
 }
 
 .cn-toggle {
@@ -951,9 +990,13 @@ table.reminder-table td {
   </div>
   <p class="presented-by">Presented by Rebecca Tang</p>
   <div class="cn-toggle-wrap">
+    <span class="cn-script-toggle" id="cnScriptToggle">
+      <button type="button" class="cn-script-btn active" data-script="trad" onclick="setCNScript('trad')">繁體</button>
+      <button type="button" class="cn-script-btn" data-script="simp" onclick="setCNScript('simp')">简体</button>
+    </span>
     <label class="cn-toggle">
       <input type="checkbox" onchange="toggleAllCN(this.checked)">
-      <span>中文翻译</span>
+      <span>中文翻譯 / 中文翻译</span>
     </label>
             </div>
           </div>
@@ -992,16 +1035,16 @@ table.reminder-table td {
   <!-- ================= Lesson 2: Making Small Talk — Hobbies & Leisure Activities ================= -->
   <div class="tab-content active" id="tab-0">
     <span class="part-badge">Lesson 2</span>
-    <h1 data-cn="閒聊：興趣與消遣活動">Making Small Talk — Hobbies & Leisure Activities</h1>
+    <h1 data-cn="閒聊：興趣與消遣活動" data-cn-s="闲聊：兴趣与消遣活动">Making Small Talk — Hobbies & Leisure Activities</h1>
 
     <div class="learning-objectives">
       <h3>Learning Objectives 學習目標</h3>
       <p>By the end of this lesson, you will be able to:</p>
       <ul>
-        <li data-cn="使用積極聆聽技巧並在輕鬆對話中做出適當回應">use active listening skills and respond appropriately in casual conversation</li>
-        <li data-cn="參與閒聊">engage in small talk</li>
-        <li data-cn="在問句中使用恰當的語調">use appropriate intonation in questions</li>
-        <li data-cn="使用實用表達方式開啟並維持關於興趣和消遣活動的輕鬆對話">start and maintain a casual conversation about hobbies and leisure activities using useful expressions</li>
+        <li data-cn="使用積極聆聽技巧並在輕鬆對話中做出適當回應" data-cn-s="使用积极聆听技巧并在轻松对话中做出适当回应">use active listening skills and respond appropriately in casual conversation</li>
+        <li data-cn="參與閒聊" data-cn-s="参与闲聊">engage in small talk</li>
+        <li data-cn="在問句中使用恰當的語調" data-cn-s="在问句中使用恰当的语调">use appropriate intonation in questions</li>
+        <li data-cn="使用實用表達方式開啟並維持關於興趣和消遣活動的輕鬆對話" data-cn-s="使用实用表达方式打开并维持关于兴趣和消遣活动的轻松对话">start and maintain a casual conversation about hobbies and leisure activities using useful expressions</li>
       </ul>
     </div>
 
@@ -1013,44 +1056,44 @@ table.reminder-table td {
     <div class="accordion">
       <div class="accordion-item active">
         <button class="accordion-header">
-          <span data-cn="1. 開啟輕鬆對話（休閒破冰話題）">1. Starting a Casual Conversation (Icebreakers for Leisure)</span>
+          <span data-cn="1. 開啟輕鬆對話（休閒破冰話題）" data-cn-s="1. 打开轻松对话（休闲破冰话题）">1. Starting a Casual Conversation (Icebreakers for Leisure)</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
           <div class="accordion-content-inner">
             <div class="task-section">
       <div class="task-box">
-        <p><strong data-cn="通用開場白：">The Universal Starter:</strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('How was your weekend? Did you get up to anything fun?', this)"></button><span class="spoken" data-cn="你週末過得怎麼樣？有做什麼有趣的事嗎？">"How was your weekend? Did you get up to anything fun?"</span></span></p>
+        <p><strong data-cn="通用開場白：" data-cn-s="通用开场白：">The Universal Starter:</strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('How was your weekend? Did you get up to anything fun?', this)"></button><span class="spoken" data-cn="你週末過得怎麼樣？有做什麼有趣的事嗎？" data-cn-s="你周末过得怎么样？有做什么有趣的事吗？">"How was your weekend? Did you get up to anything fun?"</span></span></p>
 
-        <p><strong data-cn="進度／練習：">Progress / Practice:</strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('How is your hobby or practice going?', this)"></button><span class="spoken" data-cn="你的[興趣/練習]進行得怎麼樣？">"How's your [hobby/practice] going? (e.g. guitar practice, marathon training)"</span></span></p>
+        <p><strong data-cn="進度／練習：" data-cn-s="进度／练习：">Progress / Practice:</strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('How is your hobby or practice going?', this)"></button><span class="spoken" data-cn="你的[興趣/練習]進行得怎麼樣？" data-cn-s="你的[兴趣/练习]进行得怎么样？">"How's your [hobby/practice] going? (e.g. guitar practice, marathon training)"</span></span></p>
 
-        <p><strong data-cn="一般休閒詢問：">General Leisure Inquiries:</strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('What do you usually like to do to unwind after work or on weekends?', this)"></button><span class="spoken" data-cn="你通常喜歡在下班後或週末做什麼來放鬆？">"What do you usually like to do to unwind after work / on weekends?"</span></span></p>
+        <p><strong data-cn="一般休閒詢問：" data-cn-s="一般休闲询问：">General Leisure Inquiries:</strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('What do you usually like to do to unwind after work or on weekends?', this)"></button><span class="spoken" data-cn="你通常喜歡在下班後或週末做什麼來放鬆？" data-cn-s="你通常喜欢在下班后或周末做什么来放松？">"What do you usually like to do to unwind after work / on weekends?"</span></span></p>
 
-        <p><strong data-cn="近期消遣：">Recent Pastimes:</strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Have you had a chance to go hiking or see that new movie lately?', this)"></button><span class="spoken" data-cn="你最近有機會去遠足或看那部新電影嗎？">"Have you had a chance to [activity: go hiking / see that new movie] lately?"</span></span></p>
+        <p><strong data-cn="近期消遣：" data-cn-s="近期消遣：">Recent Pastimes:</strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Have you had a chance to go hiking or see that new movie lately?', this)"></button><span class="spoken" data-cn="你最近有機會去遠足或看那部新電影嗎？" data-cn-s="你最近有机会去远足或看那部新电影吗？">"Have you had a chance to [activity: go hiking / see that new movie] lately?"</span></span></p>
       </div>
       
       <div class="oral-practice">
         <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
-          <strong data-cn="口頭練習：">Oral Practice.</strong>
+          <strong data-cn="口頭練習：" data-cn-s="口头练习：">Oral Practice.</strong>
           <span class="toggle-icon">+</span>
         </button>
         <div class="oral-practice-content">
-          <p data-cn="結對練習，5分鐘內完成。">Work in pairs in 5 minutes.</p>
-          <p><strong data-cn="學生A：">Student A:</strong> <span data-cn="從上面選擇一個開場白來問你的搭檔。">Choose a starter above to ask your partner.</span></p>
-          <p><strong data-cn="學生B：">Student B:</strong> <span data-cn="使用下面合適的回應句來回答。">Reply using an appropriate response phrase below.</span></p>
-          <p data-cn="輪流開始對話。你有5分鐘的時間練習。">Take turns starting the conversation. You have 5 minutes to practise.</p>
+          <p data-cn="結對練習，5分鐘內完成。" data-cn-s="结对练习，5分钟内完成。">Work in pairs in 5 minutes.</p>
+          <p><strong data-cn="學生A：" data-cn-s="学生A：">Student A:</strong> <span data-cn="從上面選擇一個開場白來問你的搭檔。" data-cn-s="从上面选择一个开场白来问你的搭档。">Choose a starter above to ask your partner.</span></p>
+          <p><strong data-cn="學生B：" data-cn-s="学生B：">Student B:</strong> <span data-cn="使用下面合適的回應句來回答。" data-cn-s="使用下面合适的回应句来回答。">Reply using an appropriate response phrase below.</span></p>
+          <p data-cn="輪流開始對話。你有5分鐘的時間練習。" data-cn-s="轮流开始对话。你有5分钟的时间练习。">Take turns starting the conversation. You have 5 minutes to practise.</p>
           
-          <p><strong data-cn="回應句（用於回答）：">Response Phrases (To Answer):</strong></p>
+          <p><strong data-cn="回應句（用於回答）：" data-cn-s="回应句（用于回答）：">Response Phrases (To Answer):</strong></p>
           <ul>
-            <li data-cn="「相當輕鬆— mostly just caught up on some [reading / shows].」">"It was pretty chill—mostly just caught up on some [reading / shows]."</li>
-            <li data-cn="「我最近其實很迷 [baking / bouldering]。」">"I've actually really been getting into [baking / bouldering] lately."</li>
-            <li data-cn="「進展順利！我盡量每週練習幾次。」">"It's going well! I try to practice a couple of times a week."</li>
-            <li data-cn="「老實說，沒有我希望的那麼多—工作一直很忙。」">"Not as much as I'd like, honestly—work has been pretty busy."</li>
-            <li data-cn="「有啊，我上週末 actually went to [place / event]—很棒！」">"Yeah, I actually went to [place / event] last weekend—it was great!"</li>
+            <li data-cn="「相當輕鬆— mostly just caught up on some [reading / shows].」" data-cn-s="「相当轻松— mostly just caught up on some [reading / shows].」">"It was pretty chill—mostly just caught up on some [reading / shows]."</li>
+            <li data-cn="「我最近其實很迷 [baking / bouldering]。」" data-cn-s="「我最近其实很迷 [baking / bouldering]。」">"I've actually really been getting into [baking / bouldering] lately."</li>
+            <li data-cn="「進展順利！我盡量每週練習幾次。」" data-cn-s="「进展顺利！我尽量每周练习几次。」">"It's going well! I try to practice a couple of times a week."</li>
+            <li data-cn="「老實說，沒有我希望的那麼多—工作一直很忙。」" data-cn-s="「老实说，没有我希望的那么多—工作一直很忙。」">"Not as much as I'd like, honestly—work has been pretty busy."</li>
+            <li data-cn="「有啊，我上週末 actually went to [place / event]—很棒！」" data-cn-s="「有啊，我上周末 actually went to [place / event]—很棒！」">"Yeah, I actually went to [place / event] last weekend—it was great!"</li>
           </ul>
         </div>
       </div>
@@ -1061,99 +1104,99 @@ table.reminder-table td {
       
       <div class="accordion-item">
         <button class="accordion-header">
-          <span data-cn="2. 閒聊：使用迴聲詞">2. Making Small Talk: Using Echo Words</span>
+          <span data-cn="2. 閒聊：使用迴聲詞" data-cn-s="2. 闲聊：使用回声词">2. Making Small Talk: Using Echo Words</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
           <div class="accordion-content-inner">
             <div class="task-section">
-      <h3 data-cn="簡短反應詞">Short Reaction Tokens</h3>
+      <h3 data-cn="簡短反應詞" data-cn-s="简短反应词">Short Reaction Tokens</h3>
       <div class="task-box">
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Really?', this)"></button><span class="spoken" data-cn="真的嗎？">"Really?"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('Oh yeah?', this)"></button><span class="spoken" data-cn="哦，是嗎？">"Oh yeah?"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('Wow!', this)"></button><span class="spoken" data-cn="哇！">"Wow!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That is great!', this)"></button><span class="spoken" data-cn="太棒了！">"That's great!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That sounds fun or amazing!', this)"></button><span class="spoken" data-cn="聽起來很有趣或很棒！">"That sounds fun / amazing!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That is impressive!', this)"></button><span class="spoken" data-cn="太厲害了！">"That's impressive!"</span></span></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Really?', this)"></button><span class="spoken" data-cn="真的嗎？" data-cn-s="真的吗？">"Really?"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('Oh yeah?', this)"></button><span class="spoken" data-cn="哦，是嗎？" data-cn-s="哦，是吗？">"Oh yeah?"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('Wow!', this)"></button><span class="spoken" data-cn="哇！" data-cn-s="哇！">"Wow!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That is great!', this)"></button><span class="spoken" data-cn="太棒了！" data-cn-s="太棒了！">"That's great!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That sounds fun or amazing!', this)"></button><span class="spoken" data-cn="聽起來很有趣或很棒！" data-cn-s="听起来很有趣或很棒！">"That sounds fun / amazing!"</span></span> | <span class="utterance"><button class="btn-icon" onclick="speakText('That is impressive!', this)"></button><span class="spoken" data-cn="太厲害了！" data-cn-s="太厉害了！">"That's impressive!"</span></span></p>
       </div>
 
-      <h3 data-cn="迴聲詞公式">Echo Word Formula</h3>
+      <h3 data-cn="迴聲詞公式" data-cn-s="回声词公式">Echo Word Formula</h3>
       <div class="task-box">
-        <p data-cn="句型：「[關鍵詞]？聽起來[形容詞]！」或「[關鍵詞]？那是[好處]的好方法！」"><strong>Pattern:</strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Keyword? That sounds adjective!', this)"></button><span class="spoken" data-cn="關鍵詞？聽起來[形容詞]！">"[Keyword]? That sounds [adjective]!"</span></span></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Keyword? That is a great way to benefit!', this)"></button><span class="spoken" data-cn="關鍵詞？那是[好處]的好方法！">"[Keyword]? That's a great way to [benefit]!"</span></span></p>
+        <p data-cn="句型：「[關鍵詞]？聽起來[形容詞]！」或「[關鍵詞]？那是[好處]的好方法！」" data-cn-s="句型：「[关键词]？听起来[形容词]！」或「[关键词]？那是[好处]的好方法！」"><strong>Pattern:</strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Keyword? That sounds adjective!', this)"></button><span class="spoken" data-cn="關鍵詞？聽起來[形容詞]！" data-cn-s="关键词？听起来[形容词]！">"[Keyword]? That sounds [adjective]!"</span></span></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Keyword? That is a great way to benefit!', this)"></button><span class="spoken" data-cn="關鍵詞？那是[好處]的好方法！" data-cn-s="关键词？那是[好处]的好方法！">"[Keyword]? That's a great way to [benefit]!"</span></span></p>
       </div>
 
-      <h3 data-cn="例子">Examples</h3>
+      <h3 data-cn="例子" data-cn-s="例子">Examples</h3>
       <div class="task-box">
-        <p><strong data-cn="戶外／旅行：">Outdoor / Travel:</strong></p>
+        <p><strong data-cn="戶外／旅行：" data-cn-s="户外／旅行：">Outdoor / Travel:</strong></p>
         <div class="expr-text">
-          <span class="speaker">A:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('I went hiking in Sai Kung.', this, 'female')"></button><span class="spoken" data-cn="我去西貢遠足了。">"I went hiking in Sai Kung."</span></span><br>
-          <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('Sai Kung? That sounds refreshing!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="西貢？聽起來很清爽！">"Sai Kung? That sounds refreshing!"</span></span>
+          <span class="speaker">A:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('I went hiking in Sai Kung.', this, 'female')"></button><span class="spoken" data-cn="我去西貢遠足了。" data-cn-s="我去西贡远足了。">"I went hiking in Sai Kung."</span></span><br>
+          <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('Sai Kung? That sounds refreshing!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="西貢？聽起來很清爽！" data-cn-s="西贡？听起来很清爽！">"Sai Kung? That sounds refreshing!"</span></span>
         </div>
 
-        <p><strong data-cn="創意藝術：">Creative Arts:</strong></p>
+        <p><strong data-cn="創意藝術：" data-cn-s="创意艺术：">Creative Arts:</strong></p>
         <div class="expr-text">
-          <span class="speaker">A:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('I took up photography recently.', this, 'female')"></button><span class="spoken" data-cn="我最近開始學攝影。">"I took up photography recently."</span></span><br>
-          <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('Photography? That sounds fascinating!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="攝影？聽起來很迷人！">"Photography? That sounds fascinating!"</span></span>
+          <span class="speaker">A:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('I took up photography recently.', this, 'female')"></button><span class="spoken" data-cn="我最近開始學攝影。" data-cn-s="我最近开始学摄影。">"I took up photography recently."</span></span><br>
+          <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('Photography? That sounds fascinating!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="攝影？聽起來很迷人！" data-cn-s="摄影？听起来很迷人！">"Photography? That sounds fascinating!"</span></span>
         </div>
 
-        <p><strong data-cn="健康／身心健康：">Health / Wellness:</strong></p>
+        <p><strong data-cn="健康／身心健康：" data-cn-s="健康／身心健康：">Health / Wellness:</strong></p>
         <div class="expr-text">
-          <span class="speaker">A:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('I have started doing yoga every morning.', this, 'female')"></button><span class="spoken" data-cn="我開始每天早上做瑜伽了。">"I've started doing yoga every morning."</span></span><br>
-          <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('Yoga every morning? That is a great way to start the day!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="每天早上做瑜伽？那是開始一天的好方法！">"Yoga every morning? That's a great way to start the day!"</span></span>
+          <span class="speaker">A:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('I have started doing yoga every morning.', this, 'female')"></button><span class="spoken" data-cn="我開始每天早上做瑜伽了。" data-cn-s="我开始每天早上做瑜伽了。">"I've started doing yoga every morning."</span></span><br>
+          <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('Yoga every morning? That is a great way to start the day!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="每天早上做瑜伽？那是開始一天的好方法！" data-cn-s="每天早上做瑜伽？那是开始一天的好方法！">"Yoga every morning? That's a great way to start the day!"</span></span>
         </div>
       </div>
       
       <div class="oral-practice">
         <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
-          <strong data-cn="口頭練習：">Oral Practice:</strong>
+          <strong data-cn="口頭練習：" data-cn-s="口头练习：">Oral Practice:</strong>
           <span class="toggle-icon">+</span>
         </button>
         <div class="oral-practice-content">
-          <p data-cn="結對練習。你有10分鐘的時間。">Work in pairs. You have 10 minutes.</p>
-          <p><strong data-cn="學生A：">Student A:</strong> <span data-cn="分享一個興趣、近期活動或週末計劃，使用主題提示（或你自己的想法）。">Share a hobby, recent activity, or weekend plan using the Topic Prompts (or your own ideas).</span></p>
-          <p><strong data-cn="學生B：">Student B:</strong> <span data-cn="使用迴聲詞公式回應：">React using an Echo Word Formula:</span></p>
+          <p data-cn="結對練習。你有10分鐘的時間。" data-cn-s="结对练习。你有10分钟的时间。">Work in pairs. You have 10 minutes.</p>
+          <p><strong data-cn="學生A：" data-cn-s="学生A：">Student A:</strong> <span data-cn="分享一個興趣、近期活動或週末計劃，使用主題提示（或你自己的想法）。" data-cn-s="分享一个兴趣、近期活动或周末计划，使用主题提示（或你自己的想法）。">Share a hobby, recent activity, or weekend plan using the Topic Prompts (or your own ideas).</span></p>
+          <p><strong data-cn="學生B：" data-cn-s="学生B：">Student B:</strong> <span data-cn="使用迴聲詞公式回應：" data-cn-s="使用回声词公式回应：">React using an Echo Word Formula:</span></p>
           <ul>
-            <li data-cn="「[關鍵詞]？聽起來[形容詞]！」">"[Keyword]? That sounds [adjective]!"</li>
-            <li data-cn="「[關鍵詞]？那是[好處]的好方法！」">"[Keyword]? That's a great way to [benefit]!"</li>
+            <li data-cn="「[關鍵詞]？聽起來[形容詞]！」" data-cn-s="「[关键词]？听起来[形容词]！」">"[Keyword]? That sounds [adjective]!"</li>
+            <li data-cn="「[關鍵詞]？那是[好處]的好方法！」" data-cn-s="「[关键词]？那是[好处]的好方法！」">"[Keyword]? That's a great way to [benefit]!"</li>
           </ul>
-          <p data-cn="輪流角色並嘗試不同的組合。">Switch roles and try different combinations.</p>
+          <p data-cn="輪流角色並嘗試不同的組合。" data-cn-s="轮流角色并尝试不同的组合。">Switch roles and try different combinations.</p>
           
-          <p><strong data-cn="速查表：">Cheat Sheet</strong></p>
+          <p><strong data-cn="速查表：" data-cn-s="速查表：">Cheat Sheet</strong></p>
           <table class="oral-practice-table">
             <thead>
               <tr>
-                <th data-cn="主題提示（學生A）">Topic Prompts (Student A)</th>
-                <th data-cn="形容詞（學生B）">Adjectives (Student B)</th>
-                <th data-cn="好處（學生B）">Benefits (Student B)</th>
+                <th data-cn="主題提示（學生A）" data-cn-s="主题提示（学生A）">Topic Prompts (Student A)</th>
+                <th data-cn="形容詞（學生B）" data-cn-s="形容词（学生B）">Adjectives (Student B)</th>
+                <th data-cn="好處（學生B）" data-cn-s="好处（学生B）">Benefits (Student B)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
                   <ul>
-                    <li data-cn="探店咖啡廳">cafe hopping</li>
-                    <li data-cn="深圳一日遊">day trip to Shenzhen</li>
-                    <li data-cn="塔門露營">camping in Tap Mun</li>
-                    <li data-cn="和朋友唱卡拉OK">karaoke with friends</li>
-                    <li data-cn="普拉提課">Pilates class</li>
-                    <li data-cn="去看K-pop演唱會">going to a K-pop concert</li>
+                    <li data-cn="探店咖啡廳" data-cn-s="探店咖啡厅">cafe hopping</li>
+                    <li data-cn="深圳一日遊" data-cn-s="深圳一日游">day trip to Shenzhen</li>
+                    <li data-cn="塔門露營" data-cn-s="塔门露营">camping in Tap Mun</li>
+                    <li data-cn="和朋友唱卡拉OK" data-cn-s="和朋友唱卡拉OK">karaoke with friends</li>
+                    <li data-cn="普拉提課" data-cn-s="普拉提课">Pilates class</li>
+                    <li data-cn="去看K-pop演唱會" data-cn-s="去看K-pop演唱会">going to a K-pop concert</li>
                   </ul>
                 </td>
                 <td>
                   <ul>
-                    <li data-cn="輕鬆的">chill</li>
-                    <li data-cn="振奮的">energizing</li>
-                    <li data-cn="時髦的">trendy</li>
-                    <li data-cn="有趣的">fun</li>
-                    <li data-cn="清爽的">refreshing</li>
-                    <li data-cn="令人興奮的">exciting</li>
+                    <li data-cn="輕鬆的" data-cn-s="轻松的">chill</li>
+                    <li data-cn="振奮的" data-cn-s="振奋的">energizing</li>
+                    <li data-cn="時髦的" data-cn-s="时髦的">trendy</li>
+                    <li data-cn="有趣的" data-cn-s="有趣的">fun</li>
+                    <li data-cn="清爽的" data-cn-s="清爽的">refreshing</li>
+                    <li data-cn="令人興奮的" data-cn-s="令人兴奋的">exciting</li>
                   </ul>
                 </td>
                 <td>
                   <ul>
-                    <li data-cn="下班/下課後減壓">de-stress after work / class</li>
-                    <li data-cn="找到便宜又好吃的東西">find good food on a budget</li>
-                    <li data-cn="唱出你的壓力">belt out your stress</li>
-                    <li data-cn="遠離人群">get away from the crowd</li>
-                    <li data-cn="充電休息">recharge your batteries</li>
-                    <li data-cn="和朋友出去玩">hang out with friends</li>
+                    <li data-cn="下班/下課後減壓" data-cn-s="下班/下课后减压">de-stress after work / class</li>
+                    <li data-cn="找到便宜又好吃的東西" data-cn-s="找到便宜又好吃的东西">find good food on a budget</li>
+                    <li data-cn="唱出你的壓力" data-cn-s="唱出你的压力">belt out your stress</li>
+                    <li data-cn="遠離人群" data-cn-s="远离人群">get away from the crowd</li>
+                    <li data-cn="充電休息" data-cn-s="充电休息">recharge your batteries</li>
+                    <li data-cn="和朋友出去玩" data-cn-s="和朋友出去玩">hang out with friends</li>
                   </ul>
                 </td>
               </tr>
@@ -1168,23 +1211,23 @@ table.reminder-table td {
       
       <div class="accordion-item">
         <button class="accordion-header">
-          <span data-cn="3. 閒聊：給予正面評論或讚美">3. Making Small Talk: Giving Positive Comments or Compliments</span>
+          <span data-cn="3. 閒聊：給予正面評論或讚美" data-cn-s="3. 闲聊：给予正面评论或赞美">3. Making Small Talk: Giving Positive Comments or Compliments</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
           <div class="accordion-content-inner">
             <div class="task-section">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That is an excellent way to spend your weekend and recharge.', this)"></button><span class="spoken" data-cn="那是度過週末和充電的絕佳方式。">"That's an excellent way to spend your weekend and recharge."</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Wow! Training for a marathon takes real dedication. I am sure you will do great!', this)"></button><span class="spoken" data-cn="哇！訓練馬拉松需要真正的奉獻精神。我相信你會做得很好！">"Wow! Training for a marathon takes real dedication. I'm sure you'll do great!"</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I also love acoustic guitar. It is so soothing after a long day.', this)"></button><span class="spoken" data-cn="我也很喜歡木吉他。在漫長的一天後它非常舒緩。">"I also love acoustic guitar. It's so soothing after a long day."</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That sounds really therapeutic. I definitely need a creative hobby like that!', this)"></button><span class="spoken" data-cn="聽起來真的很療癒。我絕對需要一個像那樣的創意興趣！">"That sounds really therapeutic—I definitely need a creative hobby like that!"</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That is an excellent way to spend your weekend and recharge.', this)"></button><span class="spoken" data-cn="那是度過週末和充電的絕佳方式。" data-cn-s="那是度过周末和充电的绝佳方式。">"That's an excellent way to spend your weekend and recharge."</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Wow! Training for a marathon takes real dedication. I am sure you will do great!', this)"></button><span class="spoken" data-cn="哇！訓練馬拉松需要真正的奉獻精神。我相信你會做得很好！" data-cn-s="哇！训练马拉松需要真正的奉献精神。我相信你会做得很好！">"Wow! Training for a marathon takes real dedication. I'm sure you'll do great!"</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I also love acoustic guitar. It is so soothing after a long day.', this)"></button><span class="spoken" data-cn="我也很喜歡木吉他。在漫長的一天後它非常舒緩。" data-cn-s="我也很喜欢木吉他。在漫长的一天后它非常舒缓。">"I also love acoustic guitar. It's so soothing after a long day."</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That sounds really therapeutic. I definitely need a creative hobby like that!', this)"></button><span class="spoken" data-cn="聽起來真的很療癒。我絕對需要一個像那樣的創意興趣！" data-cn-s="听起来真的很疗愈。我绝对需要一个像那样的创意兴趣！">"That sounds really therapeutic—I definitely need a creative hobby like that!"</span></span></div>
       
       <div class="task-box">
-        <p><strong data-cn="結對練習：">Pair Work:</strong></p>
-        <p data-cn="1. A：「我有一個月一直在上吉他課，現在可以彈一首簡單的曲子了。」">1. A: 'I've been taking guitar lessons for the past month and I can now play a simple tune.'</p>
-        <p data-cn="B：「太棒了！我喜歡聽吉他。」" style="color:#6a0dad; font-style:italic;">B: 'That's great! I love listening to the guitar.'</p>
-        <p data-cn="2. A：「我為下個月的馬拉松訓練了三個月。希望我能完成。」">2. A: 'I've been training for next month's marathon for the past three months. I hope I can finish it.'</p>
-        <p data-cn="B：「哇！太厲害了！我相信你比賽會表現得很好。祝你好運！」" style="color:#6a0dad; font-style:italic;">B: 'Wow! That's impressive! I'm sure you'll do great in the race. Good luck!'</p>
+        <p><strong data-cn="結對練習：" data-cn-s="结对练习：">Pair Work:</strong></p>
+        <p data-cn="1. A：「我有一個月一直在上吉他課，現在可以彈一首簡單的曲子了。」" data-cn-s="1. A：「我有一个月一直在上吉他课，现在可以弹一首简单的曲子了。」">1. A: 'I've been taking guitar lessons for the past month and I can now play a simple tune.'</p>
+        <p data-cn="B：「太棒了！我喜歡聽吉他。」" data-cn-s="B：「太棒了！我喜欢听吉他。」" style="color:#6a0dad; font-style:italic;">B: 'That's great! I love listening to the guitar.'</p>
+        <p data-cn="2. A：「我為下個月的馬拉松訓練了三個月。希望我能完成。」" data-cn-s="2. A：「我为下个月的马拉松训练了三个月。希望我能完成。」">2. A: 'I've been training for next month's marathon for the past three months. I hope I can finish it.'</p>
+        <p data-cn="B：「哇！太厲害了！我相信你比賽會表現得很好。祝你好運！」" data-cn-s="B：「哇！太厉害了！我相信你比赛会表现得很好。祝你好运！」" style="color:#6a0dad; font-style:italic;">B: 'Wow! That's impressive! I'm sure you'll do great in the race. Good luck!'</p>
       </div>
             </div>
           </div>
@@ -1193,81 +1236,81 @@ table.reminder-table td {
       
       <div class="accordion-item">
         <button class="accordion-header">
-          <span data-cn="4. 閒聊：追問問題並引入新話題">4. Making Small Talk: Asking Follow-Up Questions and Bringing Up New Topics</span>
+          <span data-cn="4. 閒聊：追問問題並引入新話題" data-cn-s="4. 闲聊：追问问题并引入新话题">4. Making Small Talk: Asking Follow-Up Questions and Bringing Up New Topics</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
           <div class="accordion-content-inner">
             <div class="task-section">
       <div class="task-box">
-        <p><strong data-cn="規則：">Rule:</strong></p>
+        <p><strong data-cn="規則：" data-cn-s="规则：">Rule:</strong></p>
         <ul style="padding-left:20px;">
-          <li data-cn="是非題和迴聲疑問句使用升調（↗）（溫暖、好奇）。">Use <strong>Rising Intonation (↗)</strong> for Yes/No & Echo questions (warm, curious).</li>
-          <li data-cn="疑問詞問句使用降調（↘）（禮貌、自然）。">Use <strong>Falling Intonation (↘)</strong> for Wh- questions (polite, natural).</li>
+          <li data-cn="是非題和迴聲疑問句使用升調（↗）（溫暖、好奇）。" data-cn-s="是非题和回声疑问句使用升调（↗）（温暖、好奇）。">Use <strong>Rising Intonation (↗)</strong> for Yes/No & Echo questions (warm, curious).</li>
+          <li data-cn="疑問詞問句使用降調（↘）（禮貌、自然）。" data-cn-s="疑问词问句使用降调（↘）（礼貌、自然）。">Use <strong>Falling Intonation (↘)</strong> for Wh- questions (polite, natural).</li>
         </ul>
       </div>
 
       <table class="words">
         <tr>
-          <th data-cn="問題類型">Question Type</th>
-          <th data-cn="興趣／休閒語境中的例子">Example in Hobbies / Leisure Context</th>
-          <th data-cn="語調">Intonation</th>
+          <th data-cn="問題類型" data-cn-s="问题类型">Question Type</th>
+          <th data-cn="興趣／休閒語境中的例子" data-cn-s="兴趣／休闲语境中的例子">Example in Hobbies / Leisure Context</th>
+          <th data-cn="語調" data-cn-s="语调">Intonation</th>
         </tr>
         <tr>
-          <td data-cn="迴聲疑問句（助動詞）">Echo Question (Auxiliary)</td>
+          <td data-cn="迴聲疑問句（助動詞）" data-cn-s="回声疑问句（助动词）">Echo Question (Auxiliary)</td>
           <td>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('I am running a ten k race.', this, 'female')"></button><span class="spoken" data-cn="我正在跑十公里比賽。">A: "I am running a 10k race."</span></span> →<br>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('Are you? That sounds challenging!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="是嗎？聽起來很有挑戰性！">B: "Are you? That sounds challenging!"</span></span>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('I am running a ten k race.', this, 'female')"></button><span class="spoken" data-cn="我正在跑十公里比賽。" data-cn-s="我正在跑十公里比赛。">A: "I am running a 10k race."</span></span> →<br>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('Are you? That sounds challenging!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="是嗎？聽起來很有挑戰性！" data-cn-s="是吗？听起来很有挑战性！">B: "Are you? That sounds challenging!"</span></span>
           </td>
-          <td data-cn="升調（↗）">Rising (↗)</td>
+          <td data-cn="升調（↗）" data-cn-s="升调（↗）">Rising (↗)</td>
         </tr>
         <tr>
-          <td data-cn="迴聲疑問句（助動詞）">Echo Question (Auxiliary)</td>
+          <td data-cn="迴聲疑問句（助動詞）" data-cn-s="回声疑问句（助动词）">Echo Question (Auxiliary)</td>
           <td>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('I have just bought a road bike.', this, 'female')"></button><span class="spoken" data-cn="我剛買了一輛公路單車。">A: "I've just bought a road bike."</span></span> →<br>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('Have you? That is fantastic!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="真的嗎？太棒了！">B: "Have you? That's fantastic!"</span></span>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('I have just bought a road bike.', this, 'female')"></button><span class="spoken" data-cn="我剛買了一輛公路單車。" data-cn-s="我刚买了一辆公路单车。">A: "I've just bought a road bike."</span></span> →<br>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('Have you? That is fantastic!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="真的嗎？太棒了！" data-cn-s="真的吗？太棒了！">B: "Have you? That's fantastic!"</span></span>
           </td>
-          <td data-cn="升調（↗）">Rising (↗)</td>
+          <td data-cn="升調（↗）" data-cn-s="升调（↗）">Rising (↗)</td>
         </tr>
         <tr>
-          <td data-cn="迴聲疑問句（無助動詞）">Echo Question (No Aux.)</td>
+          <td data-cn="迴聲疑問句（無助動詞）" data-cn-s="回声疑问句（无助动词）">Echo Question (No Aux.)</td>
           <td>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('I love playing board games.', this, 'female')"></button><span class="spoken" data-cn="我喜歡玩桌遊。">A: "I love playing board games."</span></span> →<br>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('Do you? That sounds entertaining!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="真的嗎？聽起來很有趣！">B: "Do you? That sounds entertaining!"</span></span>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('I love playing board games.', this, 'female')"></button><span class="spoken" data-cn="我喜歡玩桌遊。" data-cn-s="我喜欢玩桌游。">A: "I love playing board games."</span></span> →<br>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('Do you? That sounds entertaining!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="真的嗎？聽起來很有趣！" data-cn-s="真的吗？听起来很有趣！">B: "Do you? That sounds entertaining!"</span></span>
           </td>
-          <td data-cn="升調（↗）">Rising (↗)</td>
+          <td data-cn="升調（↗）" data-cn-s="升调（↗）">Rising (↗)</td>
         </tr>
         <tr>
-          <td data-cn="迴聲疑問句（無助動詞）">Echo Question (No Aux.)</td>
+          <td data-cn="迴聲疑問句（無助動詞）" data-cn-s="回声疑问句（无助动词）">Echo Question (No Aux.)</td>
           <td>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('I ran my first marathon.', this, 'female')"></button><span class="spoken" data-cn="我跑了第一次馬拉松。">A: "I ran my first marathon."</span></span> →<br>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('Did you? That is impressive!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="真的嗎？太厲害了！">B: "Did you? That's impressive!"</span></span>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('I ran my first marathon.', this, 'female')"></button><span class="spoken" data-cn="我跑了第一次馬拉松。" data-cn-s="我跑了第一次马拉松。">A: "I ran my first marathon."</span></span> →<br>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('Did you? That is impressive!', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="真的嗎？太厲害了！" data-cn-s="真的吗？太厉害了！">B: "Did you? That's impressive!"</span></span>
           </td>
-          <td data-cn="升調（↗）">Rising (↗)</td>
+          <td data-cn="升調（↗）" data-cn-s="升调（↗）">Rising (↗)</td>
         </tr>
         <tr>
-          <td data-cn="疑問詞問句">Wh- Question</td>
+          <td data-cn="疑問詞問句" data-cn-s="疑问词问句">Wh- Question</td>
           <td>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('Where did you go hiking on Saturday?', this, 'female')"></button><span class="spoken" data-cn="你週六去哪裡遠足了？">"Where did you go hiking on Saturday?"</span></span><br>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('What kind of music do you play?', this, 'female')"></button><span class="spoken" data-cn="你彈什麼類型的音樂？">"What kind of music do you play?"</span></span>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('Where did you go hiking on Saturday?', this, 'female')"></button><span class="spoken" data-cn="你週六去哪裡遠足了？" data-cn-s="你周六去哪里远足了？">"Where did you go hiking on Saturday?"</span></span><br>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('What kind of music do you play?', this, 'female')"></button><span class="spoken" data-cn="你彈什麼類型的音樂？" data-cn-s="你弹什么类型的音乐？">"What kind of music do you play?"</span></span>
           </td>
-          <td data-cn="降調（↘）">Falling (↘)</td>
+          <td data-cn="降調（↘）" data-cn-s="降调（↘）">Falling (↘)</td>
         </tr>
         <tr>
-          <td data-cn="是非題">Yes/No Question</td>
+          <td data-cn="是非題" data-cn-s="是非题">Yes/No Question</td>
           <td>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('Do you enjoy spending time outdoors?', this, 'female')"></button><span class="spoken" data-cn="你喜歡在戶外度過時光嗎？">"Do you enjoy spending time outdoors?"</span></span><br>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('Have you read any good books lately?', this, 'female')"></button><span class="spoken" data-cn="你最近有看什麼好書嗎？">"Have you read any good books lately?"</span></span>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('Do you enjoy spending time outdoors?', this, 'female')"></button><span class="spoken" data-cn="你喜歡在戶外度過時光嗎？" data-cn-s="你喜欢在户外度过时光吗？">"Do you enjoy spending time outdoors?"</span></span><br>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('Have you read any good books lately?', this, 'female')"></button><span class="spoken" data-cn="你最近有看什麼好書嗎？" data-cn-s="你最近有看什么好书吗？">"Have you read any good books lately?"</span></span>
           </td>
-          <td data-cn="升調（↗）">Rising (↗)</td>
+          <td data-cn="升調（↗）" data-cn-s="升调（↗）">Rising (↗)</td>
         </tr>
         <tr>
-          <td data-cn="附加問句">Question Tag</td>
+          <td data-cn="附加問句" data-cn-s="附加问句">Question Tag</td>
           <td>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('It is a really relaxing hobby... isn\\'t it?', this, 'female')"></button><span class="spoken" data-cn="這是一個非常放鬆的興趣，對吧？">"It's a really relaxing hobby, isn't it?"</span></span><br>
-            <span class="utterance"><button class="btn-icon" onclick="speakText('You do not play tennis... do you?', this, 'female')"></button><span class="spoken" data-cn="你不打網球，對吧？">"You don't play tennis, do you?"</span></span>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('It is a really relaxing hobby... isn\\'t it?', this, 'female')"></button><span class="spoken" data-cn="這是一個非常放鬆的興趣，對吧？" data-cn-s="这是一个非常放松的兴趣，对吧？">"It's a really relaxing hobby, isn't it?"</span></span><br>
+            <span class="utterance"><button class="btn-icon" onclick="speakText('You do not play tennis... do you?', this, 'female')"></button><span class="spoken" data-cn="你不打網球，對吧？" data-cn-s="你不打网球，对吧？">"You don't play tennis, do you?"</span></span>
           </td>
-          <td data-cn="↘ 同意 / ↗ 詢問">↘ Agree / ↗ Ask</td>
+          <td data-cn="↘ 同意 / ↗ 詢問" data-cn-s="↘ 同意 / ↗ 询问">↘ Agree / ↗ Ask</td>
         </tr>
       </table>
             </div>
@@ -1277,27 +1320,27 @@ table.reminder-table td {
       
       <div class="accordion-item">
         <button class="accordion-header">
-          <span data-cn="5. 轉換話題和推薦消遣">5. Transitioning & Recommending Pastimes</span>
+          <span data-cn="5. 轉換話題和推薦消遣" data-cn-s="5. 转换话题和推荐消遣">5. Transitioning & Recommending Pastimes</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
           <div class="accordion-content-inner">
             <div class="task-section">
       <div class="task-box">
-        <p><strong data-cn="「說到[消遣]……">"Speaking of [pastime]..."</strong></strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Speaking of outdoor activities, have you ever hiked the Dragons Back trail?', this)"></button><span class="spoken" data-cn="說到戶外活動，你爬過龍脊嗎？">"Speaking of outdoor activities, have you ever hiked the Dragon's Back trail?"</span></span></p>
+        <p><strong data-cn="「說到[消遣]……" data-cn-s="「说到[消遣]……">"Speaking of [pastime]..."</strong></strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Speaking of outdoor activities, have you ever hiked the Dragons Back trail?', this)"></button><span class="spoken" data-cn="說到戶外活動，你爬過龍脊嗎？" data-cn-s="说到户外活动，你爬过龙脊吗？">"Speaking of outdoor activities, have you ever hiked the Dragon's Back trail?"</span></span></p>
       </div>
       <div class="task-box">
-        <p><strong data-cn="「順便說一下……">"By the way..."</strong></strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('By the way, there is an art exhibition at the cultural museum this weekend that looks fun.', this)"></button><span class="spoken" data-cn="順便說一下，這個週末文化博物館有一場看起來很有趣的藝術展覽。">"By the way, there's an art exhibition at the cultural museum this weekend that looks fun."</span></span></p>
+        <p><strong data-cn="「順便說一下……" data-cn-s="「顺便说一下……">"By the way..."</strong></strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('By the way, there is an art exhibition at the cultural museum this weekend that looks fun.', this)"></button><span class="spoken" data-cn="順便說一下，這個週末文化博物館有一場看起來很有趣的藝術展覽。" data-cn-s="顺便说一下，这个周末文化博物馆有一场看起来很有趣的艺术展览。">"By the way, there's an art exhibition at the cultural museum this weekend that looks fun."</span></span></p>
       </div>
       <div class="task-box">
-        <p><strong data-cn="「那讓我想起……">"That reminds me..."</strong></strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That reminds me, I have been wanting to try bouldering. Do you know any good climbing gyms?', this)"></button><span class="spoken" data-cn="那讓我想起，我一直想嘗試攀岩。你知道有什麼好的攀岩館嗎？">"That reminds me, I've been wanting to try bouldering. Do you know any good climbing gyms?"</span></span></p>
+        <p><strong data-cn="「那讓我想起……" data-cn-s="「那让我想起……">"That reminds me..."</strong></strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That reminds me, I have been wanting to try bouldering. Do you know any good climbing gyms?', this)"></button><span class="spoken" data-cn="那讓我想起，我一直想嘗試攀岩。你知道有什麼好的攀岩館嗎？" data-cn-s="那让我想起，我一直想尝试攀岩。你知道有什么好的攀岩馆吗？">"That reminds me, I've been wanting to try bouldering. Do you know any good climbing gyms?"</span></span></p>
       </div>
       <div class="task-box">
-        <p><strong data-cn="量身推薦：">Tailored Suggestion:</strong></p>
-        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('If you like strategy games, you would really love Catan. It is so engaging!', this)"></button><span class="spoken" data-cn="如果你喜歡策略遊戲，你一定會喜歡卡坦島。它非常引人入勝！">"If you like strategy games, you'd really love Catan—it's so engaging!"</span></span></p>
+        <p><strong data-cn="量身推薦：" data-cn-s="量身推荐：">Tailored Suggestion:</strong></p>
+        <p class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('If you like strategy games, you would really love Catan. It is so engaging!', this)"></button><span class="spoken" data-cn="如果你喜歡策略遊戲，你一定會喜歡卡坦島。它非常引人入勝！" data-cn-s="如果你喜欢策略游戏，你一定会喜欢卡坦岛。它非常引人入胜！">"If you like strategy games, you'd really love Catan—it's so engaging!"</span></span></p>
       </div>
             </div>
           </div>
@@ -1306,15 +1349,15 @@ table.reminder-table td {
       
       <div class="accordion-item">
         <button class="accordion-header">
-          <span data-cn="6. 禮貌地結束對話">6. Ending the Conversation Politely</span>
+          <span data-cn="6. 禮貌地結束對話" data-cn-s="6. 礼貌地结束对话">6. Ending the Conversation Politely</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
           <div class="accordion-content-inner">
             <div class="task-section">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('It was great chatting about your hiking trips! We should organize a hike together sometime.', this)"></button><span class="spoken" data-cn="很高興聊到你的遠足旅行！我們應該找個時間一起組織一次遠足。">"It was great chatting about your hiking trips! We should organize a hike together sometime."</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I would love to chat more about your photography, but I have got to run to my next meeting. Catch you later!', this)"></button><span class="spoken" data-cn="我很想再多聊聊你的攝影，但我得去開下一個會議了。回頭見！">"I'd love to chat more about your photography, but I've got to run to my next meeting. Catch you later!"</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Well, it was lovely catching up. Have a great weekend enjoying your guitar practice!', this)"></button><span class="spoken" data-cn="嗯，很高兴能聊聊天。祝你週末愉快，享受你的吉他練習！">"Well, it was lovely catching up. Have a great weekend enjoying your guitar practice!"</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('It was great chatting about your hiking trips! We should organize a hike together sometime.', this)"></button><span class="spoken" data-cn="很高興聊到你的遠足旅行！我們應該找個時間一起組織一次遠足。" data-cn-s="很高兴聊到你的远足旅行！我们应该找个时间一起组织一次远足。">"It was great chatting about your hiking trips! We should organize a hike together sometime."</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I would love to chat more about your photography, but I have got to run to my next meeting. Catch you later!', this)"></button><span class="spoken" data-cn="我很想再多聊聊你的攝影，但我得去開下一個會議了。回頭見！" data-cn-s="我很想再多聊聊你的摄影，但我得去开下一个会议了。回头见！">"I'd love to chat more about your photography, but I've got to run to my next meeting. Catch you later!"</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Well, it was lovely catching up. Have a great weekend enjoying your guitar practice!', this)"></button><span class="spoken" data-cn="嗯，很高兴能聊聊天。祝你週末愉快，享受你的吉他練習！" data-cn-s="嗯，很高兴能聊聊天。祝你周末愉快，享受你的吉他练习！">"Well, it was lovely catching up. Have a great weekend enjoying your guitar practice!"</span></span></div>
             </div>
           </div>
         </div>
@@ -1322,7 +1365,7 @@ table.reminder-table td {
       
       <div class="accordion-item">
         <button class="accordion-header">
-          <span data-cn="7. 精簡詞彙與目標形容詞庫">7. Compact Vocabulary & Target Adjectives Bank</span>
+          <span data-cn="7. 精簡詞彙與目標形容詞庫" data-cn-s="7. 精简词汇与目标形容词库">7. Compact Vocabulary & Target Adjectives Bank</span>
           <span class="accordion-icon">+</span>
         </button>
         <div class="accordion-content">
@@ -1373,79 +1416,79 @@ table.reminder-table td {
   <!-- ================= Lesson 2 Activity: Describing a Hobby ================= -->
   <div class="tab-content" id="tab-1">
     <span class="part-badge">Lesson 2 Activity</span>
-    <h1 data-cn="描述興趣或消遣活動">Describing a Hobby or Leisure Activity</h1>
+    <h1 data-cn="描述興趣或消遣活動" data-cn-s="描述兴趣或消遣活动">Describing a Hobby or Leisure Activity</h1>
 
     <div class="char-card">
       <div>
-        <div class="char-caption" data-cn="寫30-50個字描述你最喜歡的興趣">Write 30-50 words to describe your favourite hobby</div>
-        <p style="color:#555;" data-cn="使用形容詞豐富你的描述。所有描述性形容詞都已<u>底線標示</u>，以展示如何豐富你的寫作。">Use adjectives to enrich your description. All descriptive adjectives in the model samples are <u>highlighted</u> to demonstrate how to enrich your writing.</p>
+        <div class="char-caption" data-cn="寫30-50個字描述你最喜歡的興趣" data-cn-s="写30-50个字描述你最喜欢的兴趣">Write 30-50 words to describe your favourite hobby</div>
+        <p style="color:#555;" data-cn="使用形容詞豐富你的描述。所有描述性形容詞都已<u>底線標示</u>，以展示如何豐富你的寫作。" data-cn-s="使用形容词丰富你的描述。所有描述性形容词都已<u>底线标示</u>，以展示如何丰富你的写作。">Use adjectives to enrich your description. All descriptive adjectives in the model samples are <u>highlighted</u> to demonstrate how to enrich your writing.</p>
       </div>
     </div>
 
     <div class="task-box">
-      <p><strong data-cn="說明：">Instructions:</strong></p>
+      <p><strong data-cn="說明：" data-cn-s="说明：">Instructions:</strong></p>
       <ul style="padding-left:20px;">
-        <li data-cn="寫30-50個字談談你最喜歡的興趣、消遣活動或嗜好。">Write 30-50 words to talk about your favourite hobby, leisure activity, or pastime.</li>
-        <li data-cn="你可以虛構資訊或引用你的真实經驗。">You can make up information or quote your real experience.</li>
-        <li data-cn="使用列表中的形容詞：active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating。">Use adjectives from the list: <em>active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating</em>.</li>
-        <li data-cn="使用以下範本作為參考。">Use the samples below to help you.</li>
+        <li data-cn="寫30-50個字談談你最喜歡的興趣、消遣活動或嗜好。" data-cn-s="写30-50个字谈谈你最喜欢的兴趣、消遣活动或嗜好。">Write 30-50 words to talk about your favourite hobby, leisure activity, or pastime.</li>
+        <li data-cn="你可以虛構資訊或引用你的真实經驗。" data-cn-s="你可以虚构信息或引用你的真实经验。">You can make up information or quote your real experience.</li>
+        <li data-cn="使用列表中的形容詞：active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating。" data-cn-s="使用列表中的形容词：active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating。">Use adjectives from the list: <em>active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating</em>.</li>
+        <li data-cn="使用以下範本作為參考。" data-cn-s="使用以下范本作为参考。">Use the samples below to help you.</li>
       </ul>
     </div>
 
-    <h2 data-cn="範本">Model Samples</h2>
+    <h2 data-cn="範本" data-cn-s="范本">Model Samples</h2>
 
-    <h3 data-cn="1. 遠足／鄉村步行">1. Hiking / Countryside Walking</h3>
+    <h3 data-cn="1. 遠足／鄉村步行" data-cn-s="1. 远足／乡村步行">1. Hiking / Countryside Walking</h3>
     <img src="https://images.unsplash.com/photo-1762375212814-21dfcb0bfb38?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hiking" class="hobby-img" loading="lazy">
     <div class="task-box">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Hiking in the countryside is my absolute favourite pastime because it is both refreshing and peaceful. Last Saturday, I hiked the Dragons Back trail. The coastal views were breathtaking, and the cool mountain air was truly invigorating. It is a fantastic way to unwind after a busy week.', this)"></button><span class="spoken" data-cn="在鄉村遠足是我最喜歡的消遣，因為它既清爽又寧靜。上週六，我爬了龍脊。海岸景色令人嘆為觀止，涼爽的山間空氣確實令人振奮。這是忙碌一週後放鬆的好方法。">Hiking in the countryside is my absolute favourite pastime because it is both <u>refreshing</u> and <u>peaceful</u>. Last Saturday, I hiked the Dragon's Back trail. The coastal views were <u>breathtaking</u>, and the cool mountain air was truly <u>invigorating</u>. It is a <u>fantastic</u> way to unwind after a busy week.</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Hiking in the countryside is my absolute favourite pastime because it is both refreshing and peaceful. Last Saturday, I hiked the Dragons Back trail. The coastal views were breathtaking, and the cool mountain air was truly invigorating. It is a fantastic way to unwind after a busy week.', this)"></button><span class="spoken" data-cn="在鄉村遠足是我最喜歡的消遣，因為它既清爽又寧靜。上週六，我爬了龍脊。海岸景色令人嘆為觀止，涼爽的山間空氣確實令人振奮。這是忙碌一週後放鬆的好方法。" data-cn-s="在乡村远足是我最喜欢的消遣，因为它既清爽又宁静。上周六，我爬了龙脊。海岸景色令人叹为观止，凉爽的山间空气确实令人振奋。这是忙碌一周后放松的好方法。">Hiking in the countryside is my absolute favourite pastime because it is both <u>refreshing</u> and <u>peaceful</u>. Last Saturday, I hiked the Dragon's Back trail. The coastal views were <u>breathtaking</u>, and the cool mountain air was truly <u>invigorating</u>. It is a <u>fantastic</u> way to unwind after a busy week.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(48 words)</p>
     </div>
 
-    <h3 data-cn="2. 街頭攝影">2. Street Photography</h3>
+    <h3 data-cn="2. 街頭攝影" data-cn-s="2. 街头摄影">2. Street Photography</h3>
     <img src="https://images.unsplash.com/photo-1756673737035-5203ea23b4e7?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Street Photography" class="hobby-img" loading="lazy">
     <div class="task-box">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I took up street photography last year, and it has been an incredibly creative and fulfilling hobby. Exploring vibrant city streets with my camera is always fascinating. Capturing candid moments makes the whole pastime deeply rewarding and memorable.', this)"></button><span class="spoken" data-cn="我去年開始學街頭攝影，這一直是一個非常有創造力和成就感的興趣。帶著相機探索充滿活力的城市街道總是令人著迷。捕捉自然的時刻使整個消遣活動非常有回報和難忘。">I took up street photography last year, and it has been an incredibly <u>creative</u> and <u>fulfilling</u> hobby. Exploring <u>vibrant</u> city streets with my camera is always <u>fascinating</u>. Capturing candid moments makes the whole pastime deeply <u>rewarding</u> and <u>memorable</u>.</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I took up street photography last year, and it has been an incredibly creative and fulfilling hobby. Exploring vibrant city streets with my camera is always fascinating. Capturing candid moments makes the whole pastime deeply rewarding and memorable.', this)"></button><span class="spoken" data-cn="我去年開始學街頭攝影，這一直是一個非常有創造力和成就感的興趣。帶著相機探索充滿活力的城市街道總是令人著迷。捕捉自然的時刻使整個消遣活動非常有回報和難忘。" data-cn-s="我去年开始学街头摄影，这一直是一个非常有创造力和成就感的兴趣。带着相机探索充满活力的城市街道总是令人着迷。捕捉自然的时刻使整个消遣活动非常有回报和难忘。">I took up street photography last year, and it has been an incredibly <u>creative</u> and <u>fulfilling</u> hobby. Exploring <u>vibrant</u> city streets with my camera is always <u>fascinating</u>. Capturing candid moments makes the whole pastime deeply <u>rewarding</u> and <u>memorable</u>.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(40 words)</p>
     </div>
 
-    <h3 data-cn="3. 木吉他">3. Acoustic Guitar</h3>
+    <h3 data-cn="3. 木吉他" data-cn-s="3. 木吉他">3. Acoustic Guitar</h3>
     <img src="https://images.unsplash.com/photo-1564576605444-ad082633c14d?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Acoustic Guitar" class="hobby-img" loading="lazy">
     <div class="task-box">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Playing the acoustic guitar is a deeply calming and therapeutic pastime for me. After a hectic day, practicing simple fingerpicking songs feels very soothing. Learning new chords is sometimes challenging, but mastering a complete song is immensely satisfying.', this)"></button><span class="spoken" data-cn="彈木吉他對我來說是一個非常 calm 和療癒的消遣。在忙碌的一天後，練習簡單的指彈歌曲感覺非常舒緩。學習新和弦有時很有挑戰性，但掌握一首完整的歌曲會帶來巨大的滿足感。">Playing the acoustic guitar is a deeply <u>calming</u> and <u>therapeutic</u> pastime for me. After a hectic day, practicing simple fingerpicking songs feels very <u>soothing</u>. Learning new chords is sometimes <u>challenging</u>, but mastering a complete song is immensely <u>satisfying</u>.</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Playing the acoustic guitar is a deeply calming and therapeutic pastime for me. After a hectic day, practicing simple fingerpicking songs feels very soothing. Learning new chords is sometimes challenging, but mastering a complete song is immensely satisfying.', this)"></button><span class="spoken" data-cn="彈木吉他對我來說是一個非常 calm 和療癒的消遣。在忙碌的一天後，練習簡單的指彈歌曲感覺非常舒緩。學習新和弦有時很有挑戰性，但掌握一首完整的歌曲會帶來巨大的滿足感。" data-cn-s="弹木吉他对我来说是一个非常 calm 和疗愈的消遣。在忙碌的一天后，练习简单的指弹歌曲感觉非常舒缓。学习新和弦有时很有挑战性，但掌握一首完整的歌曲会带来巨大的满足感。">Playing the acoustic guitar is a deeply <u>calming</u> and <u>therapeutic</u> pastime for me. After a hectic day, practicing simple fingerpicking songs feels very <u>soothing</u>. Learning new chords is sometimes <u>challenging</u>, but mastering a complete song is immensely <u>satisfying</u>.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(40 words)</p>
     </div>
 
-    <h3 data-cn="4. 早晨瑜伽">4. Morning Yoga</h3>
+    <h3 data-cn="4. 早晨瑜伽" data-cn-s="4. 早晨瑜伽">4. Morning Yoga</h3>
     <img src="https://images.unsplash.com/photo-1767611118992-b300c4fb4bee?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Morning Yoga" class="hobby-img" loading="lazy">
     <div class="task-box">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I practice yoga four mornings a week. It is an enjoyable and restorative activity that keeps me physically flexible and mentally focused. The gentle stretches are remarkably calming, providing an energizing boost before work.', this)"></button><span class="spoken" data-cn="我每週四個早晨練習瑜伽。這是一種令人愉快且恢復活力的活動，讓我保持身體靈活和精神集中。溫和的伸展運動非常 calm，為工作前提供振奮的能量。">I practice yoga four mornings a week. It is an <u>enjoyable</u> and <u>restorative</u> activity that keeps me physically flexible and mentally focused. The gentle stretches are remarkably <u>calming</u>, providing an <u>energizing</u> boost before work.</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I practice yoga four mornings a week. It is an enjoyable and restorative activity that keeps me physically flexible and mentally focused. The gentle stretches are remarkably calming, providing an energizing boost before work.', this)"></button><span class="spoken" data-cn="我每週四個早晨練習瑜伽。這是一種令人愉快且恢復活力的活動，讓我保持身體靈活和精神集中。溫和的伸展運動非常 calm，為工作前提供振奮的能量。" data-cn-s="我每周四个早晨练习瑜伽。这是一种令人愉快且恢复活力的活动，让我保持身体灵活和精神集中。温和的伸展运动非常 calm，为工作前提供振奋的能量。">I practice yoga four mornings a week. It is an <u>enjoyable</u> and <u>restorative</u> activity that keeps me physically flexible and mentally focused. The gentle stretches are remarkably <u>calming</u>, providing an <u>energizing</u> boost before work.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(41 words)</p>
     </div>
 
-    <h3 data-cn="5. 桌遊">5. Board Gaming</h3>
+    <h3 data-cn="5. 桌遊" data-cn-s="5. 桌游">5. Board Gaming</h3>
     <img src="https://images.unsplash.com/photo-1661114544971-0aee18c148d4?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Board Gaming" class="hobby-img" loading="lazy">
     <div class="task-box">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Hosting board game nights with my friends is my favourite social pastime. It is always lively, entertaining, and full of laughter. We especially enjoy strategy games because they are intellectually stimulating and engaging. It is a wonderful way to connect.', this)"></button><span class="spoken" data-cn="和朋友舉辦桌遊之夜是我最喜歡的社交消遣。它總是充滿活力、娛樂性和歡笑。我們特別喜歡策略遊戲，因為它們在智力上引人入勝且引人入勝。這是聯繫感情的好方法。">Hosting board game nights with my friends is my favourite social pastime. It is always <u>lively</u>, <u>entertaining</u>, and full of laughter. We especially enjoy strategy games because they are intellectually <u>stimulating</u> and <u>engaging</u>. It is a <u>wonderful</u> way to connect.</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Hosting board game nights with my friends is my favourite social pastime. It is always lively, entertaining, and full of laughter. We especially enjoy strategy games because they are intellectually stimulating and engaging. It is a wonderful way to connect.', this)"></button><span class="spoken" data-cn="和朋友舉辦桌遊之夜是我最喜歡的社交消遣。它總是充滿活力、娛樂性和歡笑。我們特別喜歡策略遊戲，因為它們在智力上引人入勝且引人入勝。這是聯繫感情的好方法。" data-cn-s="和朋友举办桌游之夜是我最喜欢的社交消遣。它总是充满活力、娱乐性和欢笑。我们特别喜欢策略游戏，因为它们在智力上引人入胜且引人入胜。这是联系感情的好方法。">Hosting board game nights with my friends is my favourite social pastime. It is always <u>lively</u>, <u>entertaining</u>, and full of laughter. We especially enjoy strategy games because they are intellectually <u>stimulating</u> and <u>engaging</u>. It is a <u>wonderful</u> way to connect.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(41 words)</p>
     </div>
 
-    <h3 data-cn="6. 手工烘焙">6. Artisanal Baking</h3>
+    <h3 data-cn="6. 手工烘焙" data-cn-s="6. 手工烘焙">6. Artisanal Baking</h3>
     <img src="https://images.unsplash.com/photo-1767065888075-59d3bf3f02d1?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Artisanal Baking" class="hobby-img" loading="lazy">
     <div class="task-box">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Baking sourdough bread on Sunday mornings is a delightful and hands-on hobby. Kneading dough is surprisingly therapeutic, and the aroma from the oven is completely mouthwatering. Sharing warm, crispy loaves with family makes it an exceptionally gratifying pastime.', this)"></button><span class="spoken" data-cn="在週日早晨烤酸麵團麵包是一個令人愉快且親自動手的興趣。揉麵團非常療発，烤箱散發的香氣非常令人垂涎。與家人分享溫暖、酥脆的麵包使它成為一種非常令人滿意的消遣。">Baking sourdough bread on Sunday mornings is a <u>delightful</u> and <u>hands-on</u> hobby. Kneading dough is surprisingly <u>therapeutic</u>, and the aroma from the oven is completely <u>mouthwatering</u>. Sharing warm, crispy loaves with family makes it an exceptionally <u>gratifying</u> pastime.</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Baking sourdough bread on Sunday mornings is a delightful and hands-on hobby. Kneading dough is surprisingly therapeutic, and the aroma from the oven is completely mouthwatering. Sharing warm, crispy loaves with family makes it an exceptionally gratifying pastime.', this)"></button><span class="spoken" data-cn="在週日早晨烤酸麵團麵包是一個令人愉快且親自動手的興趣。揉麵團非常療発，烤箱散發的香氣非常令人垂涎。與家人分享溫暖、酥脆的麵包使它成為一種非常令人滿意的消遣。" data-cn-s="在周日早晨烤酸面团面包是一个令人愉快且亲自动手的兴趣。揉面团非常疗発，烤箱散发的香气非常令人垂涎。与家人分享温暖、酥脆的面包使它成为一种非常令人满意的消遣。">Baking sourdough bread on Sunday mornings is a <u>delightful</u> and <u>hands-on</u> hobby. Kneading dough is surprisingly <u>therapeutic</u>, and the aroma from the oven is completely <u>mouthwatering</u>. Sharing warm, crispy loaves with family makes it an exceptionally <u>gratifying</u> pastime.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(41 words)</p>
     </div>
 
-    <h3 data-cn="7. 長跑">7. Distance Running</h3>
+    <h3 data-cn="7. 長跑" data-cn-s="7. 长跑">7. Distance Running</h3>
     <img src="https://images.unsplash.com/photo-1760464907224-0a1dda1596b9?fm=jpg&q=60&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Distance Running" class="hobby-img" loading="lazy">
     <div class="task-box">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I have been training for a 10-kilometer race, which is an active and exhilarating sport. Although long-distance training can be physically demanding and exhausting, crossing the finish line feels completely triumphant and empowering.', this)"></button><span class="spoken" data-cn="我一直在為10公里比賽訓練，這是一項活躍且令人振奮的運動。雖然長跑訓練在體力上要求很高且令人筋疲力盡，但衝過終點線的感覺完全勝利和振奮。">I have been training for a 10-kilometer race, which is an <u>active</u> and <u>exhilarating</u> sport. Although long-distance training can be physically <u>demanding</u> and <u>exhausting</u>, crossing the finish line feels completely <u>triumphant</u> and <u>empowering</u>.</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I have been training for a 10-kilometer race, which is an active and exhilarating sport. Although long-distance training can be physically demanding and exhausting, crossing the finish line feels completely triumphant and empowering.', this)"></button><span class="spoken" data-cn="我一直在為10公里比賽訓練，這是一項活躍且令人振奮的運動。雖然長跑訓練在體力上要求很高且令人筋疲力盡，但衝過終點線的感覺完全勝利和振奮。" data-cn-s="我一直在为10公里比赛训练，这是一项活跃且令人振奋的运动。虽然长跑训练在体力上要求很高且令人筋疲力尽，但冲过终点线的感觉完全胜利和振奋。">I have been training for a 10-kilometer race, which is an <u>active</u> and <u>exhilarating</u> sport. Although long-distance training can be physically <u>demanding</u> and <u>exhausting</u>, crossing the finish line feels completely <u>triumphant</u> and <u>empowering</u>.</span></span></div>
       <p style="color:#888; font-size:13px; margin-top:4px;">(39 words)</p>
     </div>
 
-    <h2 data-cn="口頭練習">Oral Practice</h2>
+    <h2 data-cn="口頭練習" data-cn-s="口头练习">Oral Practice</h2>
     <div class="task-box">
-      <p><strong data-cn="在下面寫下你自己的30-50字描述。記得用底線標示你的形容詞！然後，結對練習，輪流告訴搭檔你的興趣或消遣活動。">Write your own 30-50 word description below. Remember to highlight and underline your adjectives! Then, work in pairs and take turns to tell your partner your hobby or leisure activity.</strong></p>
+      <p><strong data-cn="在下面寫下你自己的30-50字描述。記得用底線標示你的形容詞！然後，結對練習，輪流告訴搭檔你的興趣或消遣活動。" data-cn-s="在下面写下你自己的30-50字描述。记得用底线标示你的形容词！然后，结对练习，轮流告诉搭档你的兴趣或消遣活动。">Write your own 30-50 word description below. Remember to highlight and underline your adjectives! Then, work in pairs and take turns to tell your partner your hobby or leisure activity.</strong></p>
       <div contenteditable="true" style="min-height:120px; border:1px dashed #9370db; border-radius:8px; padding:12px; margin-top:10px; background:#faf5ff; outline:none;" data-ph="Write your description here..."></div>
     </div>
   </div>
@@ -1453,226 +1496,226 @@ table.reminder-table td {
   <!-- ================= Lesson 3: Work Projects ================= -->
   <div class="tab-content" id="tab-2">
     <span class="part-badge">Lesson 3</span>
-    <h1 data-cn="閒聊部門項目">Small talk on Department Projects</h1>
+    <h1 data-cn="閒聊部門項目" data-cn-s="闲聊部门项目">Small talk on Department Projects</h1>
 
-    <h2 data-cn="三個階段的時態">Three stages — use the correct tenses</h2>
+    <h2 data-cn="三個階段的時態" data-cn-s="三个阶段的时态">Three stages — use the correct tenses</h2>
     <table class="words tenses">
       <tr>
-        <th data-cn="時態">Tense</th>
-        <th data-cn="功能">Function</th>
-        <th data-cn="形式">Form</th>
+        <th data-cn="時態" data-cn-s="时态">Tense</th>
+        <th data-cn="功能" data-cn-s="功能">Function</th>
+        <th data-cn="形式" data-cn-s="形式">Form</th>
       </tr>
       <tr>
-        <td><strong data-cn="現在完成式">Present perfect</strong></td>
-        <td data-cn="描述最近已完成的事情">To describe what has been completed recently</td>
+        <td><strong data-cn="現在完成式" data-cn-s="现在完成式">Present perfect</strong></td>
+        <td data-cn="描述最近已完成的事情" data-cn-s="描述最近已完成的事情">To describe what has been completed recently</td>
         <td>Have/has + past participle verb</td>
       </tr>
       <tr>
-        <td><strong data-cn="現在進行式">Present continuous</strong></td>
-        <td data-cn="描述正在發生的事情">To describe what is happening now</td>
+        <td><strong data-cn="現在進行式" data-cn-s="现在进行式">Present continuous</strong></td>
+        <td data-cn="描述正在發生的事情" data-cn-s="描述正在发生的事情">To describe what is happening now</td>
         <td>Am/is/are + present participle verb</td>
       </tr>
       <tr>
-        <td><strong data-cn="未來式">Future tense</strong></td>
-        <td data-cn="描述將來會發生的事情">To describe what will happen</td>
+        <td><strong data-cn="未來式" data-cn-s="未来式">Future tense</strong></td>
+        <td data-cn="描述將來會發生的事情" data-cn-s="描述将来会发生的事情">To describe what will happen</td>
         <td>Will + base form of verb</td>
       </tr>
     </table>
 
-    <h2 data-cn="實用搭配詞">Useful Collocations</h2>
+    <h2 data-cn="實用搭配詞" data-cn-s="实用搭配词">Useful Collocations</h2>
 
-    <h3 data-cn="Healthfirst Medical (CA Practice 2)">Healthfirst Medical (CA Practice 2)</h3>
+    <h3 data-cn="Healthfirst Medical (CA Practice 2)" data-cn-s="Healthfirst Medical (CA Practice 2)">Healthfirst Medical (CA Practice 2)</h3>
     <div class="task-section">
       <table class="words stacked">
-        <tr><th data-cn="搭配詞">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="發起活動">launch (v.) campaigns (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="推廣流動健康診所">promote (v.) mobile health clinics (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與社區中心合作">partner (v.) with community centres (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="整合排程系統">integrated (v.) a scheduling system (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="審查會員的意見">reviewed (v.) members' opinions (n.)</span></td></tr>
+        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
+        <tr><td><span class="cn-word" data-cn="發起活動" data-cn-s="发起活动">launch (v.) campaigns (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="推廣流動健康診所" data-cn-s="推广流动健康诊所">promote (v.) mobile health clinics (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="與社區中心合作" data-cn-s="与社区中心合作">partner (v.) with community centres (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="整合排程系統" data-cn-s="集成调度系统">integrated (v.) a scheduling system (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="審查會員的意見" data-cn-s="审查会员的意见">reviewed (v.) members' opinions (n.)</span></td></tr>
       </table>
     </div>
 
-    <h3 data-cn="Boost Health Fitness Centre (CA Practice 1)">Boost Health Fitness Centre (CA Practice 1)</h3>
+    <h3 data-cn="Boost Health Fitness Centre (CA Practice 1)" data-cn-s="Boost Health Fitness Centre (CA Practice 1)">Boost Health Fitness Centre (CA Practice 1)</h3>
     <div class="task-section">
       <table class="words stacked">
-        <tr><th data-cn="搭配詞">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="儲備補充品">stock (v.) supplements (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與健身方面有影響力的人合作">team (v.) up with fitness influencers (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="擴展產品範圍">expand (v.) the product range (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="推出自動售貨機">launch (v.) a vending machine (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="制定線上推廣計劃">develop (v.) an online promotional plan (n.)</span></td></tr>
+        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
+        <tr><td><span class="cn-word" data-cn="儲備補充品" data-cn-s="储备补充品">stock (v.) supplements (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="與健身方面有影響力的人合作" data-cn-s="与健身方面有影响力的人合作">team (v.) up with fitness influencers (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="擴展產品範圍" data-cn-s="扩展产品范围">expand (v.) the product range (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="推出自動售貨機" data-cn-s="推出自动售货机">launch (v.) a vending machine (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="制定線上推廣計劃" data-cn-s="制定在线推广计划">develop (v.) an online promotional plan (n.)</span></td></tr>
       </table>
     </div>
 
-    <h3 data-cn="DILWL — Online Media HK (Practice 1)">DILWL — Online Media HK (Practice 1)</h3>
+    <h3 data-cn="DILWL — Online Media HK (Practice 1)" data-cn-s="DILWL — Online Media HK (Practice 1)">DILWL — Online Media HK (Practice 1)</h3>
     <div class="task-section">
       <table class="words stacked">
-        <tr><th data-cn="搭配詞">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="設計冬季系列">designing (v.) the winter collection (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="改善公司的網站">revamping (v.) the company's website (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="開發線上購物應用程式">developing (v.) a mobile app for online shopping (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與品牌合作舉辦活動">collaborating (v.) with brands for events (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="確定設計">finalizing (v.) designs (n.)</span></td></tr>
+        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
+        <tr><td><span class="cn-word" data-cn="設計冬季系列" data-cn-s="设计冬季系列">designing (v.) the winter collection (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="改善公司的網站" data-cn-s="改善公司的网站">revamping (v.) the company's website (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="開發線上購物應用程式" data-cn-s="开发在线购物应用程序">developing (v.) a mobile app for online shopping (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="與品牌合作舉辦活動" data-cn-s="与品牌合作举办活动">collaborating (v.) with brands for events (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="確定設計" data-cn-s="确定设计">finalizing (v.) designs (n.)</span></td></tr>
       </table>
     </div>
 
-    <h3 data-cn="DILWL — Topsy Company (Practice 2)">DILWL — Topsy Company (Practice 2)</h3>
+    <h3 data-cn="DILWL — Topsy Company (Practice 2)" data-cn-s="DILWL — Topsy Company (Practice 2)">DILWL — Topsy Company (Practice 2)</h3>
     <div class="task-section">
       <table class="words stacked">
-        <tr><th data-cn="搭配詞">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="與關鍵意見領袖合作">engaging (v.) key opinion leaders (KOL) (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="加強內部溝通渠道">enhancing (v.) internal communication channels (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="識別減少紙張使用的領域">identifying (v.) areas to reduce paper usage (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="推出適合移動設備的界面">launching (v.) a mobile-friendly interface (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="進行樣品試穿">conducting (v.) fittings for prototypes (n.)</span></td></tr>
+        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
+        <tr><td><span class="cn-word" data-cn="與關鍵意見領袖合作" data-cn-s="与关键意见领袖合作">engaging (v.) key opinion leaders (KOL) (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="加強內部溝通渠道" data-cn-s="加强内部沟通渠道">enhancing (v.) internal communication channels (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="識別減少紙張使用的領域" data-cn-s="识别减少纸张使用的领域">identifying (v.) areas to reduce paper usage (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="推出適合移動設備的界面" data-cn-s="推出适合移动设备的界面">launching (v.) a mobile-friendly interface (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="進行樣品試穿" data-cn-s="进行样品试穿">conducting (v.) fittings for prototypes (n.)</span></td></tr>
       </table>
     </div>
 
-    <h3 data-cn="DILWL — Active Sportswear (Practice 3)">DILWL — Active Sportswear (Practice 3)</h3>
+    <h3 data-cn="DILWL — Active Sportswear (Practice 3)" data-cn-s="DILWL — Active Sportswear (Practice 3)">DILWL — Active Sportswear (Practice 3)</h3>
     <div class="task-section">
       <table class="words stacked">
-        <tr><th data-cn="搭配詞">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="設計冬季系列">designing (v.) the winter collection (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="改善公司的網站">revamping (v.) the company's website (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="開發線上購物應用程式">developing (v.) a mobile app for online shopping (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與品牌合作舉辦活動">collaborating (v.) with brands for events (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="確定設計">finalizing (v.) designs (n.)</span></td></tr>
+        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
+        <tr><td><span class="cn-word" data-cn="設計冬季系列" data-cn-s="设计冬季系列">designing (v.) the winter collection (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="改善公司的網站" data-cn-s="改善公司的网站">revamping (v.) the company's website (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="開發線上購物應用程式" data-cn-s="开发在线购物应用程序">developing (v.) a mobile app for online shopping (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="與品牌合作舉辦活動" data-cn-s="与品牌合作举办活动">collaborating (v.) with brands for events (n.)</span></td></tr>
+        <tr><td><span class="cn-word" data-cn="確定設計" data-cn-s="确定设计">finalizing (v.) designs (n.)</span></td></tr>
       </table>
     </div>
 
-    <h2 data-cn="例子">Examples</h2>
+    <h2 data-cn="例子" data-cn-s="例子">Examples</h2>
 
-    <h3 data-cn="Healthfirst Medical">Healthfirst Medical</h3>
+    <h3 data-cn="Healthfirst Medical" data-cn-s="Healthfirst Medical">Healthfirst Medical</h3>
     <div class="task-box">
       <p><strong>Charlie Chan (A - Marketing Assistant) — Promoting mobile health clinics:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="到目前為止，我們已經在線上和本地社區發起了活動。目前，我們正在推廣流動健康診所。在未來幾個月，我們將與當地學校和社區中心合作，進一步推廣這些服務。">So far, we've launched campaigns both online and in the local community. Right now, we're promoting mobile health clinics. In the coming months, we will partner with local schools and community centres to promote these services even further.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="到目前為止，我們已經在線上和本地社區發起了活動。目前，我們正在推廣流動健康診所。在未來幾個月，我們將與當地學校和社區中心合作，進一步推廣這些服務。" data-cn-s="到目前为止，我们已经在在线和本地社区发起了活动。目前，我们正在推广流动健康诊所。在未来几个月，我们将与当地学校和社区中心合作，进一步推广这些服务。">So far, we've launched campaigns both online and in the local community. Right now, we're promoting mobile health clinics. In the coming months, we will partner with local schools and community centres to promote these services even further.</span></div>
     </div>
     <div class="task-box">
       <p><strong>Parker Leung (B - Operations Assistant) — Launching a new patient appointment scheduling system:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經將它與現有系統整合了。目前，我們正在培訓員工如何使用它。下個月，我們將使預約流程更加順暢。">We've already integrated it with our existing systems. Currently, we're training staff on how to use it. Next month, we will make the booking process much smoother for everyone.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們已經將它與現有系統整合了。目前，我們正在培訓員工如何使用它。下個月，我們將使預約流程更加順暢。" data-cn-s="我们已经将它与现有系统集成了。目前，我们正在培训员工如何使用它。下个月，我们将使预约流程更加顺畅。">We've already integrated it with our existing systems. Currently, we're training staff on how to use it. Next month, we will make the booking process much smoother for everyone.</span></div>
     </div>
 
-    <h3 data-cn="Boost Health Fitness Centre">Boost Health Fitness Centre</h3>
+    <h3 data-cn="Boost Health Fitness Centre" data-cn-s="Boost Health Fitness Centre">Boost Health Fitness Centre</h3>
     <div class="task-box">
       <p><strong>Alex Lam (A - Operations Assistant) — Installing a health products vending machine at the gym:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經審查了會員的意見，並儲備了補充品、蛋白棒和運動飲料。目前，我們正在健身房安裝自動售貨機。在未來幾個月，我們將擴展產品範圍，並在今年夏天底推出自動售貨機。">We've reviewed members' opinions and stocked it with supplements, protein bars, and sports drinks. Currently, we're installing the vending machine at the gym. In the coming months, we will expand our product range and launch the vending machine by the end of this summer.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們已經審查了會員的意見，並儲備了補充品、蛋白棒和運動飲料。目前，我們正在健身房安裝自動售貨機。在未來幾個月，我們將擴展產品範圍，並在今年夏天底推出自動售貨機。" data-cn-s="我们已经审查了会员的意见，并储备了补充品、蛋白棒和运动饮料。目前，我们正在健身房安装自动售货机。在未来几个月，我们将扩展产品范围，并在今年夏天底推出自动售货机。">We've reviewed members' opinions and stocked it with supplements, protein bars, and sports drinks. Currently, we're installing the vending machine at the gym. In the coming months, we will expand our product range and launch the vending machine by the end of this summer.</span></div>
     </div>
     <div class="task-box">
       <p><strong>Jacob Wong (B - Marketing Assistant) — Boosting gym membership:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經制定了一個線上推廣計劃來吸引新會員。目前，我們正在與當地健身方面有影響力的人合作。在未來幾個月，我們將推出「為夏天做好準備」社交媒體活動，以增加我們的健身會員。">We've developed an online promotional plan to attract new members. Currently, we're teaming up with local fitness influencers. In the coming months, we will launch a 'Get Ready for Summer' social media campaign to increase our gym membership.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們已經制定了一個線上推廣計劃來吸引新會員。目前，我們正在與當地健身方面有影響力的人合作。在未來幾個月，我們將推出「為夏天做好準備」社交媒體活動，以增加我們的健身會員。" data-cn-s="我们已经制定了一个在线推广计划来吸引新会员。目前，我们正在与当地健身方面有影响力的人合作。在未来几个月，我们将推出「为夏天做好准备」社交媒体活动，以增加我们的健身会员。">We've developed an online promotional plan to attract new members. Currently, we're teaming up with local fitness influencers. In the coming months, we will launch a 'Get Ready for Summer' social media campaign to increase our gym membership.</span></div>
     </div>
 
-    <h3 data-cn="DILWL — Online Media HK (Practice 1)">DILWL — Online Media HK (Practice 1)</h3>
+    <h3 data-cn="DILWL — Online Media HK (Practice 1)" data-cn-s="DILWL — Online Media HK (Practice 1)">DILWL — Online Media HK (Practice 1)</h3>
     <div class="task-box">
       <p><strong>Gladys Yeung (Marketing Officer, Student A) — Engaging Key Opinion Leaders (KOLs) and/or influencers:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在為公司設計一系列新的Instagram帖子，關注飲食趨勢以吸引網紅。我們希望未來能與品牌合作舉辦品嚐活動。">We are designing a new series of Instagram posts for the company, keeping an eye on the food and beverage trend to engage influencers. We hope to collaborate with brands for tasting events in the future.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們正在為公司設計一系列新的Instagram帖子，關注飲食趨勢以吸引網紅。我們希望未來能與品牌合作舉辦品嚐活動。" data-cn-s="我们正在为公司设计一系列新的Instagram帖子，关注饮食趋势以吸引网红。我们希望未来能与品牌合作举办品尝活动。">We are designing a new series of Instagram posts for the company, keeping an eye on the food and beverage trend to engage influencers. We hope to collaborate with brands for tasting events in the future.</span></div>
     </div>
     <div class="task-box">
       <p><strong>Edith Li (Administrative Officer, Student B) — Revamping the company's website:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經推出了一個適合移動設備的界面，現在正在改進圖片描述以提高可訪問性。我們預計將在本季度末收到有關這些功能的報告。">We have launched a mobile-friendly interface and are now working on improving image descriptions for accessibility. We expect the report on these features by the end of the quarter.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們已經推出了一個適合移動設備的界面，現在正在改進圖片描述以提高可訪問性。我們預計將在本季度末收到有關這些功能的報告。" data-cn-s="我们已经推出了一个适合移动设备的界面，现在正在改进图片描述以提高可访问性。我们预计将在本季度末收到有关这些功能的报告。">We have launched a mobile-friendly interface and are now working on improving image descriptions for accessibility. We expect the report on these features by the end of the quarter.</span></div>
     </div>
 
-    <h3 data-cn="DILWL — Topsy Company (Practice 2)">DILWL — Topsy Company (Practice 2)</h3>
+    <h3 data-cn="DILWL — Topsy Company (Practice 2)" data-cn-s="DILWL — Topsy Company (Practice 2)">DILWL — Topsy Company (Practice 2)</h3>
     <div class="task-box">
       <p><strong>Alex Cheung (IT Officer, Student A) — Enhancing internal communication channels:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在內部網路上設立一個中央门户，以改善各辦公室之間的溝通。這將使區域辦公室能夠更有效地訪問資源並建立我們的系統。">We're setting up a central portal on our intranet to improve communication across offices. This will allow regional offices to access resources more efficiently and build upon our system.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們正在內部網路上設立一個中央门户，以改善各辦公室之間的溝通。這將使區域辦公室能夠更有效地訪問資源並建立我們的系統。" data-cn-s="我们正在内部网络上设立一个中央门户，以改善各办公室之间的沟通。这将使区域办公室能够更有效地访问资源并创建我们的系统。">We're setting up a central portal on our intranet to improve communication across offices. This will allow regional offices to access resources more efficiently and build upon our system.</span></div>
     </div>
     <div class="task-box">
       <p><strong>Jamie Chau (Administrative Officer, Student B) — Streamlining workflow to reduce paper usage:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在識別減少紙張使用的領域，預計將在第三季度收到報告。我們希望根據調查結果實施新政策，使流程更加環保。">We are identifying areas to reduce paper usage, and a report is expected by the third quarter. We are hoping to implement new policies based on the findings to make the process more eco-friendly.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們正在識別減少紙張使用的領域，預計將在第三季度收到報告。我們希望根據調查結果實施新政策，使流程更加環保。" data-cn-s="我们正在识别减少纸张使用的领域，预计将在第三季度收到报告。我们希望根据调查结果实施新政策，使流程更加环保。">We are identifying areas to reduce paper usage, and a report is expected by the third quarter. We are hoping to implement new policies based on the findings to make the process more eco-friendly.</span></div>
     </div>
 
-    <h3 data-cn="DILWL — Active Sportswear (Practice 3)">DILWL — Active Sportswear (Practice 3)</h3>
+    <h3 data-cn="DILWL — Active Sportswear (Practice 3)" data-cn-s="DILWL — Active Sportswear (Practice 3)">DILWL — Active Sportswear (Practice 3)</h3>
     <div class="task-box">
       <p><strong>Samantha Lee (Fashion Designer, Student A) — Designing the Winter Collection 2024:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經為冬季系列選擇了「動態演進」的主題，完成了情緒板，並且很快將確定設計。接下來的步驟包括面料選擇和進行樣品試穿。">We've chosen the theme 'Dynamic Evolution' for the winter collection, completed mood boards, and will soon finalize designs. Next steps include fabric selection and conducting fittings for prototypes.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們已經為冬季系列選擇了「動態演進」的主題，完成了情緒板，並且很快將確定設計。接下來的步驟包括面料選擇和進行樣品試穿。" data-cn-s="我们已经为冬季系列选择了「动态演进」的主题，完成了情绪板，并且很快将确定设计。接下来的步骤包括面料选择和进行样品试穿。">We've chosen the theme 'Dynamic Evolution' for the winter collection, completed mood boards, and will soon finalize designs. Next steps include fabric selection and conducting fittings for prototypes.</span></div>
     </div>
     <div class="task-box">
       <p><strong>Vincent Chan (IT Officer, Student B) — Developing a mobile app for enhanced online shopping:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在開發一個具有新界面的移動應用程式，用於線上購物。接下來，我們將添加系列圖片和價格。測試應用程式的功能是我們未來幾個月的目標。">We're developing a mobile app with a new interface for online shopping. Next, we'll add the collection pictures and prices. Testing the app's functionality is our goal for the coming months.</span></div>
+      <div class="expr-text"><span class="spoken" data-cn="我們正在開發一個具有新界面的移動應用程式，用於線上購物。接下來，我們將添加系列圖片和價格。測試應用程式的功能是我們未來幾個月的目標。" data-cn-s="我们正在开发一个具有新界面的移动应用程序，用于在线购物。接下来，我们将添加系列图片和价格。测试应用程序的功能是我们未来几个月的目标。">We're developing a mobile app with a new interface for online shopping. Next, we'll add the collection pictures and prices. Testing the app's functionality is our goal for the coming months.</span></div>
     </div>
   </div>
 
   <!-- ================= Part 3: Opinions on Policy ================= -->
   <div class="tab-content" id="tab-3">
     <span class="part-badge">Lesson 4</span>
-    <h1 data-cn="分享你對公司政策的意見">Share your opinions on a new company policy</h1>
+    <h1 data-cn="分享你對公司政策的意見" data-cn-s="分享你对公司政策的意见">Share your opinions on a new company policy</h1>
 
-    <h2 data-cn="表達意見">Expressing opinions</h2>
+    <h2 data-cn="表達意見" data-cn-s="表达意见">Expressing opinions</h2>
     <div class="task-section">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I think, feel, believe, reckon, love something.', this)"></button><span class="spoken" data-cn="我認為／覺得／相信／認為／很喜歡……">I think / feel / believe / reckon / love…</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('In my view or opinion, something.', this)"></button><span class="spoken" data-cn="在我看來／我認為，……">In my view / opinion, …</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('On the one hand, something. On the other hand, something.', this)"></button><span class="spoken" data-cn="一方面，……另一方面，……">On the one hand, … On the other hand, …</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I think, feel, believe, reckon, love something.', this)"></button><span class="spoken" data-cn="我認為／覺得／相信／認為／很喜歡……" data-cn-s="我认为／觉得／相信／认为／很喜欢……">I think / feel / believe / reckon / love…</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('In my view or opinion, something.', this)"></button><span class="spoken" data-cn="在我看來／我認為，……" data-cn-s="在我看来／我认为，……">In my view / opinion, …</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('On the one hand, something. On the other hand, something.', this)"></button><span class="spoken" data-cn="一方面，……另一方面，……" data-cn-s="一方面，……另一方面，……">On the one hand, … On the other hand, …</span></span></div>
     </div>
 
-    <h2 data-cn="說明原因與影響">Stating causes &amp; explaining effects</h2>
+    <h2 data-cn="說明原因與影響" data-cn-s="说明原因与影响">Stating causes &amp; explaining effects</h2>
     <div class="task-section">
       <ul style="padding-left:20px;">
-        <li><strong data-cn="原因">Causes:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('because, since, as', this)"></button><span class="spoken" data-cn="……因為／由於／既然……">…because / since / as…</span></span></li>
-        <li><strong data-cn="影響">Effects:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('so, as a result, therefore, consequently', this)"></button><span class="spoken" data-cn="……所以……／因此，……／所以／因此，……">…so… / As a result, … / Therefore / Consequently, …</span></span></li>
+        <li><strong data-cn="原因" data-cn-s="原因">Causes:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('because, since, as', this)"></button><span class="spoken" data-cn="……因為／由於／既然……" data-cn-s="……因为／由于／既然……">…because / since / as…</span></span></li>
+        <li><strong data-cn="影響" data-cn-s="影响">Effects:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('so, as a result, therefore, consequently', this)"></button><span class="spoken" data-cn="……所以……／因此，……／所以／因此，……" data-cn-s="……所以……／因此，……／所以／因此，……">…so… / As a result, … / Therefore / Consequently, …</span></span></li>
       </ul>
     </div>
 
-    <h2 data-cn="分享個人經驗">Sharing personal experiences</h2>
+    <h2 data-cn="分享個人經驗" data-cn-s="分享个人经验">Sharing personal experiences</h2>
     <div class="task-section">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My position is that something.', this)"></button><span class="spoken" data-cn="我的立場是……">My position is that…</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Personally speaking, something.', this)"></button><span class="spoken" data-cn="就個人而言，……">Personally speaking, …</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My personal feeling is that something.', this)"></button><span class="spoken" data-cn="我個人的感覺是……">My personal feeling is that…</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My own experience is that something.', this)"></button><span class="spoken" data-cn="我自己的經驗是……">My own experience is that…</span></span></div>
-      <p style="color:#888; font-size:14px; margin-top:6px;"><strong data-cn="舉例說明：">Giving examples:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('For example or instance, something.', this)"></button><span class="spoken" data-cn="例如／譬如，……">For example / instance, …</span></span></p>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My position is that something.', this)"></button><span class="spoken" data-cn="我的立場是……" data-cn-s="我的立场是……">My position is that…</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Personally speaking, something.', this)"></button><span class="spoken" data-cn="就個人而言，……" data-cn-s="就个人而言，……">Personally speaking, …</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My personal feeling is that something.', this)"></button><span class="spoken" data-cn="我個人的感覺是……" data-cn-s="我个人的感觉是……">My personal feeling is that…</span></span></div>
+      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My own experience is that something.', this)"></button><span class="spoken" data-cn="我自己的經驗是……" data-cn-s="我自己的经验是……">My own experience is that…</span></span></div>
+      <p style="color:#888; font-size:14px; margin-top:6px;"><strong data-cn="舉例說明：" data-cn-s="举例说明：">Giving examples:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('For example or instance, something.', this)"></button><span class="spoken" data-cn="例如／譬如，……" data-cn-s="例如／譬如，……">For example / instance, …</span></span></p>
     </div>
 
-    <h2 data-cn="例子">Examples</h2>
+    <h2 data-cn="例子" data-cn-s="例子">Examples</h2>
 
-    <h3 data-cn="Work From Home (WFH) Policy">Work From Home (WFH) Policy</h3>
+    <h3 data-cn="Work From Home (WFH) Policy" data-cn-s="Work From Home (WFH) Policy">Work From Home (WFH) Policy</h3>
     <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見">Positive (Alex Lam):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我認為這是一個非常積極的進步，因為它給我更多的靈活性和更好的工作與生活平衡。在旅行上節省更多時間是一個巨大的優勢，在家工作政策的日子通常壓力較小。下班後我也應該有更多的時間進行個人活動，所以它可以增強我的整體幸福感。">I think it's a very positive step forward because it gives me more flexibility and a better work–life balance. Saving more time on travelling is a huge plus and Work From Home days are generally less stressful. I should also have more time for personal activities after work so it can enhance my overall well-being.</span></div>
+      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Alex Lam):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="我認為這是一個非常積極的進步，因為它給我更多的靈活性和更好的工作與生活平衡。在旅行上節省更多時間是一個巨大的優勢，在家工作政策的日子通常壓力較小。下班後我也應該有更多的時間進行個人活動，所以它可以增強我的整體幸福感。" data-cn-s="我认为这是一个非常积极的进步，因为它给我更多的灵活性和更好的工作与生活平衡。在旅行上节省更多时间是一个巨大的优势，在家工作政策的日子通常压力较小。下班后我也应该有更多的时间进行个人活动，所以它可以增强我的整体幸福感。">I think it's a very positive step forward because it gives me more flexibility and a better work–life balance. Saving more time on travelling is a huge plus and Work From Home days are generally less stressful. I should also have more time for personal activities after work so it can enhance my overall well-being.</span></div>
     </div>
     <div class="task-box">
-      <p><strong style="color:#9a3412;" data-cn="負面關注">Concern (Jacob Wong):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="它似乎在許多公司越來越受歡迎。我認為它可以提高一些同事的生產力。但是，我擔心在處理工作相關事務時與團隊成員溝通可能會很有挑戰性。當我們在家工作時，擁有適當的溝通渠道對於確保有效的團隊合作非常重要。">It seems to be increasingly popular in many companies. I think it can improve productivity for some colleagues. However, I'm worried that it might be challenging to communicate with my team members on work-related matters. It's important to have proper communication channels when we work from home to ensure effective teamwork.</span></div>
-    </div>
-
-    <h3 data-cn="Professional Development Policy">Professional Development Policy</h3>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見">Positive (Charlie Chan):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="提供免費的線上課程和培訓研討會將使我們能夠在沒有任何額外費用的情況下提高我們的技能。此外，這是提高員工士氣和個人成長的好方法。">Offering free online courses and training workshops will allow us to improve our skills without any additional costs. Plus, it's a great way to boost employee morale and personal growth.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong style="color:#9a3412;" data-cn="負面關注">Concern (Parker Leung):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="然而，我可以理解一些員工可能會因為要在工作量中增加更多內容而感到不知所措。要平衡工作和學習可能很困難。">However, I can see how some employees might feel overwhelmed by the idea of adding more to their workload. It could be tough to balance work and learning.</span></div>
+      <p><strong style="color:#9a3412;" data-cn="負面關注" data-cn-s="负面关注">Concern (Jacob Wong):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="它似乎在許多公司越來越受歡迎。我認為它可以提高一些同事的生產力。但是，我擔心在處理工作相關事務時與團隊成員溝通可能會很有挑戰性。當我們在家工作時，擁有適當的溝通渠道對於確保有效的團隊合作非常重要。" data-cn-s="它似乎在许多公司越来越受欢迎。我认为它可以提高一些同事的生产力。但是，我担心在处理工作相关事务时与团队成员沟通可能会很有挑战性。当我们在家工作时，拥有适当的沟通渠道对于确保有效的团队合作非常重要。">It seems to be increasingly popular in many companies. I think it can improve productivity for some colleagues. However, I'm worried that it might be challenging to communicate with my team members on work-related matters. It's important to have proper communication channels when we work from home to ensure effective teamwork.</span></div>
     </div>
 
-    <h3 data-cn="Denim Outfits on Fridays Policy">Denim Outfits on Fridays Policy</h3>
+    <h3 data-cn="Professional Development Policy" data-cn-s="Professional Development Policy">Professional Development Policy</h3>
     <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見">Positive (Samantha Lee):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="作為一個有創造力的人，我喜歡穿最能代表我並反映我獨特風格的衣服。這項新政策無疑會增強我的創造力和工作效率。">As a creative person I would love to wear clothes that best represent me and reflect my unique style. This new policy will undoubtedly enhance my creativity and work efficiency.</span></div>
+      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Charlie Chan):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="提供免費的線上課程和培訓研討會將使我們能夠在沒有任何額外費用的情況下提高我們的技能。此外，這是提高員工士氣和個人成長的好方法。" data-cn-s="提供免费的在线课程和培训研讨会将使我们能够在没有任何额外费用的情况下提高我们的技能。此外，这是提高员工士气和个人成长的好方法。">Offering free online courses and training workshops will allow us to improve our skills without any additional costs. Plus, it's a great way to boost employee morale and personal growth.</span></div>
     </div>
     <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見">Positive (Vincent Chan):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我完全同意。星期五穿牛仔布可以讓我們表達獨特的風格，培養積極的工作環境。這項新政策與我的衣櫃完美搭配，讓我在辦公室展示我的個人風格。">I couldn't agree more. Dressing in denim on Fridays allows us to express our unique style, fostering a positive work environment. This new policy is a perfect match for my wardrobe and allows me to showcase my personal style in the office.</span></div>
-    </div>
-
-    <h3 data-cn="Flexi Lunch Break Policy">Flexi Lunch Break Policy</h3>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見">Positive (Gladys Yeung):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="這項新政策讓我可以在中午更早吃午飯，以便為下午的工作恢復精力。更重要的是，我發現自己被授權對自己的時間表做出決定。">The new policy allows me to have my lunch earlier so that I can refresh myself for the afternoon work. More importantly, I find myself empowered to make the decisions about my own schedules.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong style="color:#9a3412;" data-cn="負面關注">Concern (Edith Li):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我同意這項政策可以提高員工的生產力和歸屬感。但我最擔心的是與同事協調的困難。當午休時間變得靈活時，可能會導致時間安排衝突或工作流程中斷。">I agree that the policy could improve employees' productivity and sense of belonging. What I concern the most is the difficulty in coordinating with colleagues. When lunch breaks become flexible, it could lead to scheduling conflicts or disruptions in workflow.</span></div>
+      <p><strong style="color:#9a3412;" data-cn="負面關注" data-cn-s="负面关注">Concern (Parker Leung):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="然而，我可以理解一些員工可能會因為要在工作量中增加更多內容而感到不知所措。要平衡工作和學習可能很困難。" data-cn-s="然而，我可以理解一些员工可能会因为要在工作量中增加更多内容而感到不知所措。要平衡工作和学习可能很困难。">However, I can see how some employees might feel overwhelmed by the idea of adding more to their workload. It could be tough to balance work and learning.</span></div>
     </div>
 
-    <h3 data-cn="Remote Office Policy">Remote Office Policy</h3>
+    <h3 data-cn="Denim Outfits on Fridays Policy" data-cn-s="Denim Outfits on Fridays Policy">Denim Outfits on Fridays Policy</h3>
     <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見">Positive (Alex Cheung):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="這項政策讓我有更多靈活性，可以更接近我的家人。我相信這將使我能夠更專注於提供高品質的工作，而不必擔心我的家人。">This policy allows me to have more flexibility to be in close proximity with my family. I believe this will enable me to be more focused in delivering quality work without having to worry about my family.</span></div>
+      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Samantha Lee):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="作為一個有創造力的人，我喜歡穿最能代表我並反映我獨特風格的衣服。這項新政策無疑會增強我的創造力和工作效率。" data-cn-s="作为一个有创造力的人，我喜欢穿最能代表我并反映我独特风格的衣服。这项新政策无疑会增强我的创造力和工作效率。">As a creative person I would love to wear clothes that best represent me and reflect my unique style. This new policy will undoubtedly enhance my creativity and work efficiency.</span></div>
     </div>
     <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見">Positive (Jamie Chau):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="它不僅可以提高我們的員工士氣，而且我認為從長遠來看它可以降低流失率。對於那些住在遠處的人來說，它還可以節省我們大量的通勤時間，讓我們不會因為通勤而感到疲倦。它也可以更容易地管理工作與生活的平衡。">Not only can it improve our staff morale but I think it could decrease the turnover rate in the long run. It'll also be easier to manage work-life balance. Not to mention the policy itself would save us a lot of commute time for those who live afar, allowing us to be less tired from commuting. It'll also be easier to manage work life balance as well.</span></div>
+      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Vincent Chan):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="我完全同意。星期五穿牛仔布可以讓我們表達獨特的風格，培養積極的工作環境。這項新政策與我的衣櫃完美搭配，讓我在辦公室展示我的個人風格。" data-cn-s="我完全同意。星期五穿牛仔布可以让我们表达独特的风格，培养积极的工作环境。这项新政策与我的衣柜完美搭配，让我在办公室展示我的个人风格。">I couldn't agree more. Dressing in denim on Fridays allows us to express our unique style, fostering a positive work environment. This new policy is a perfect match for my wardrobe and allows me to showcase my personal style in the office.</span></div>
+    </div>
+
+    <h3 data-cn="Flexi Lunch Break Policy" data-cn-s="Flexi Lunch Break Policy">Flexi Lunch Break Policy</h3>
+    <div class="task-box">
+      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Gladys Yeung):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="這項新政策讓我可以在中午更早吃午飯，以便為下午的工作恢復精力。更重要的是，我發現自己被授權對自己的時間表做出決定。" data-cn-s="这项新政策让我可以在中午更早吃午饭，以便为下午的工作恢复精力。更重要的是，我发现自己被授权对自己的时间表做出决定。">The new policy allows me to have my lunch earlier so that I can refresh myself for the afternoon work. More importantly, I find myself empowered to make the decisions about my own schedules.</span></div>
+    </div>
+    <div class="task-box">
+      <p><strong style="color:#9a3412;" data-cn="負面關注" data-cn-s="负面关注">Concern (Edith Li):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="我同意這項政策可以提高員工的生產力和歸屬感。但我最擔心的是與同事協調的困難。當午休時間變得靈活時，可能會導致時間安排衝突或工作流程中斷。" data-cn-s="我同意这项政策可以提高员工的生产力和归属感。但我最担心的是与同事协调的困难。当午休时间变得灵活时，可能会导致时间安排冲突或工作流程中断。">I agree that the policy could improve employees' productivity and sense of belonging. What I concern the most is the difficulty in coordinating with colleagues. When lunch breaks become flexible, it could lead to scheduling conflicts or disruptions in workflow.</span></div>
+    </div>
+
+    <h3 data-cn="Remote Office Policy" data-cn-s="Remote Office Policy">Remote Office Policy</h3>
+    <div class="task-box">
+      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Alex Cheung):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="這項政策讓我有更多靈活性，可以更接近我的家人。我相信這將使我能夠更專注於提供高品質的工作，而不必擔心我的家人。" data-cn-s="这项政策让我有更多灵活性，可以更接近我的家人。我相信这将使我能够更专注于提供高品质的工作，而不必担心我的家人。">This policy allows me to have more flexibility to be in close proximity with my family. I believe this will enable me to be more focused in delivering quality work without having to worry about my family.</span></div>
+    </div>
+    <div class="task-box">
+      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Jamie Chau):</strong></p>
+      <div class="expr-text"><span class="spoken" data-cn="它不僅可以提高我們的員工士氣，而且我認為從長遠來看它可以降低流失率。對於那些住在遠處的人來說，它還可以節省我們大量的通勤時間，讓我們不會因為通勤而感到疲倦。它也可以更容易地管理工作與生活的平衡。" data-cn-s="它不仅可以提高我们的员工士气，而且我认为从长远来看它可以降低流失率。对于那些住在远处的人来说，它还可以节省我们大量的通勤时间，让我们不会因为通勤而感到疲倦。它也可以更容易地管理工作与生活的平衡。">Not only can it improve our staff morale but I think it could decrease the turnover rate in the long run. It'll also be easier to manage work-life balance. Not to mention the policy itself would save us a lot of commute time for those who live afar, allowing us to be less tired from commuting. It'll also be easier to manage work life balance as well.</span></div>
     </div>
   </div>
 
@@ -1696,8 +1739,24 @@ function switchTab(index) {
 }
 
 // Chinese translation toggle
+let cnScript = 'trad'; // 'trad' = Traditional Chinese, 'simp' = Simplified Chinese
+
 function toggleAllCN(show) {
   document.querySelector('.container').classList.toggle('cn-active', show);
+  document.getElementById('cnScriptToggle').classList.toggle('visible', show);
+}
+
+function setCNScript(script) {
+  cnScript = script;
+  document.querySelectorAll('.cn-script-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.script === script);
+  });
+  // Each .cn-translation node is inserted immediately after its source [data-cn] element.
+  document.querySelectorAll('.cn-translation').forEach(trans => {
+    const source = trans.previousElementSibling;
+    if (!source || !source.dataset || !source.dataset.cn) return;
+    trans.textContent = script === 'simp' ? (source.dataset.cnS || source.dataset.cn) : source.dataset.cn;
+  });
 }
 
 function initTranslations() {
@@ -1706,7 +1765,7 @@ function initTranslations() {
     el.dataset.cnProcessed = '1';
     const trans = document.createElement('div');
     trans.className = 'cn-translation';
-    trans.textContent = el.dataset.cn;
+    trans.textContent = cnScript === 'simp' ? (el.dataset.cnS || el.dataset.cn) : el.dataset.cn;
     el.after(trans);
   });
 }
