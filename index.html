@@ -1772,9 +1772,11 @@ table.reminder-table td {
 
 </div>
 
+<script src="audio-data.js"></script>
 <script>
 let synth = window.speechSynthesis;
 let currentWordEl = null;
+let currentWordAudio = null;
 
 function switchTab(index) {
   if (typeof stopAll === 'function') stopAll();
@@ -1896,37 +1898,72 @@ function getEdgeVoice(gender) {
 
 function speakWord(word, el, gender) {
   if (!word) return;
-  if (synth.speaking) {
-    synth.cancel();
-    if (currentWordEl) currentWordEl.classList.remove('speaking');
-    if (currentWordEl === el) { currentWordEl = null; return; }
+  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
+  const key = word + '|' + selectedGender;
+  const b64 = window.AUDIO_DATA && window.AUDIO_DATA.words[key];
+
+  // Toggle off if the same word is clicked again while it's playing
+  if (currentWordEl === el && (currentWordAudio || synth.speaking)) {
+    if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
+    if (synth.speaking) synth.cancel();
+    el.classList.remove('speaking');
+    currentWordEl = null;
+    return;
   }
+
+  // Stop any other audio/speech currently playing
+  if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
+  if (synth.speaking) synth.cancel();
   if (currentWordEl) currentWordEl.classList.remove('speaking');
+  if (currentAudio) { currentAudio.pause(); if (currentBtn) resetBtn(currentBtn); currentAudio = null; currentBtn = null; }
+  if (isPlayingAll) stopAll();
+
   el.classList.add('speaking');
   currentWordEl = el;
+
+  if (b64) {
+    const audio = new Audio('data:audio/mp3;base64,' + b64);
+    currentWordAudio = audio;
+    audio.onended = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; currentWordAudio = null; };
+    audio.onerror = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; currentWordAudio = null; speakWordFallback(word, el, selectedGender); };
+    audio.play();
+    return;
+  }
+  speakWordFallback(word, el, selectedGender);
+}
+
+// Browser TTS fallback, only used if a natural-voice clip isn't available for this word
+function speakWordFallback(word, el, selectedGender) {
   const utter = new SpeechSynthesisUtterance(word);
   utter.rate = 0.85;
   utter.pitch = 1;
-  // Use gender parameter, or fall back to voice selector, or default to female
-  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
   const v = getEdgeVoice(selectedGender);
   if (v) utter.voice = v;
-  utter.onend = function() { el.classList.remove('speaking'); currentWordEl = null; };
-  utter.onerror = function() { el.classList.remove('speaking'); currentWordEl = null; };
+  utter.onend = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; };
+  utter.onerror = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; };
   synth.speak(utter);
 }
 
 // Speak text for button click
 function speakText(text, btn, gender) {
-  if (synth.speaking) {
-    synth.cancel();
-    if (currentWordEl) currentWordEl.classList.remove('speaking');
+  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
+  const key = text + '|' + selectedGender;
+  const b64 = window.AUDIO_DATA && window.AUDIO_DATA.phrases[key];
+
+  // Stop any word-level audio/speech that might be playing
+  if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
+  if (synth.speaking) synth.cancel();
+  if (currentWordEl) { currentWordEl.classList.remove('speaking'); currentWordEl = null; }
+
+  if (b64) {
+    playAudio('data:audio/mp3;base64,' + b64, btn);
+    return;
   }
+
+  // Browser TTS fallback, only used if a natural-voice clip isn't available for this phrase
   const utter = new SpeechSynthesisUtterance(text);
   utter.rate = 0.85;
   utter.pitch = 1;
-  // Use gender parameter, or fall back to voice selector, or default to female
-  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
   const v = getEdgeVoice(selectedGender);
   if (v) utter.voice = v;
 
