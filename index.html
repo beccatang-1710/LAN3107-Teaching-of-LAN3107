@@ -974,6 +974,271 @@ table.reminder-table td {
     padding: 16px;
   }
 }
+
+/* Tense Highlighting for Teaching */
+.tense-hl {
+  cursor: help;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  transition: all 0.2s;
+}
+
+.tense-hl:hover {
+  transform: scale(1.05);
+}
+
+/* Present Perfect - Green */
+.tense-hl.pp {
+  background: #dcfce7;
+  color: #166534;
+  border-bottom: 2px solid #22c55e;
+  text-decoration-color: #22c55e;
+}
+
+/* Present Continuous - Blue */
+.tense-hl.pc {
+  background: #dbeafe;
+  color: #1e40af;
+  border-bottom: 2px solid #3b82f6;
+  text-decoration-color: #3b82f6;
+}
+
+/* Simple Future - Orange */
+.tense-hl.sf {
+  background: #ffedd5;
+  color: #9a3412;
+  border-bottom: 2px solid #f97316;
+  text-decoration-color: #f97316;
+}
+
+.tense-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8f0ff;
+  border-radius: 8px;
+  border: 1px solid #e6d8f0;
+}
+
+.tense-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tense-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.tense-legend-dot.pp { background: #dcfce7; border: 1px solid #22c55e; }
+.tense-legend-dot.pc { background: #dbeafe; border: 1px solid #3b82f6; }
+.tense-legend-dot.sf { background: #ffedd5; border: 1px solid #f97316; }
+
+/* Role Card Styles */
+.role-card {
+  border: 2px solid #9370db;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+  background: linear-gradient(135deg, #faf5ff 0%, #f0e6f7 100%);
+  box-shadow: 0 2px 8px rgba(147,112,219,0.15);
+}
+
+.role-card-header {
+  background: #4b0082;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.role-card-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4b0082;
+  margin-bottom: 4px;
+}
+
+.role-card-title {
+  font-size: 14px;
+  color: #6a0dad;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.role-card-step {
+  background: white;
+  border-left: 4px solid #9370db;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.role-card-step h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #4b0082;
+}
+
+.role-card-step p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.role-card-project {
+  background: #f0f8ff;
+  border: 1px solid #4a90d9;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 8px 0;
+}
+
+.role-card-project strong {
+  color: #2f6b3a;
+}
+
+.role-card-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .role-card-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Collocation Matcher Game */
+.collocation-game {
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+}
+.collocation-game h3 {
+  text-align: center;
+  color: #1e3a8a;
+  margin: 0 0 4px;
+}
+.collocation-game .game-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+}
+.collocation-game .status-bar {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.collocation-game .score-badge {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 6px 14px;
+  border-radius: 9999px;
+}
+.collocation-game .game-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+.collocation-game .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.collocation-game .column h2 {
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+.collocation-game .card {
+  background: #fff;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.15s ease-in-out;
+  user-select: none;
+}
+.collocation-game .card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.collocation-game .card.selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+  font-weight: 600;
+}
+.collocation-game .card.matched {
+  background-color: #dcfce7;
+  border-color: #16a34a;
+  color: #15803d;
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.85;
+}
+.collocation-game .card.wrong {
+  border-color: #dc2626;
+  background-color: #fee2e2;
+  animation: gameShake 0.3s ease;
+}
+@keyframes gameShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+.collocation-game .domain-tag {
+  font-size: 0.75rem;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-left: 6px;
+}
+.collocation-game .reset-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 18px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.collocation-game .reset-btn:hover { background: #2563eb; }
+
+@media (max-width: 768px) {
+  .collocation-game .game-board { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -1419,20 +1684,10 @@ table.reminder-table td {
     <h1 data-cn="描述興趣或消遣活動" data-cn-s="描述兴趣或消遣活动">Describing a Hobby or Leisure Activity</h1>
     <p style="font-size:13px; color:#888; font-style:italic; margin-top:-4px; margin-bottom:12px;">In acknowledgement of Nancy Ng</p>
 
-    <div class="char-card">
-      <div>
-        <div class="char-caption" data-cn="寫30-50個字描述你最喜歡的興趣" data-cn-s="写30-50个字描述你最喜欢的兴趣">Write 30-50 words to describe your favourite hobby</div>
-        <p style="color:#555;" data-cn="使用形容詞豐富你的描述。所有描述性形容詞都已<u>底線標示</u>，以展示如何豐富你的寫作。" data-cn-s="使用形容词丰富你的描述。所有描述性形容词都已<u>底线标示</u>，以展示如何丰富你的写作。">Use adjectives to enrich your description. All descriptive adjectives in the model samples are <u>highlighted</u> to demonstrate how to enrich your writing.</p>
-      </div>
-    </div>
-
     <div class="task-box">
       <p><strong data-cn="說明：" data-cn-s="说明：">Instructions:</strong></p>
       <ul style="padding-left:20px;">
-        <li data-cn="寫30-50個字談談你最喜歡的興趣、消遣活動或嗜好。" data-cn-s="写30-50个字谈谈你最喜欢的兴趣、消遣活动或嗜好。">Write 30-50 words to talk about your favourite hobby, leisure activity, or pastime.</li>
-        <li data-cn="你可以虛構資訊或引用你的真实經驗。" data-cn-s="你可以虚构信息或引用你的真实经验。">You can make up information or quote your real experience.</li>
-        <li data-cn="使用列表中的形容詞：active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating。" data-cn-s="使用列表中的形容词：active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating。">Use adjectives from the list: <em>active, calming, enjoyable, therapeutic, entertaining, exciting, fulfilling, refreshing, relaxing, rewarding, creative, invigorating</em>.</li>
-        <li data-cn="使用以下範本作為參考。" data-cn-s="使用以下范本作为参考。">Use the samples below to help you.</li>
+        <li data-cn="選擇以下其中一個範本作為你最喜歡的興趣／消遣活動／嗜好的描述。與你的搭檔分享。" data-cn-s="选择以下其中一个范本作为你最喜欢的兴趣／消遣活动／嗜好的描述。与你的搭档分享。">Choose one model sample below as the description of your favourite hobby/ leisure activity/ pastime. Share it with your partner. Learn the underlined adjectives for describing the hobby/ pastime/ leisure activity.</li>
       </ul>
     </div>
 
@@ -1499,15 +1754,20 @@ table.reminder-table td {
       <p style="color:#888; font-size:13px; margin-top:4px;">(53 words)</p>
     </div>
 
-    <h2 data-cn="口頭練習" data-cn-s="口头练习">Oral Practice</h2>
+    <h2 data-cn="口頭練習／結對練習" data-cn-s="口头练习／结对练习">Oral Practice/ Pair Work</h2>
     <div class="task-box">
-      <p><strong data-cn="在下面寫下你自己的30-50字描述。記得用底線標示你的形容詞！然後，結對練習，輪流告訴搭檔你的興趣或消遣活動。" data-cn-s="在下面写下你自己的30-50字描述。记得用底线标示你的形容词！然后，结对练习，轮流告诉搭档你的兴趣或消遣活动。">Write your own 30-50 word description below. Remember to highlight and underline your adjectives! Then, work in pairs and take turns to tell your partner your hobby or leisure activity.</strong></p>
-      <div contenteditable="true" style="min-height:120px; border:1px dashed #9370db; border-radius:8px; padding:12px; margin-top:10px; background:#faf5ff; outline:none;" data-ph="Write your description here..."></div>
+      <p><strong data-cn="與你的 CA 夥伴起草 CA 腳本。使用以下所有閒聊策略完成前兩個步驟：" data-cn-s="与你的 CA 伙伴起草 CA 脚本。使用以下所有闲聊策略完成前两个步骤：">Draft the CA script with your CA partner. Use all small talk strategies (see examples below) to complete the first two steps:</strong></p>
+      <ol style="padding-left:20px; margin-top:8px;">
+        <li data-cn="問候你的同事並自我介紹。" data-cn-s="问候你的同事并自我介绍。">Greet your colleague and introduce yourself.</li>
+        <li data-cn="就以下話題閒聊：" data-cn-s="就以下话题闲聊：">Make small talk on the following topics:
+          <ul style="padding-left:20px; margin-top:4px;">
+            <li data-cn="你的週末活動。" data-cn-s="你的周末活动。">Your weekend activities.</li>
+          </ul>
+        </li>
+      </ol>
     </div>
 
     <div class="task-box" style="margin-top:20px;">
-      <p><strong data-cn="現在，思考你的回應：" data-cn-s="现在，思考你的回应：">Now, think about your responses:</strong></p>
-
       <h3 data-cn="1. 迴聲問句（表達興趣）" data-cn-s="1. 回声问句（表达兴趣）">1. Echo Question (Show interest)</h3>
       <ul>
         <li><span class="utterance"><button class="btn-icon" onclick="speakText('M+ Museum? That sounds interesting!', this)"></button><span class="spoken" data-cn="M+博物館？聽起來很有趣！" data-cn-s="M+博物馆？听起来很有趣！">M+ Museum? That sounds interesting!</span></span></li>
@@ -1537,153 +1797,518 @@ table.reminder-table td {
           <span class="speaker">B:</span> <span class="utterance"><button class="btn-icon" onclick="speakText('The M+ Museum? That sounds interesting! What was your favourite exhibit? I have always wanted to visit it myself.', this, 'male')"></button><span class="spoken" style="color:#1a7f37;" data-cn="M+博物館？聽起來很有趣！你最喜歡哪個展品？我一直都很想親自去參觀。" data-cn-s="M+博物馆？听起来很有趣！你最喜欢哪个展品？我一直都很想亲自去参观。">"The M+ Museum? That sounds interesting! What was your favourite exhibit? I've always wanted to visit it myself."</span></span>
         </div>
       </div>
-
-      <p data-cn="結對練習：分享你的興趣，並使用迴聲問句、特殊疑問句和評論來回應你的搭檔。" data-cn-s="结对练习：分享你的兴趣，并使用回声问句、特殊疑问句和评论来回应你的搭档。">Work in pairs: share your hobby, and use an Echo Question, a Wh- Question, and a Comment to respond to your partner.</p>
     </div>
   </div>
 
   <!-- ================= Lesson 3: Work Projects ================= -->
   <div class="tab-content" id="tab-2">
     <span class="part-badge">Lesson 3</span>
-    <h1 data-cn="閒聊部門項目" data-cn-s="闲聊部门项目">Small talk on Department Projects</h1>
+    <h1 data-cn="閒聊部門項目" data-cn-s="闲聊部门项目">Unit 4: Talking About Company Projects</h1>
 
-    <h2 data-cn="三個階段的時態" data-cn-s="三个阶段的时态">Three stages — use the correct tenses</h2>
-    <table class="words tenses">
-      <tr>
-        <th data-cn="時態" data-cn-s="时态">Tense</th>
-        <th data-cn="功能" data-cn-s="功能">Function</th>
-        <th data-cn="形式" data-cn-s="形式">Form</th>
-      </tr>
-      <tr>
-        <td><strong data-cn="現在完成式" data-cn-s="现在完成式">Present perfect</strong></td>
-        <td data-cn="描述最近已完成的事情" data-cn-s="描述最近已完成的事情">To describe what has been completed recently</td>
-        <td>Have/has + past participle verb</td>
-      </tr>
-      <tr>
-        <td><strong data-cn="現在進行式" data-cn-s="现在进行式">Present continuous</strong></td>
-        <td data-cn="描述正在發生的事情" data-cn-s="描述正在发生的事情">To describe what is happening now</td>
-        <td>Am/is/are + present participle verb</td>
-      </tr>
-      <tr>
-        <td><strong data-cn="未來式" data-cn-s="未来式">Future tense</strong></td>
-        <td data-cn="描述將來會發生的事情" data-cn-s="描述将来会发生的事情">To describe what will happen</td>
-        <td>Will + base form of verb</td>
-      </tr>
-    </table>
-
-    <h2 data-cn="實用搭配詞" data-cn-s="实用搭配词">Useful Collocations</h2>
-
-    <h3 data-cn="Healthfirst Medical (CA Practice 2)" data-cn-s="Healthfirst Medical (CA Practice 2)">Healthfirst Medical (CA Practice 2)</h3>
-    <div class="task-section">
-      <table class="words stacked">
-        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="發起活動" data-cn-s="发起活动">launch (v.) campaigns (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="推廣流動健康診所" data-cn-s="推广流动健康诊所">promote (v.) mobile health clinics (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與社區中心合作" data-cn-s="与社区中心合作">partner (v.) with community centres (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="整合排程系統" data-cn-s="集成调度系统">integrated (v.) a scheduling system (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="審查會員的意見" data-cn-s="审查会员的意见">reviewed (v.) members' opinions (n.)</span></td></tr>
-      </table>
+    <div class="learning-objectives">
+      <h3 data-cn="學習目標" data-cn-s="学习目标">🎯 Unit Learning Objectives</h3>
+      <p data-cn="在本單元結束時，你將能夠：" data-cn-s="在本单元结束时，你将能够：">By the end of this unit, you will be able to:</p>
+      <ul>
+        <li data-cn="識別不同部門的主要項目" data-cn-s="识别不同部门的主要项目">identify the major projects of different departments</li>
+        <li data-cn="描述項目的不同階段" data-cn-s="描述项目的不同阶段">describe the different stages of a project</li>
+        <li data-cn="描述項目的安排" data-cn-s="描述项目的安排">describe the project's arrangements</li>
+      </ul>
     </div>
 
-    <h3 data-cn="Boost Health Fitness Centre (CA Practice 1)" data-cn-s="Boost Health Fitness Centre (CA Practice 1)">Boost Health Fitness Centre (CA Practice 1)</h3>
-    <div class="task-section">
-      <table class="words stacked">
-        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="儲備補充品" data-cn-s="储备补充品">stock (v.) supplements (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與健身方面有影響力的人合作" data-cn-s="与健身方面有影响力的人合作">team (v.) up with fitness influencers (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="擴展產品範圍" data-cn-s="扩展产品范围">expand (v.) the product range (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="推出自動售貨機" data-cn-s="推出自动售货机">launch (v.) a vending machine (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="制定線上推廣計劃" data-cn-s="制定在线推广计划">develop (v.) an online promotional plan (n.)</span></td></tr>
-      </table>
+    <div class="accordion-controls">
+      <button class="accordion-btn" onclick="expandAllInTab(2)">Expand All</button>
+      <button class="accordion-btn" onclick="collapseAllInTab(2)">Collapse All</button>
     </div>
 
-    <h3 data-cn="DILWL — Online Media HK (Practice 1)" data-cn-s="DILWL — Online Media HK (Practice 1)">DILWL — Online Media HK (Practice 1)</h3>
-    <div class="task-section">
-      <table class="words stacked">
-        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="設計冬季系列" data-cn-s="设计冬季系列">designing (v.) the winter collection (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="改善公司的網站" data-cn-s="改善公司的网站">revamping (v.) the company's website (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="開發線上購物應用程式" data-cn-s="开发在线购物应用程序">developing (v.) a mobile app for online shopping (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與品牌合作舉辦活動" data-cn-s="与品牌合作举办活动">collaborating (v.) with brands for events (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="確定設計" data-cn-s="确定设计">finalizing (v.) designs (n.)</span></td></tr>
-      </table>
-    </div>
+    <div class="accordion">
 
-    <h3 data-cn="DILWL — Topsy Company (Practice 2)" data-cn-s="DILWL — Topsy Company (Practice 2)">DILWL — Topsy Company (Practice 2)</h3>
-    <div class="task-section">
-      <table class="words stacked">
-        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="與關鍵意見領袖合作" data-cn-s="与关键意见领袖合作">engaging (v.) key opinion leaders (KOL) (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="加強內部溝通渠道" data-cn-s="加强内部沟通渠道">enhancing (v.) internal communication channels (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="識別減少紙張使用的領域" data-cn-s="识别减少纸张使用的领域">identifying (v.) areas to reduce paper usage (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="推出適合移動設備的界面" data-cn-s="推出适合移动设备的界面">launching (v.) a mobile-friendly interface (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="進行樣品試穿" data-cn-s="进行样品试穿">conducting (v.) fittings for prototypes (n.)</span></td></tr>
-      </table>
-    </div>
+      <!-- ===== Part 1 ===== -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="第一部分：項目的三個階段" data-cn-s="第一部分：项目的三个阶段">Part 1: The Three Stages of a Project</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
 
-    <h3 data-cn="DILWL — Active Sportswear (Practice 3)" data-cn-s="DILWL — Active Sportswear (Practice 3)">DILWL — Active Sportswear (Practice 3)</h3>
-    <div class="task-section">
-      <table class="words stacked">
-        <tr><th data-cn="搭配詞" data-cn-s="搭配词">Collocations</th></tr>
-        <tr><td><span class="cn-word" data-cn="設計冬季系列" data-cn-s="设计冬季系列">designing (v.) the winter collection (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="改善公司的網站" data-cn-s="改善公司的网站">revamping (v.) the company's website (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="開發線上購物應用程式" data-cn-s="开发在线购物应用程序">developing (v.) a mobile app for online shopping (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="與品牌合作舉辦活動" data-cn-s="与品牌合作举办活动">collaborating (v.) with brands for events (n.)</span></td></tr>
-        <tr><td><span class="cn-word" data-cn="確定設計" data-cn-s="确定设计">finalizing (v.) designs (n.)</span></td></tr>
-      </table>
-    </div>
+            <div class="tense-legend">
+              <span class="tense-legend-item"><span class="tense-legend-dot pp"></span> Present Perfect</span>
+              <span class="tense-legend-item"><span class="tense-legend-dot pc"></span> Present Continuous</span>
+              <span class="tense-legend-item"><span class="tense-legend-dot sf"></span> Simple Future</span>
+            </div>
 
-    <h2 data-cn="例子" data-cn-s="例子">Examples</h2>
+            <table class="words tenses">
+              <tr>
+                <th data-cn="項目階段" data-cn-s="项目阶段">Project Stage</th>
+                <th data-cn="語法時態與結構" data-cn-s="语法时态与结构">Grammatical Tense &amp; Structure</th>
+                <th data-cn="常見時間標記" data-cn-s="常见时间标记">Common Time Markers</th>
+                <th data-cn="職場例子" data-cn-s="职场例子">Workplace Example</th>
+              </tr>
+              <tr>
+                <td><strong data-cn="階段 1：已完成的任務" data-cn-s="阶段 1：已完成的任务">Stage 1: Task Completed</strong></td>
+                <td><strong data-cn="現在完成式" data-cn-s="现在完成式">Present Perfect</strong><br>have / has + past participle</td>
+                <td>so far, already, recently, to date</td>
+                <td><span class="utterance"><button class="btn-icon" onclick="speakText('So far, we have designed an eco-friendly line.', this)"></button><span class="spoken">"So far, we <span class="tense-hl pp" title="Present Perfect: have + past participle">have designed</span> an eco-friendly line."</span></span></td>
+              </tr>
+              <tr>
+                <td><strong data-cn="階段 2：進行中的任務" data-cn-s="阶段 2：进行中的任务">Stage 2: Task in Progress</strong></td>
+                <td><strong data-cn="現在進行式" data-cn-s="现在进行式">Present Continuous</strong><br>am / is / are + verb-ing</td>
+                <td>currently, at present, right now, at this stage</td>
+                <td><span class="utterance"><button class="btn-icon" onclick="speakText('We are currently creating a marketing plan.', this)"></button><span class="spoken">"We <span class="tense-hl pc" title="Present Continuous: are + verb-ing">are currently creating</span> a marketing plan."</span></span></td>
+              </tr>
+              <tr>
+                <td><strong data-cn="階段 3：待完成的工作" data-cn-s="阶段 3：待完成的工作">Stage 3: Work to Complete</strong></td>
+                <td><strong data-cn="簡單未來式" data-cn-s="简单未来式">Simple Future</strong><br>will + base verb / plan to</td>
+                <td>next, next week, soon, in the coming months</td>
+                <td><span class="utterance"><button class="btn-icon" onclick="speakText('Next, we will introduce our new product line.', this)"></button><span class="spoken">"Next, we <span class="tense-hl sf" title="Simple Future: will + base verb">will introduce</span> our new product line."</span></span></td>
+              </tr>
+            </table>
 
-    <h3 data-cn="Healthfirst Medical" data-cn-s="Healthfirst Medical">Healthfirst Medical</h3>
-    <div class="task-box">
-      <p><strong>Charlie Chan (A - Marketing Assistant) — Promoting mobile health clinics:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="到目前為止，我們已經在線上和本地社區發起了活動。目前，我們正在推廣流動健康診所。在未來幾個月，我們將與當地學校和社區中心合作，進一步推廣這些服務。" data-cn-s="到目前为止，我们已经在在线和本地社区发起了活动。目前，我们正在推广流动健康诊所。在未来几个月，我们将与当地学校和社区中心合作，进一步推广这些服务。">So far, we've launched campaigns both online and in the local community. Right now, we're promoting mobile health clinics. In the coming months, we will partner with local schools and community centres to promote these services even further.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong>Parker Leung (B - Operations Assistant) — Launching a new patient appointment scheduling system:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經將它與現有系統整合了。目前，我們正在培訓員工如何使用它。下個月，我們將使預約流程更加順暢。" data-cn-s="我们已经将它与现有系统集成了。目前，我们正在培训员工如何使用它。下个月，我们将使预约流程更加顺畅。">We've already integrated it with our existing systems. Currently, we're training staff on how to use it. Next month, we will make the booking process much smoother for everyone.</span></div>
-    </div>
+            <div class="task-box" style="background:#f0f7ff; border-left-color:#4a90d9;">
+              <p><strong data-cn="語言提示：集體名詞與主謂一致" data-cn-s="语言提示：集体名词与主谓一致">💡 Language Tip: Collective Nouns &amp; Subject-Verb Agreement</strong></p>
+              <p data-cn="在商務溝通中密切注意集體名詞：" data-cn-s="在商务沟通中密切注意集体名词：">Pay close attention to collective nouns in business communication:</p>
+              <ul style="padding-left:20px;">
+                <li><span class="utterance"><button class="btn-icon" onclick="speakText('The purchasing team has already planned', this)"></button><span class="spoken">"The purchasing team <strong>has</strong> already planned..."</span></span> <span style="color:#888;">(singular noun 'team' → has)</span></li>
+                <li><span class="utterance"><button class="btn-icon" onclick="speakText('The IT department has installed', this)"></button><span class="spoken">"The IT department <strong>has</strong> installed..."</span></span> <span style="color:#888;">(singular noun 'department' → has)</span></li>
+                <li><span class="utterance"><button class="btn-icon" onclick="speakText('We have designed', this)"></button><span class="spoken">"We <strong>have</strong> designed..." / "They <strong>have</strong> updated..."</span></span> <span style="color:#888;">(plural pronoun 'we' / 'they' → have)</span></li>
+              </ul>
+            </div>
 
-    <h3 data-cn="Boost Health Fitness Centre" data-cn-s="Boost Health Fitness Centre">Boost Health Fitness Centre</h3>
-    <div class="task-box">
-      <p><strong>Alex Lam (A - Operations Assistant) — Installing a health products vending machine at the gym:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經審查了會員的意見，並儲備了補充品、蛋白棒和運動飲料。目前，我們正在健身房安裝自動售貨機。在未來幾個月，我們將擴展產品範圍，並在今年夏天底推出自動售貨機。" data-cn-s="我们已经审查了会员的意见，并储备了补充品、蛋白棒和运动饮料。目前，我们正在健身房安装自动售货机。在未来几个月，我们将扩展产品范围，并在今年夏天底推出自动售货机。">We've reviewed members' opinions and stocked it with supplements, protein bars, and sports drinks. Currently, we're installing the vending machine at the gym. In the coming months, we will expand our product range and launch the vending machine by the end of this summer.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong>Jacob Wong (B - Marketing Assistant) — Boosting gym membership:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經制定了一個線上推廣計劃來吸引新會員。目前，我們正在與當地健身方面有影響力的人合作。在未來幾個月，我們將推出「為夏天做好準備」社交媒體活動，以增加我們的健身會員。" data-cn-s="我们已经制定了一个在线推广计划来吸引新会员。目前，我们正在与当地健身方面有影响力的人合作。在未来几个月，我们将推出「为夏天做好准备」社交媒体活动，以增加我们的健身会员。">We've developed an online promotional plan to attract new members. Currently, we're teaming up with local fitness influencers. In the coming months, we will launch a 'Get Ready for Summer' social media campaign to increase our gym membership.</span></div>
-    </div>
+          </div>
+        </div>
+      </div>
 
-    <h3 data-cn="DILWL — Online Media HK (Practice 1)" data-cn-s="DILWL — Online Media HK (Practice 1)">DILWL — Online Media HK (Practice 1)</h3>
-    <div class="task-box">
-      <p><strong>Gladys Yeung (Marketing Officer, Student A) — Engaging Key Opinion Leaders (KOLs) and/or influencers:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在為公司設計一系列新的Instagram帖子，關注飲食趨勢以吸引網紅。我們希望未來能與品牌合作舉辦品嚐活動。" data-cn-s="我们正在为公司设计一系列新的Instagram帖子，关注饮食趋势以吸引网红。我们希望未来能与品牌合作举办品尝活动。">We are designing a new series of Instagram posts for the company, keeping an eye on the food and beverage trend to engage influencers. We hope to collaborate with brands for tasting events in the future.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong>Edith Li (Administrative Officer, Student B) — Revamping the company's website:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經推出了一個適合移動設備的界面，現在正在改進圖片描述以提高可訪問性。我們預計將在本季度末收到有關這些功能的報告。" data-cn-s="我们已经推出了一个适合移动设备的界面，现在正在改进图片描述以提高可访问性。我们预计将在本季度末收到有关这些功能的报告。">We have launched a mobile-friendly interface and are now working on improving image descriptions for accessibility. We expect the report on these features by the end of the quarter.</span></div>
-    </div>
+      <!-- ===== Part 2 ===== -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="第二部分：案例研究 — ClickMart" data-cn-s="第二部分：案例研究 — ClickMart">Part 2: Case Studies in Project Reporting — ClickMart</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
 
-    <h3 data-cn="DILWL — Topsy Company (Practice 2)" data-cn-s="DILWL — Topsy Company (Practice 2)">DILWL — Topsy Company (Practice 2)</h3>
-    <div class="task-box">
-      <p><strong>Alex Cheung (IT Officer, Student A) — Enhancing internal communication channels:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在內部網路上設立一個中央门户，以改善各辦公室之間的溝通。這將使區域辦公室能夠更有效地訪問資源並建立我們的系統。" data-cn-s="我们正在内部网络上设立一个中央门户，以改善各办公室之间的沟通。这将使区域办公室能够更有效地访问资源并创建我们的系统。">We're setting up a central portal on our intranet to improve communication across offices. This will allow regional offices to access resources more efficiently and build upon our system.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong>Jamie Chau (Administrative Officer, Student B) — Streamlining workflow to reduce paper usage:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在識別減少紙張使用的領域，預計將在第三季度收到報告。我們希望根據調查結果實施新政策，使流程更加環保。" data-cn-s="我们正在识别减少纸张使用的领域，预计将在第三季度收到报告。我们希望根据调查结果实施新政策，使流程更加环保。">We are identifying areas to reduce paper usage, and a report is expected by the third quarter. We are hoping to implement new policies based on the findings to make the process more eco-friendly.</span></div>
-    </div>
+            <h3 data-cn="案例研究 1：新的環保家居裝飾系列" data-cn-s="案例研究 1：新的环保家居装饰系列">Case Study 1: New Eco-Friendly Home Decor Line</h3>
+            <table class="words tenses">
+              <tr>
+                <th data-cn="項目階段" data-cn-s="项目阶段">Project Stage</th>
+                <th data-cn="項目行動項目／範圍" data-cn-s="项目行动项目／范围">Project Action Item / Scope</th>
+              </tr>
+              <tr>
+                <td><strong data-cn="已完成的任務" data-cn-s="已完成的任务">Task Completed</strong></td>
+                <td>Design an eco-friendly home decor line made from sustainable materials</td>
+              </tr>
+              <tr>
+                <td><strong data-cn="進行中的任務" data-cn-s="进行中的任务">Task in Progress</strong></td>
+                <td>Create a marketing plan to promote our new eco-friendly home decor line</td>
+              </tr>
+              <tr>
+                <td><strong data-cn="待完成的工作" data-cn-s="待完成的工作">Work to Complete</strong></td>
+                <td>Introduce our new eco-friendly home decor line with a launch event to showcase the new line of products</td>
+              </tr>
+            </table>
+            <div class="task-box">
+              <p><strong data-cn="可能的回答：" data-cn-s="可能的回答：">Possible response:</strong></p>
+              <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('We are currently creating a marketing plan to engage our target audience and promote our new eco-friendly home decor line. So far, we have designed an eco-friendly home decor line made from sustainable materials. Next, we will introduce our new eco-friendly home decor line with a launch event to showcase the features of the new product line.', this)"></button><span class="spoken">"We <span class="tense-hl pc" title="Present Continuous: are + verb-ing">are currently creating</span> a marketing plan to engage our target audience and promote our new eco-friendly home decor line. <span style="background:#fffbe6; border:2px solid #f59e0b; border-radius:6px; padding:1px 6px; font-weight:700;" title="Time marker">So far</span>, we <span class="tense-hl pp" title="Present Perfect: have + past participle">have designed</span> an eco-friendly home decor line made from sustainable materials. <span style="background:#fffbe6; border:2px solid #f59e0b; border-radius:6px; padding:1px 6px; font-weight:700;" title="Time marker">Next</span>, we <span class="tense-hl sf" title="Simple Future: will + base verb">will introduce</span> our new eco-friendly home decor line with a launch event to showcase the features of the new product line."</span></span></div>
+            </div>
 
-    <h3 data-cn="DILWL — Active Sportswear (Practice 3)" data-cn-s="DILWL — Active Sportswear (Practice 3)">DILWL — Active Sportswear (Practice 3)</h3>
-    <div class="task-box">
-      <p><strong>Samantha Lee (Fashion Designer, Student A) — Designing the Winter Collection 2024:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們已經為冬季系列選擇了「動態演進」的主題，完成了情緒板，並且很快將確定設計。接下來的步驟包括面料選擇和進行樣品試穿。" data-cn-s="我们已经为冬季系列选择了「动态演进」的主题，完成了情绪板，并且很快将确定设计。接下来的步骤包括面料选择和进行样品试穿。">We've chosen the theme 'Dynamic Evolution' for the winter collection, completed mood boards, and will soon finalize designs. Next steps include fabric selection and conducting fittings for prototypes.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong>Vincent Chan (IT Officer, Student B) — Developing a mobile app for enhanced online shopping:</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我們正在開發一個具有新界面的移動應用程式，用於線上購物。接下來，我們將添加系列圖片和價格。測試應用程式的功能是我們未來幾個月的目標。" data-cn-s="我们正在开发一个具有新界面的移动应用程序，用于在线购物。接下来，我们将添加系列图片和价格。测试应用程序的功能是我们未来几个月的目标。">We're developing a mobile app with a new interface for online shopping. Next, we'll add the collection pictures and prices. Testing the app's functionality is our goal for the coming months.</span></div>
-    </div>
+            <h3 data-cn="案例研究 2：購買新會計軟件" data-cn-s="案例研究 2：购买新会计软件">Case Study 2: Purchasing New Accounting Software</h3>
+            <table class="words tenses">
+              <tr>
+                <th data-cn="項目階段" data-cn-s="项目阶段">Project Stage</th>
+                <th data-cn="項目行動項目／範圍" data-cn-s="项目行动项目／范围">Project Action Item / Scope</th>
+              </tr>
+              <tr>
+                <td><strong data-cn="已完成的任務" data-cn-s="已完成的任务">Task Completed</strong></td>
+                <td>Plan a budget for buying new accounting software for the company</td>
+              </tr>
+              <tr>
+                <td><strong data-cn="進行中的任務" data-cn-s="进行中的任务">Task in Progress</strong></td>
+                <td>Contact different providers and compare the packages</td>
+              </tr>
+              <tr>
+                <td><strong data-cn="待完成的工作" data-cn-s="待完成的工作">Work to Complete</strong></td>
+                <td>Place the order for the new software next week</td>
+              </tr>
+            </table>
+            <div class="task-box">
+              <p><strong data-cn="可能的回答：" data-cn-s="可能的回答：">Possible response:</strong></p>
+              <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('The purchasing team has already planned a budget for the new accounting software. Currently, we are contacting different providers and comparing the packages they offer. Next week, we will place the order for the new software.', this)"></button><span class="spoken">"The purchasing team <span class="tense-hl pp" title="Present Perfect: has + past participle">has <span style="background:#fffbe6; border:2px solid #f59e0b; border-radius:6px; padding:1px 6px; font-weight:700;" title="Time marker">already</span> planned</span> a budget for the new accounting software. <span style="background:#fffbe6; border:2px solid #f59e0b; border-radius:6px; padding:1px 6px; font-weight:700;" title="Time marker">Currently</span>, we <span class="tense-hl pc" title="Present Continuous: are + verb-ing">are contacting</span> different providers and comparing the packages they offer. <span style="background:#fffbe6; border:2px solid #f59e0b; border-radius:6px; padding:1px 6px; font-weight:700;" title="Time marker">Next week</span>, we <span class="tense-hl sf" title="Simple Future: will + base verb">will place</span> the order for the new software."</span></span></div>
+            </div>
+
+            <div class="oral-practice">
+              <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
+                <strong data-cn="學習活動 1（結對練習）：識別動詞時態與時間標記" data-cn-s="学习活动 1（结对练习）：识别动词时态与时间标记">👥 Learning Activity 1 (Pair Work): Identifying Verb Tenses &amp; Time Markers</strong>
+                <span class="toggle-icon">+</span>
+              </button>
+              <div class="oral-practice-content">
+                <p data-cn="與你的夥伴一起複習上面的口語報告模型：" data-cn-s="与你的伙伴一起复习上面的口语报告模型：">With your partner, review the spoken reporting models for Case Study 1 and Case Study 2 above:</p>
+                <ol style="padding-left:20px;">
+                  <li data-cn="與你的夥伴一起大聲朗讀模型以提高口語流利度。" data-cn-s="与你的伙伴一起大声朗读模型以提高口语流利度。">Practice reading the models aloud with your partner to build spoken fluency.</li>
+                </ol>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Part 3 ===== -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="第三部分：詞彙構建 — 職場專業搭配詞" data-cn-s="第三部分：词汇构建 — 职场专业搭配词">Part 3: Vocabulary Builder — Professional Workplace Collocations</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+
+            <div class="task-box" style="background:#f0f7ff; border-left-color:#4a90d9;">
+              <p><strong data-cn="什麼是搭配詞？" data-cn-s="什么是搭配词？">What is a collocation?</strong></p>
+              <p data-cn="搭配詞是自然英語中常見的詞語組合。在商務環境中，使用正確的搭配詞可以使你的溝通聽起來自然且專業。" data-cn-s="搭配词是自然英语中常见的词语组合。在商务环境中，使用正确的搭配词可以使你的沟通听起来自然且专业。">A collocation is a combination of words that commonly occur together in natural English. In business contexts, using proper collocations makes your communication sound natural and professional.</p>
+              <p data-cn="例如，在英語中我們說 'launch a campaign'（而不是 'make a campaign'）和 'arrange delivery'（而不是 'give delivery'）。" data-cn-s="例如，在英语中我们说 'launch a campaign'（而不是 'make a campaign'）和 'arrange delivery'（而不是 'give delivery'）。">For example, in English we say 'launch a campaign' (not 'make a campaign') and 'arrange delivery' (not 'give delivery').</p>
+            </div>
+
+            <h3 data-cn="職場搭配詞按功能領域分類" data-cn-s="职场搭配词按功能领域分类">Workplace Collocations by Functional Domain</h3>
+            <table class="words stacked">
+              <tr><th data-cn="職業領域" data-cn-s="职业领域">Vocational Domain</th><th data-cn="搭配動詞" data-cn-s="搭配动词">Collocating Verbs</th><th data-cn="目標名詞／短語" data-cn-s="目标名词／短语">Target Nouns / Phrases</th></tr>
+              <tr>
+                <td><strong data-cn="技術" data-cn-s="技术">Technology</strong></td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('install', this)"></button><span class="spoken"><span class="cn-word" data-cn="安裝／升級" data-cn-s="安装／升级">install</span> / upgrade</span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('create', this)"></button><span class="spoken"><span class="cn-word" data-cn="創建／設計" data-cn-s="创建／设计">create</span> / design</span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('maintain', this)"></button><span class="spoken"><span class="cn-word" data-cn="設計／維護／更新" data-cn-s="设计／维护／更新">design / maintain</span> / update</span></span>
+                </td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a computer software', this)"></button><span class="spoken"><span class="cn-word" data-cn="電腦軟件" data-cn-s="电脑软件">a computer software</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a mobile app', this)"></button><span class="spoken"><span class="cn-word" data-cn="手機應用程式" data-cn-s="手机应用程序">a mobile app</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('our webpage', this)"></button><span class="spoken"><span class="cn-word" data-cn="我們的網頁" data-cn-s="我们的网页">our webpage</span></span></span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong data-cn="產品與服務" data-cn-s="产品与服务">Products &amp; Services</strong></td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('launch', this)"></button><span class="spoken"><span class="cn-word" data-cn="推出／介紹／建立" data-cn-s="推出／介绍／建立">launch</span> / introduce / set up</span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('develop', this)"></button><span class="spoken"><span class="cn-word" data-cn="創建／設計／開發" data-cn-s="创建／设计／开发">create / design / develop</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('place an order', this)"></button><span class="spoken"><span class="cn-word" data-cn="下單" data-cn-s="下单">place / make</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('arrange delivery', this)"></button><span class="spoken"><span class="cn-word" data-cn="安排" data-cn-s="安排">arrange</span></span></span>
+                </td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a membership scheme', this)"></button><span class="spoken"><span class="cn-word" data-cn="會員計劃" data-cn-s="会员计划">a membership scheme</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a new product', this)"></button><span class="spoken"><span class="cn-word" data-cn="新產品／服務" data-cn-s="新产品／服务">a new product / service</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('an order', this)"></button><span class="spoken"><span class="cn-word" data-cn="訂單" data-cn-s="订单">an order</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('delivery', this)"></button><span class="spoken"><span class="cn-word" data-cn="交付" data-cn-s="交付">delivery</span></span></span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong data-cn="推廣" data-cn-s="推广">Promotion</strong></td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('promote', this)"></button><span class="spoken"><span class="cn-word" data-cn="推廣" data-cn-s="推广">promote</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('host', this)"></button><span class="spoken"><span class="cn-word" data-cn="舉辦／組織" data-cn-s="举办／组织">host / organise / hold</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('give away', this)"></button><span class="spoken"><span class="cn-word" data-cn="贈送／提供" data-cn-s="赠送／提供">give away</span> / offer</span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('reach', this)"></button><span class="spoken"><span class="cn-word" data-cn="觸及" data-cn-s="触及">reach</span></span></span>
+                </td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('webinars', this)"></button><span class="spoken"><span class="cn-word" data-cn="網絡研討會／活動" data-cn-s="网络研讨会／活动">webinars / campaign / contests / events</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('vouchers', this)"></button><span class="spoken"><span class="cn-word" data-cn="禮品／優惠券" data-cn-s="礼品／优惠券">souvenirs / coupons / vouchers / samples</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('target customers', this)"></button><span class="spoken"><span class="cn-word" data-cn="目標客戶" data-cn-s="目标客户">target customers</span></span></span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong data-cn="規劃" data-cn-s="规划">Planning</strong></td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('plan', this)"></button><span class="spoken"><span class="cn-word" data-cn="計劃" data-cn-s="计划">plan</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('finalise', this)"></button><span class="spoken"><span class="cn-word" data-cn="創建／制定" data-cn-s="创建／制定">create / make / finalise</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('conduct', this)"></button><span class="spoken"><span class="cn-word" data-cn="進行" data-cn-s="进行">conduct</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('schedule', this)"></button><span class="spoken"><span class="cn-word" data-cn="安排" data-cn-s="安排">schedule</span> / arrange</span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('allocate', this)"></button><span class="spoken"><span class="cn-word" data-cn="分配" data-cn-s="分配">allocate</span></span></span>
+                </td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a budget', this)"></button><span class="spoken"><span class="cn-word" data-cn="預算" data-cn-s="预算">a budget</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a plan', this)"></button><span class="spoken"><span class="cn-word" data-cn="計劃" data-cn-s="计划">a plan</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a supplier', this)"></button><span class="spoken"><span class="cn-word" data-cn="供應商" data-cn-s="供应商">a supplier</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('a meeting', this)"></button><span class="spoken"><span class="cn-word" data-cn="會議" data-cn-s="会议">a meeting</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('resources', this)"></button><span class="spoken"><span class="cn-word" data-cn="資源" data-cn-s="资源">resources</span></span></span>
+                </td>
+              </tr>
+              <tr>
+                <td><strong data-cn="社交媒體" data-cn-s="社交媒体">Social Media</strong></td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('create', this)"></button><span class="spoken"><span class="cn-word" data-cn="創建" data-cn-s="创建">create</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('engage', this)"></button><span class="spoken"><span class="cn-word" data-cn="互動／吸引" data-cn-s="互动／吸引">engage</span> / attract</span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('boost', this)"></button><span class="spoken"><span class="cn-word" data-cn="提升" data-cn-s="提升">boost</span></span></span>
+                </td>
+                <td>
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('social media posts', this)"></button><span class="spoken"><span class="cn-word" data-cn="社交媒體帖子" data-cn-s="社交媒体帖子">social media posts</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('followers', this)"></button><span class="spoken"><span class="cn-word" data-cn="粉絲" data-cn-s="粉丝">followers</span></span></span> · 
+                  <span class="utterance"><button class="btn-icon" onclick="speakText('engagement', this)"></button><span class="spoken"><span class="cn-word" data-cn="互動" data-cn-s="互动">engagement</span></span></span>
+                </td>
+              </tr>
+            </table>
+
+            <div class="collocation-game">
+              <h3>🎯 Workplace Collocations Matcher</h3>
+              <p class="game-subtitle">Select a verb on the left, then select its matching noun phrase on the right.</p>
+              <div class="status-bar">
+                <div class="score-badge" id="collocation-score">Matched: 0 / 20</div>
+              </div>
+              <div class="game-board">
+                <div class="column" id="verbs-col">
+                  <h2>Verbs</h2>
+                </div>
+                <div class="column" id="nouns-col">
+                  <h2>Target Nouns / Phrases</h2>
+                </div>
+              </div>
+              <button class="reset-btn" onclick="initCollocationGame()">Reset Game</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Part 4 ===== -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="第四部分：口語練習：ClickMart 項目 3 和 4" data-cn-s="第四部分：口语练习：ClickMart 项目 3 和 4">Part 4: Oral Practice: ClickMart Projects 3 &amp; 4</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+
+            <div class="role-card-steps-grid">
+              <!-- Student A Role Card -->
+              <div class="role-card">
+                <div class="role-card-header">STUDENT A</div>
+                <div class="role-card-name">Project 3 — New Clothing Collection</div>
+                <p style="color:#555; font-size:14px; margin-bottom:12px;" data-cn="向學生 B 發送 3 句話的項目更新。" data-cn-s="向学生 B 发送 3 句话的项目更新。">Deliver a 3-sentence project update to Student B.</p>
+
+                <div class="role-card-step">
+                  <h4 data-cn="你的指派項目要點：" data-cn-s="你的指派项目要点：">Your Assigned Project Bullets:</h4>
+                  <div class="role-card-project">
+                    <p><strong data-cn="已完成的任務：" data-cn-s="已完成的任务：">Task Completed:</strong> Partner with experienced designers and manufacturers to create a collection</p>
+                    <p><strong data-cn="進行中的任務：" data-cn-s="进行中的任务：">Task in Progress:</strong> Develop a marketing strategy to promote the new clothing collection</p>
+                    <p><strong data-cn="待完成的工作：" data-cn-s="待完成的工作：">Work to Complete:</strong> Offer limited edition pieces to create exclusivity and demand for our brand</p>
+                  </div>
+                </div>
+
+                <div class="role-card-step">
+                  <h4 data-cn="你的口語任務：" data-cn-s="你的口语任务：">Your Speaking Mission:</h4>
+                  <p data-cn="使用以下時態撰寫你的更新：" data-cn-s="使用以下时态撰写你的更新：">Write your update using these tenses:</p>
+                  <ul style="padding-left:20px; margin:6px 0 0;">
+                    <li><strong>Simple Future</strong> for the limited edition pieces</li>
+                    <li><strong>Present Perfect</strong> ('have partnered') for the completed design work</li>
+                    <li><strong>Present Continuous</strong> ('is currently developing') for the marketing strategy</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Student B Role Card -->
+              <div class="role-card">
+                <div class="role-card-header">STUDENT B</div>
+                <div class="role-card-name">Project 4 — Educational Toys Campaign</div>
+                <p style="color:#555; font-size:14px; margin-bottom:12px;" data-cn="向學生 A 發送 3 句話的項目更新。" data-cn-s="向学生 A 发送 3 句话的项目更新。">Deliver a 3-sentence project update to Student A.</p>
+
+                <div class="role-card-step">
+                  <h4 data-cn="你的指派項目要點：" data-cn-s="你的指派项目要点：">Your Assigned Project Bullets:</h4>
+                  <div class="role-card-project">
+                    <p><strong data-cn="已完成的任務：" data-cn-s="已完成的任务：">Task Completed:</strong> Kick off digital marketing campaign</p>
+                    <p><strong data-cn="進行中的任務：" data-cn-s="进行中的任务：">Task in Progress:</strong> Launch social media contests to increase engagement and brand awareness</p>
+                    <p><strong data-cn="待完成的工作：" data-cn-s="待完成的工作：">Work to Complete:</strong> Offer exclusive discounts and promotions to email subscribers and social media followers</p>
+                  </div>
+                </div>
+
+                <div class="role-card-step">
+                  <h4 data-cn="你的口語任務：" data-cn-s="你的口语任务：">Your Speaking Mission:</h4>
+                  <p data-cn="使用以下時態撰寫你的更新：" data-cn-s="使用以下时态撰写你的更新：">Write your update using these tenses:</p>
+                  <ul style="padding-left:20px; margin:6px 0 0;">
+                    <li><strong>Present Continuous</strong> ('is launching') for social media contests</li>
+                    <li><strong>Present Perfect</strong> ('have also kicked off') for the digital marketing campaign</li>
+                    <li><strong>Simple Future</strong> ('will offer') for discounts and promotions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="oral-practice">
+              <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
+                <strong data-cn="學習活動 3（結對練習）：口語與質量審計" data-cn-s="学习活动 3（结对练习）：口语与质量审计">👥 Learning Activity 3 (Pair Work): Peer Speaking &amp; Quality Audit</strong>
+                <span class="toggle-icon">+</span>
+              </button>
+              <div class="oral-practice-content">
+                <p><strong data-cn="結對練習說明：" data-cn-s="结对练习说明：">Pair Work Instructions:</strong></p>
+                <ol style="padding-left:20px;">
+                  <li data-cn="學生 A 先發言，使用上面的要點演示項目 3。" data-cn-s="学生 A 先发言，使用上面的要点演示项目 3。">Student A speaks first and presents Project 3 using the bullets above.</li>
+                  <li data-cn="學生 B 仔細聆聽並檢查學生 A 是否使用了：" data-cn-s="学生 B 仔细聆听并检查学生 A 是否使用了：">Student B listens carefully and checks if Student A used:</li>
+                </ol>
+                <ul style="padding-left:40px;">
+                  <li>[   ] Present Perfect ('have partnered')</li>
+                  <li>[   ] Present Continuous ('is developing')</li>
+                  <li>[   ] Simple Future ('will offer')</li>
+                </ul>
+                <ol style="padding-left:20px;" start="3">
+                  <li data-cn="現在交換角色！學生 B 演示項目 4，而學生 A 審計三個時態。" data-cn-s="现在交换角色！学生 B 演示项目 4，而学生 A 审计三个时态。">Now swap roles! Student B presents Project 4 while Student A audits the three tenses.</li>
+                </ol>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Part 5 ===== -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="第五部分：起草你的 CA 腳本" data-cn-s="第五部分：起草你的 CA 脚本">Part 5: Drafting your CA script</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+
+            <div class="role-card-steps-grid">
+              <!-- Role Card A -->
+              <div class="role-card">
+                <div class="role-card-header">ROLE CARD A</div>
+                <div class="role-card-name">Alex Liu</div>
+                <div class="role-card-title" data-cn="公共關係部職員" data-cn-s="公共关系部职员">Public Relations Officer</div>
+                <p style="color:#555; font-size:14px; margin-bottom:12px;" data-cn="你在員工感謝晚宴上。與你的同事 Ashley Lam（學生 B，設施部職員）進行對話。" data-cn-s="你在员工感谢晚宴上。与你的同事 Ashley Lam（学生 B，设施部职员）进行对话。">You are at a staff appreciation dinner. Hold a conversation with your colleague, <strong>Ashley Lam</strong> (Student B, a Facilities Officer).</p>
+
+                <div class="role-card-step">
+                  <h4 data-cn="步驟 1：問候你的同事並自我介紹" data-cn-s="步骤 1：问候你的同事并自我介绍">Step 1: Greet your colleague and introduce yourself</h4>
+                </div>
+
+                <div class="role-card-step">
+                  <h4 data-cn="步驟 2：就以下話題閒聊" data-cn-s="步骤 2：就以下话题闲聊">Step 2: Make small talk on the following topics</h4>
+                  <p data-cn="a. 你的週末活動" data-cn-s="a. 你的周末活动"><strong>a.</strong> Your weekend activities</p>
+                  <p data-cn="b. 你部門負責的一個項目" data-cn-s="b. 你部门负责的一个项目"><strong>b.</strong> A project run by your department</p>
+                  <div class="role-card-project">
+                    <p><strong data-cn="項目：組織開放日" data-cn-s="项目：组织开放日">Project: Organising an Open Day</strong></p>
+                    <p data-cn="你可以談論到目前為止已完成的工作，以及未來幾個月的計劃。" data-cn-s="你可以谈论到目前为止已完成的工作，以及未来几个月的计划。">You may talk about what has been done so far, and plans for the coming months.</p>
+                  </div>
+                </div>
+
+                <div class="role-card-step">
+                  <h4 data-cn="步驟 3：禮貌地結束對話" data-cn-s="步骤 3：礼貌地结束对话">Step 3: End the conversation politely</h4>
+                </div>
+              </div>
+
+              <!-- Role Card B -->
+              <div class="role-card">
+                <div class="role-card-header">ROLE CARD B</div>
+                <div class="role-card-name">Ashley Lam</div>
+                <div class="role-card-title" data-cn="設施部職員" data-cn-s="设施部职员">Facilities Officer</div>
+                <p style="color:#555; font-size:14px; margin-bottom:12px;" data-cn="你在員工感謝晚宴上。與你的同事 Alex Liu（學生 A，公共關係部職員）進行對話。" data-cn-s="你在员工感谢晚宴上。与你的同事 Alex Liu（学生 A，公共关系部职员）进行对话。">You are at a staff appreciation dinner. Hold a conversation with your colleague, <strong>Alex Liu</strong> (Student A, a Public Relations Officer).</p>
+
+                <div class="role-card-step">
+                  <h4 data-cn="步驟 1：問候你的同事並自我介紹" data-cn-s="步骤 1：问候你的同事并自我介绍">Step 1: Greet your colleague and introduce yourself</h4>
+                </div>
+
+                <div class="role-card-step">
+                  <h4 data-cn="步驟 2：就以下話題閒聊" data-cn-s="步骤 2：就以下话题闲聊">Step 2: Make small talk on the following topics</h4>
+                  <p data-cn="a. 你的週末活動" data-cn-s="a. 你的周末活动"><strong>a.</strong> Your weekend activities</p>
+                  <p data-cn="b. 你部門負責的一個項目" data-cn-s="b. 你部门负责的一个项目"><strong>b.</strong> A project run by your department</p>
+                  <div class="role-card-project">
+                    <p><strong data-cn="項目：翻新教室" data-cn-s="项目：翻新教室">Project: Renovating the classrooms</strong></p>
+                    <p data-cn="你可以談論到目前為止已完成的工作，以及未來幾個月的計劃。" data-cn-s="你可以谈论到目前为止已完成的工作，以及未来几个月的计划。">You may talk about what has been done so far, and plans for the coming months.</p>
+                  </div>
+                </div>
+
+                <div class="role-card-step">
+                  <h4 data-cn="步驟 3：禮貌地結束對話" data-cn-s="步骤 3：礼貌地结束对话">Step 3: End the conversation politely</h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="oral-practice">
+              <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
+                <strong data-cn="腳本起草引導問題與提示指南" data-cn-s="脚本起草引导问题与提示指南">Script Drafting Guided Questions &amp; Prompting Guide</strong>
+                <span class="toggle-icon">+</span>
+              </button>
+              <div class="oral-practice-content">
+                <p data-cn="與你的夥伴一起完成這些問題，逐步規劃你的對話。不要隨機寫句子——確保每個回合都回答下面的具體語言問題：" data-cn-s="与你的伙伴一起完成这些问题，逐步规划你的对话。不要随机写句子——确保每个回合都回答下面的具体语言问题：">Work through these questions with your partner to plan your conversation step-by-step. Do NOT write random sentences—make sure every turn answers the specific language questions below:</p>
+                
+                <p><strong>📌 Step 1: Greeting &amp; Self-Introduction</strong></p>
+                <ul style="padding-left:20px;">
+                  <li data-cn="Alex 將如何在接待環境中專業地問候 Ashley？" data-cn-s="Alex 将如何在接待环境中专业地问候 Ashley？">How will Alex greet Ashley professionally in a reception setting?</li>
+                  <li data-cn="Ashley 將如何回應 Alex 的介紹？" data-cn-s="Ashley 将如何回应 Alex 的介绍？">How will Ashley respond to Alex's introduction?</li>
+                </ul>
+
+                <p><strong>📌 Step 2: Social Small Talk &amp; Transition</strong></p>
+                <ul style="padding-left:20px;">
+                  <li data-cn="你會對員工感謝晚宴發表什麼評論或問題？" data-cn-s="你会对员工感谢晚宴发表什么评论或问题？">What comment or question will you ask about the Staff Appreciation Dinner?</li>
+                  <li data-cn="你將如何將對話從社交閒聊轉向詢問同事的部門項目？" data-cn-s="你将如何将对话从社交闲聊转向询问同事的部门项目？">How will you bridge the conversation from social small talk to asking about your colleague's departmental project?</li>
+                </ul>
+
+                <p><strong>📌 Step 3: Describing Alex's Project (Organising an Open Day)</strong></p>
+                <ul style="padding-left:20px;">
+                  <li><strong>Present Continuous:</strong> <span data-cn="Alex 將如何陳述公關部目前正在處理的項目？" data-cn-s="Alex 将如何陈述公关部目前正在处理的项目？">How will Alex state the project that PR is currently handling?</span></li>
+                  <li><strong>Present Perfect:</strong> <span data-cn="到目前為止已完成的工作。Alex 必須使用什麼助動詞？" data-cn-s="到目前为止已完成的工作。Alex 必须使用什么助动词？">What auxiliary verb ('have' or 'has') must Alex use?</span></li>
+                  <li><strong>Simple Future:</strong> <span data-cn="未來幾個月的計劃。Alex 必須使用什麼動詞時態？" data-cn-s="未来几个月的计划。Alex 必须使用什么动词时态？">What verb tense must Alex use?</span></li>
+                </ul>
+
+                <p><strong>📌 Step 4: Active Listening, Reaction &amp; Asking Ashley</strong></p>
+                <ul style="padding-left:20px;">
+                  <li data-cn="Ashley 將如何表現出對 Alex 項目的興趣？" data-cn-s="Ashley 将如何表现出对 Alex 项目的兴趣？">How will Ashley show interest in Alex's project?</li>
+                  <li data-cn="Ashley 將如何將對話轉回 Alex 以詢問設施部的項目？" data-cn-s="Ashley 将如何将对话转回 Alex 以询问设施部的项目？">How will Ashley transition the conversation back to Alex to ask about the Facilities department's project?</li>
+                </ul>
+
+                <p><strong>📌 Step 5: Describing Ashley's Project (Renovating the Classrooms)</strong></p>
+                <ul style="padding-left:20px;">
+                  <li><strong>Present Continuous:</strong> <span data-cn="Ashley 將如何描述目前正在進行的翻新工作？" data-cn-s="Ashley 将如何描述目前正在进行的翻新工作？">How will Ashley describe the ongoing renovation work right now?</span></li>
+                  <li><strong>Present Perfect:</strong> <span data-cn="已完成的項目。Ashley 必須使用什麼語法結構？" data-cn-s="已完成的项目。Ashley 必须使用什么语法结构？">What grammatical structure must Ashley use?</span></li>
+                  <li><strong>Simple Future:</strong> <span data-cn="未來計劃。Ashley 應該使用什麼時態和時間標記？" data-cn-s="未来计划。Ashley 应该使用什么时态和时间标记？">What tense and time markers should Ashley use?</span></li>
+                </ul>
+
+                <p><strong>📌 Step 6: Closing the Conversation Gracefully</strong></p>
+                <ul style="padding-left:20px;">
+                  <li data-cn="Alex 將如何積極回應 Ashley 的教室翻新更新？" data-cn-s="Alex 将如何积极回应 Ashley 的教室翻新更新？">How will Alex respond positively to Ashley's classroom renovation update?</li>
+                  <li data-cn="你可以使用什麼自然事件或藉口來順利結束對話？" data-cn-s="你可以使用什么自然事件或借口来顺利结束对话？">What natural event or excuse can you use to end the conversation smoothly?</li>
+                  <li data-cn="你將使用什麼商業搭配詞來提議再次聚聚？" data-cn-s="你将使用什么商业搭配词来提议再次聚聚？">What business collocation will you use to propose catching up again?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="oral-practice">
+              <button class="oral-practice-toggle" onclick="toggleOralPractice(this)">
+                <strong data-cn="學生自檢與質量檢查表" data-cn-s="学生自检与质量检查表">Student Self-Check &amp; Quality Checklist</strong>
+                <span class="toggle-icon">+</span>
+              </button>
+              <div class="oral-practice-content">
+                <p data-cn="在提交或表演你的腳本之前，驗證你的工作是否符合所有標準：" data-cn-s="在提交或表演你的脚本之前，验证你的工作是否符合所有标准：">Before submitting or performing your script, verify that your work meets all criteria:</p>
+                <table class="words stacked">
+                  <tr><th data-cn="評估領域" data-cn-s="评估领域">Assessment Area</th><th data-cn="檢查表問題" data-cn-s="检查表问题">Checklist Question</th><th>Status</th></tr>
+                  <tr>
+                    <td><strong data-cn="階段 1：已完成的任務" data-cn-s="阶段 1：已完成的任务">Stage 1: Task Completed</strong></td>
+                    <td data-cn="我們是否使用了現在完成式（have/has + 過去分詞）並搭配 'so far' 或 'already' 等時間標記？" data-cn-s="我们是否使用了现在完成式（have/has + 过去分词）并搭配 'so far' 或 'already' 等时间标记？">Did we use Present Perfect (have/has + past participle) with time markers like 'so far' or 'already'?</td>
+                    <td>[   ] Yes [   ] Need to fix</td>
+                  </tr>
+                  <tr>
+                    <td><strong data-cn="階段 2：進行中的任務" data-cn-s="阶段 2：进行中的任务">Stage 2: Task in Progress</strong></td>
+                    <td data-cn="我們是否使用了現在進行式（am/is/are + verb-ing）並搭配 'currently' 或 'right now' 等標記？" data-cn-s="我们是否使用了现在进行式（am/is/are + verb-ing）并搭配 'currently' 或 'right now' 等标记？">Did we use Present Continuous (am/is/are + verb-ing) with markers like 'currently' or 'right now'?</td>
+                    <td>[   ] Yes [   ] Need to fix</td>
+                  </tr>
+                  <tr>
+                    <td><strong data-cn="階段 3：待完成的工作" data-cn-s="阶段 3：待完成的工作">Stage 3: Work to Complete</strong></td>
+                    <td data-cn="我們是否使用了簡單未來式（will + 基本動詞 / plan to）並搭配 'next week' 或 'in the coming months' 等標記？" data-cn-s="我们是否使用了简单未来式（will + 基本动词 / plan to）并搭配 'next week' 或 'in the coming months' 等标记？">Did we use Simple Future (will + base verb / plan to) with markers like 'next week' or 'in the coming months'?</td>
+                    <td>[   ] Yes [   ] Need to fix</td>
+                  </tr>
+                  <tr>
+                    <td><strong data-cn="職業搭配詞" data-cn-s="职业搭配词">Vocational Collocations</strong></td>
+                    <td data-cn="我們是否使用了來自投影片 P.27–P.29 的目標搭配詞（例如：plan a budget, compare quotations, give away vouchers）？" data-cn-s="我们是否使用了来自投影片 P.27–P.29 的目标搭配词（例如：plan a budget, compare quotations, give away vouchers）？">Did we use target collocations from Slides P.27–P.29 (e.g., plan a budget, compare quotations, give away vouchers)?</td>
+                    <td>[   ] Yes [   ] Need to fix</td>
+                  </tr>
+                  <tr>
+                    <td><strong data-cn="對話流程" data-cn-s="对话流程">Conversational Flow</strong></td>
+                    <td data-cn="我們是否包含了自然的問候、社交閒聊、積極聆聽反應和禮貌的結束語？" data-cn-s="我们是否包含了自然的问候、社交闲聊、积极聆听反应和礼貌的结束语？">Did we include natural greetings, social small talk, active listening reactions, and a polite closing?</td>
+                    <td>[   ] Yes [   ] Need to fix</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .accordion -->
   </div>
 
   <!-- ================= Part 3: Opinions on Policy ================= -->
@@ -2180,11 +2805,136 @@ function toggleAccordionItem(item) {
   }
 }
 
+function toggleAccordion(btn) {
+  const item = btn.closest('.accordion-item');
+  toggleAccordionItem(item);
+}
+
+function expandAllInTab(tabIndex) {
+  const tab = document.getElementById('tab-' + tabIndex);
+  if (!tab) return;
+  tab.querySelectorAll('.accordion-item').forEach(item => {
+    item.classList.add('active');
+  });
+}
+
+function collapseAllInTab(tabIndex) {
+  const tab = document.getElementById('tab-' + tabIndex);
+  if (!tab) return;
+  tab.querySelectorAll('.accordion-item').forEach(item => {
+    item.classList.remove('active');
+  });
+}
+
 function toggleOralPractice(btn) {
   const practice = btn.closest('.oral-practice');
   practice.classList.toggle('open');
 }
 
+// Collocation Matcher Game
+const collocationData = [
+  { id: 1,  domain: "Tech",     verb: "install / upgrade",                   noun: "a computer software" },
+  { id: 2,  domain: "Tech",     verb: "create / design",                     noun: "a mobile app" },
+  { id: 3,  domain: "Tech",     verb: "design / maintain / update",          noun: "our webpage" },
+  { id: 4,  domain: "Products", verb: "launch / introduce / set up",         noun: "a membership scheme" },
+  { id: 5,  domain: "Products", verb: "create / design / develop / launch",  noun: "a new product / service" },
+  { id: 6,  domain: "Products", verb: "place / make",                        noun: "an order" },
+  { id: 7,  domain: "Products", verb: "arrange",                             noun: "delivery" },
+  { id: 8,  domain: "Promo",    verb: "promote",                             noun: "a product / service" },
+  { id: 9,  domain: "Promo",    verb: "host / organise / hold",              noun: "webinars / campaign / contests / events" },
+  { id: 10, domain: "Promo",    verb: "give away / offer",                   noun: "souvenirs / coupons / vouchers / samples" },
+  { id: 11, domain: "Promo",    verb: "reach",                               noun: "target customers" },
+  { id: 12, domain: "Planning", verb: "plan",                                noun: "a budget" },
+  { id: 13, domain: "Planning", verb: "create / make / finalise",            noun: "a plan" },
+  { id: 14, domain: "Planning", verb: "conduct",                             noun: "research" },
+  { id: 15, domain: "Planning", verb: "contact / identify",                  noun: "a supplier" },
+  { id: 16, domain: "Planning", verb: "schedule / arrange",                  noun: "a meeting" },
+  { id: 17, domain: "Planning", verb: "allocate",                            noun: "resources" },
+  { id: 18, domain: "Social",   verb: "create",                              noun: "social media posts" },
+  { id: 19, domain: "Social",   verb: "engage / attract",                    noun: "followers" },
+  { id: 20, domain: "Social",   verb: "boost",                               noun: "engagement" }
+];
+
+let selVerb = null;
+let selNoun = null;
+let matchCount = 0;
+
+function shuffleArr(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
+}
+
+function initCollocationGame() {
+  selVerb = null;
+  selNoun = null;
+  matchCount = 0;
+  document.getElementById('collocation-score').textContent = 'Matched: 0 / ' + collocationData.length;
+
+  const verbsCol = document.getElementById('verbs-col');
+  const nounsCol = document.getElementById('nouns-col');
+
+  verbsCol.querySelectorAll('.card').forEach(c => c.remove());
+  nounsCol.querySelectorAll('.card').forEach(c => c.remove());
+
+  shuffleArr(collocationData).forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.id = item.id;
+    card.innerHTML = item.verb + ' <span class="domain-tag">' + item.domain + '</span>';
+    card.onclick = function() { selectGameCard(card, 'verb'); };
+    verbsCol.appendChild(card);
+  });
+
+  shuffleArr(collocationData).forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.id = item.id;
+    card.innerHTML = item.noun + ' <span class="domain-tag">' + item.domain + '</span>';
+    card.onclick = function() { selectGameCard(card, 'noun'); };
+    nounsCol.appendChild(card);
+  });
+}
+
+function selectGameCard(card, type) {
+  if (card.classList.contains('matched')) return;
+
+  if (type === 'verb') {
+    if (selVerb) selVerb.classList.remove('selected');
+    selVerb = card;
+    card.classList.add('selected');
+  } else {
+    if (selNoun) selNoun.classList.remove('selected');
+    selNoun = card;
+    card.classList.add('selected');
+  }
+
+  if (selVerb && selNoun) checkGameMatch();
+}
+
+function checkGameMatch() {
+  const isMatch = selVerb.dataset.id === selNoun.dataset.id;
+
+  if (isMatch) {
+    selVerb.classList.remove('selected');
+    selNoun.classList.remove('selected');
+    selVerb.classList.add('matched');
+    selNoun.classList.add('matched');
+    selVerb = null;
+    selNoun = null;
+    matchCount++;
+    document.getElementById('collocation-score').textContent = 'Matched: ' + matchCount + ' / ' + collocationData.length;
+  } else {
+    const v = selVerb;
+    const n = selNoun;
+    v.classList.add('wrong');
+    n.classList.add('wrong');
+    setTimeout(function() {
+      v.classList.remove('wrong', 'selected');
+      n.classList.remove('wrong', 'selected');
+    }, 500);
+    selVerb = null;
+    selNoun = null;
+  }
+}
 </script>
 
 </body>
