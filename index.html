@@ -1239,6 +1239,19 @@ table.reminder-table td {
 @media (max-width: 768px) {
   .collocation-game .game-board { grid-template-columns: 1fr; }
 }
+
+.skill-hl {
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-weight: 600;
+  border-bottom: 2px solid;
+}
+.skill-hl-opinion  { background: #dcfce7; color: #166534; border-color: #22c55e; }
+.skill-hl-cause    { background: #dbeafe; color: #1e40af; border-color: #3b82f6; }
+.skill-hl-effect   { background: #fae8ff; color: #86198f; border-color: #a855f7; }
+.skill-hl-experience { background: #ffedd5; color: #9a3412; border-color: #f97316; }
+.skill-hl-feeling  { background: #fce7f3; color: #9d174d; border-color: #ec4899; }
+.skill-hl-example  { background: #fef9c3; color: #854d0e; border-color: #eab308; }
 </style>
 </head>
 <body>
@@ -2185,9 +2198,6 @@ table.reminder-table td {
                   </div>
                 </div>
 
-                <div class="role-card-step">
-                  <h4 data-cn="步驟 3：禮貌地結束對話" data-cn-s="步骤 3：礼貌地结束对话">Step 3: End the conversation politely</h4>
-                </div>
               </div>
 
               <!-- Role Card B -->
@@ -2211,9 +2221,6 @@ table.reminder-table td {
                   </div>
                 </div>
 
-                <div class="role-card-step">
-                  <h4 data-cn="步驟 3：禮貌地結束對話" data-cn-s="步骤 3：礼貌地结束对话">Step 3: End the conversation politely</h4>
-                </div>
               </div>
             </div>
 
@@ -2314,83 +2321,1003 @@ table.reminder-table td {
   <!-- ================= Part 3: Opinions on Policy ================= -->
   <div class="tab-content" id="tab-3">
     <span class="part-badge">Lesson 4</span>
-    <h1 data-cn="分享你對公司政策的意見" data-cn-s="分享你对公司政策的意见">Share your opinions on a new company policy</h1>
+    <h1 data-cn="第5單元：分享你對公司政策的意見" data-cn-s="第5单元：分享你对公司政策的意见">Unit 5: Share your opinions on a new company policy</h1>
 
-    <h2 data-cn="表達意見" data-cn-s="表达意见">Expressing opinions</h2>
-    <div class="task-section">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I think, feel, believe, reckon, love something.', this)"></button><span class="spoken" data-cn="我認為／覺得／相信／認為／很喜歡……" data-cn-s="我认为／觉得／相信／认为／很喜欢……">I think / feel / believe / reckon / love…</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('In my view or opinion, something.', this)"></button><span class="spoken" data-cn="在我看來／我認為，……" data-cn-s="在我看来／我认为，……">In my view / opinion, …</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('On the one hand, something. On the other hand, something.', this)"></button><span class="spoken" data-cn="一方面，……另一方面，……" data-cn-s="一方面，……另一方面，……">On the one hand, … On the other hand, …</span></span></div>
+    <div class="learning-objectives">
+      <h3 data-cn="學習目標" data-cn-s="学习目标">Learning Objectives</h3>
+      <p data-cn="到本單元結束時，你將能夠：" data-cn-s="到本单元结束时，你将能够：">By the end of this unit, you will be able to:</p>
+      <ul>
+        <li data-cn="表達意見" data-cn-s="表达意见">express opinions</li>
+        <li data-cn="通過說明原因、影響、個人感受和例子來解釋你的觀點" data-cn-s="通过说明原因、影响、个人感受和例子来解释你的观点">explain your opinions by stating causes, effects, personal feelings, and examples</li>
+      </ul>
+    
+
+    <div class="accordion-controls">
+      <button class="accordion-btn" onclick="expandAllInTab(3)">Expand All</button>
+      <button class="accordion-btn" onclick="collapseAllInTab(3)">Collapse All</button>
+    </div>
+    <div class="accordion">
+      <div class="accordion-item active">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="表達與支持意見的技巧" data-cn-s="表达与支持意见的技巧">Skills for Expressing & Supporting Opinions</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+
+    <div style="max-width:780px; margin:20px auto; padding:24px; background:#ffffff; border:1px solid #e0e0e0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); color:#2c3e50;">
+      <header style="border-bottom:2px solid #eef2f6; padding-bottom:16px; margin-bottom:20px;">
+        <h2 style="margin:0 0 8px 0; color:#1e293b; font-size:1.4rem;" data-cn="表達與支持意見的技巧" data-cn-s="表达与支持意见的技巧">Skills for Expressing &amp; Supporting Opinions</h2>
+        <p style="margin:0; color:#64748b; font-size:0.95rem; line-height:1.5;" data-cn="有力的意見不僅僅是表達簡單的偏好。學習如何通過連結原因、影響、個人感受和具體例子來支持你的觀點。" data-cn-s="有力的意见不仅仅是表达简单的偏好。学习如何通过连接原因、影响、个人感受和具体例子来支持你的观点。">
+          Strong opinions go beyond stating a simple preference. Learn how to support your view by connecting <strong>Causes</strong>, <strong>Effects</strong>, <strong>Personal Feelings</strong>, and concrete <strong>Examples</strong>.
+        </p>
+      </header>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:12px; margin-bottom:24px;">
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:12px;">
+          <h4 style="margin:0 0 4px 0; color:#166534; font-size:0.9rem;">1. <span data-cn="表達意見" data-cn-s="表达意见">Expressing Opinions</span></h4>
+          <p style="margin:0; font-size:0.8rem; color:#14532d; line-height:1.5;" data-cn="陳述個人觀點或立場。" data-cn-s="陈述个人观点或立场。">States your personal viewpoint or stance.<br><strong>Keys:</strong> <em>I think, in my view, on the one hand</em></p>
+        </div>
+        <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px; padding:12px;">
+          <h4 style="margin:0 0 4px 0; color:#1e40af; font-size:0.9rem;">2. <span data-cn="說明原因" data-cn-s="说明原因">Stating Causes</span></h4>
+          <p style="margin:0; font-size:0.8rem; color:#1e3a8a;" data-cn="解釋為什麼某事發生（原因/驅動因素）。" data-cn-s="解释为什么某事发生（原因/驱动因素）。">Explains <em>why</em> something occurs (reasons/drivers).<br><strong>Keys:</strong> <em>because, since, due to</em></p>
+        </div>
+        <div style="background:#fdf4ff; border:1px solid #f5d0fe; border-radius:8px; padding:12px;">
+          <h4 style="margin:0 0 4px 0; color:#86198f; font-size:0.9rem;">3. <span data-cn="說明影響" data-cn-s="说明影响">Stating Effects</span></h4>
+          <p style="margin:0; font-size:0.8rem; color:#701a75;" data-cn="解釋結果或影響。" data-cn-s="解释结果或影响。">Explains the <em>outcome</em> or impact.<br><strong>Keys:</strong> <em>which leads to, resulting in, makes it</em></p>
+        </div>
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:12px;">
+          <h4 style="margin:0 0 4px 0; color:#9a3412; font-size:0.9rem;">4. <span data-cn="分享個人經驗" data-cn-s="分享个人经验">Sharing Personal Experiences</span></h4>
+          <p style="margin:0; font-size:0.8rem; color:#78350f;" data-cn="用親身經歷支持你的觀點。" data-cn-s="用亲身经历支持你的观点。">Supports your view with personal evidence.<br><strong>Keys:</strong> <em>my position, personally speaking, my own experience</em></p>
+        </div>
+        <div style="background:#fdf4ff; border:1px solid #f5d0fe; border-radius:8px; padding:12px;">
+          <h4 style="margin:0 0 4px 0; color:#86198f; font-size:0.9rem;">5. <span data-cn="個人感受" data-cn-s="个人感受">Personal Feelings</span></h4>
+          <p style="margin:0; font-size:0.8rem; color:#701a75;" data-cn="表達主觀情感或態度。" data-cn-s="表达主观情感或态度。">Expresses subjective emotion or attitude.<br><strong>Keys:</strong> <em>my personal feeling, I love, underwhelming</em></p>
+        </div>
+        <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:12px;">
+          <h4 style="margin:0 0 4px 0; color:#92400e; font-size:0.9rem;">6. <span data-cn="舉例說明" data-cn-s="举例说明">Giving Examples</span></h4>
+          <p style="margin:0; font-size:0.8rem; color:#78350f;" data-cn="提供真實世界的證據或例證。" data-cn-s="提供真实世界的证据或例证。">Provides real-world evidence or illustrations.<br><strong>Keys:</strong> <em>for instance, such as, in my experience</em></p>
+        </div>
+      </div>
     </div>
 
-    <h2 data-cn="說明原因與影響" data-cn-s="说明原因与影响">Stating causes &amp; explaining effects</h2>
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="熱身活動" data-cn-s="热身活动">Warm-up Activity</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+    <h2 data-cn="熱身活動" data-cn-s="热身活动">Warm-up Activity</h2>
+    <p style="font-size:0.95rem; color:#475569; margin:0 0 14px 0;" data-cn="點擊音頻按鈕聆聽，或閱讀下方Jane和Martin的對話。在跟讀時，找出以下兩個問題的答案：" data-cn-s="点击音频按钮聆听，或阅读下方Jane和Martin的对话。在跟读时，找出以下两个问题的答案：">Click the audio buttons to listen, or read along with the dialogue between Jane and Martin below. As you follow along, identify the answers to these two questions:</p>
+    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:14px 18px; margin:0 0 16px 0; font-size:0.9rem; line-height:1.6; color:#0c4a6e;">
+      <p style="margin:0 0 6px 0;"><strong data-cn="問題 1：" data-cn-s="问题 1：">Question 1:</strong> <span data-cn="Martin支持還是反對新健身房？他給出的主要原因是什麼？" data-cn-s="Martin支持还是反对新健身房？他给出的主要原因是什么？">Does Martin support or oppose the new gym? What primary reason does he give?</span></p>
+      <p style="margin:0;"><strong data-cn="問題 2：" data-cn-s="问题 2：">Question 2:</strong> <span data-cn="為什麼Jane認為健身房有些不切實際？她建議用什麼替代設施？" data-cn-s="为什么Jane认为健身房有些不切实际？她建议用什么替代设施？">Why does Jane consider the gym somewhat impractical, and what alternative amenities does she suggest instead?</span></p>
+    </div>
     <div class="task-section">
-      <ul style="padding-left:20px;">
-        <li><strong data-cn="原因" data-cn-s="原因">Causes:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('because, since, as', this)"></button><span class="spoken" data-cn="……因為／由於／既然……" data-cn-s="……因为／由于／既然……">…because / since / as…</span></span></li>
-        <li><strong data-cn="影響" data-cn-s="影响">Effects:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('so, as a result, therefore, consequently', this)"></button><span class="spoken" data-cn="……所以……／因此，……／所以／因此，……" data-cn-s="……所以……／因此，……／所以／因此，……">…so… / As a result, … / Therefore / Consequently, …</span></span></li>
+      <div class="task-box">
+        <p><strong data-cn="Jane：" data-cn-s="Jane：">Jane:</strong></p>
+        <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('What do you think about the new gym facility our company introduced for staff?', this, 'female')"></button><span class="spoken" data-cn="你覺得我們公司為員工引入的新健身設施怎麼樣？" data-cn-s="你觉得我们公司为员工引入的新健身设施怎么样？">What do you think about the new gym facility our company introduced for staff?</span></span></div>
+
+        <p><strong data-cn="Martin：" data-cn-s="Martin：">Martin:</strong></p>
+        <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('I believe it is a fantastic idea. I love the convenience of having a fitness space right at the workplace. My own experience is that getting in a workout during lunch breaks or after hours is an ideal way to relieve stress and boost overall fitness, and it clearly shows the company cares about our well-being.', this, 'male')"></button><span class="spoken" data-cn="我認為這是一個絕妙的主意。我喜愛在工作場所就有健身空間的便利性。我自己的經驗是，在午休或下班後做運動是緩解壓力和提升整體健康水平的理想方式，而且這清楚表明公司關心我們的健康。" data-cn-s="我认为这是一个绝妙的主意。我喜爱在工作场所就有健身空间的便利性。我自己的经验是，在午休或下班后做运动是缓解压力和提升整体健康水平的理想方式，而且这清楚表明公司关心我们的健康。">I believe it's a fantastic idea. I love the convenience of having a fitness space right at the workplace. My own experience is that getting in a workout during lunch breaks or after hours is an ideal way to relieve stress and boost overall fitness, and it clearly shows the company cares about our well-being.</span></span></div>
+
+        <p><strong data-cn="Jane：" data-cn-s="Jane：">Jane:</strong></p>
+        <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Personally speaking, I am not so sure. On the one hand, it is great that the company wants to introduce new staff perks; on the other hand, my personal feeling is that opening a facility that only a fraction of employees will use is somewhat impractical. In my view, creating shared areas where everyone can unwind such as an outdoor seating area or a meditation room would be far more worthwhile than adding only a gym.', this, 'female')"></button><span class="spoken" data-cn="就個人而言，我不太確定。一方面，公司想要引入新的員工福利是好事；另一方面，我個人的感覺是，開設只有一小部分員工會使用的設施有些不切實際。在我看來，創建所有人都可以放鬆的共享區域，例如戶外休息區或冥想室，會比僅僅添加健身房更有價值。" data-cn-s="就个人而言，我不太确定。一方面，公司想要引入新的员工福利是好事；另一方面，我个人的感觉是，开设只有一小部分员工会使用的设施有些不切实际。在我看来，创建所有人都可以放松的共享区域，例如户外休息区或冥想室，会比仅仅添加健身房更有价值。">Personally speaking, I'm not so sure. On the one hand, it's great that the company wants to introduce new staff perks; on the other hand, my personal feeling is that opening a facility that only a fraction of employees will use is somewhat impractical. In my view, creating shared areas where everyone can unwind—such as an outdoor seating area or a meditation room—would be far more worthwhile than adding only a gym.</span></span></div>
+
+        <p><strong data-cn="Martin：" data-cn-s="Martin：">Martin:</strong></p>
+        <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Really? In my opinion, having an on-site gym is still a major perk for the team. I feel that it actively encourages healthy habits, and I reckon the nominal fee being charged makes it far more cost-effective than paying for a private gym membership.', this, 'male')"></button><span class="spoken" data-cn="真的嗎？我認為，擁有內部健身房仍然是團隊的一大福利。我覺得它積極鼓勵健康的習慣，而且我認為收取的象徵性費用比支付私人健身房會費更具成本效益。" data-cn-s="真的吗？我认为，拥有内部健身房仍然是团队的一大福利。我觉得它积极鼓励健康的习惯，而且我认为收取的象征性费用比支付私人健身房会费更具成本效益。">Really? In my opinion, having an on-site gym is still a major perk for the team. I feel that it actively encourages healthy habits, and I reckon the nominal fee being charged makes it far more cost-effective than paying for a private gym membership.</span></span></div>
+
+        <p><strong data-cn="Jane：" data-cn-s="Jane：">Jane:</strong></p>
+        <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('That is a fair point, and I think the affordable rate is definitely attractive for people who exercise regularly. Even so, my position is that employee amenities should cater to diverse needs, so I hope management will also consider adding dedicated relaxation spaces in the near future.', this, 'female')"></button><span class="spoken" data-cn="這是個合理的觀點，而且我認為實惠的價格對經常鍛煉的人來說絕對有吸引力。即便如此，我的立場是員工設施應該滿足多樣化的需求，所以我希望管理層在不久的將來也能考慮添加專門的放鬆空間。" data-cn-s="这是个合理的观点，而且我认为实惠的价格对经常锻炼的人来说绝对有吸引力。即便如此，我的立场是员工设施应该满足多样化的需求，所以我希望管理层在不久的将来也能考虑添加专门的放松空间。">That's a fair point, and I think the affordable rate is definitely attractive for people who exercise regularly. Even so, my position is that employee amenities should cater to diverse needs, so I hope management will also consider adding dedicated relaxation spaces in the near future.</span></span></div>
+      </div>
+    </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span data-cn="互動練習" data-cn-s="互动练习">Interactive Practice</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="accordion-content-inner">
+    <!-- Interactive Opinion Skills Activity -->
+    <div id="opinion-skills-app" style="max-width:780px; margin:20px auto; padding:24px; background:#ffffff; border:1px solid #e0e0e0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05); color:#2c3e50;">
+      <section style="margin-bottom:30px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <h3 style="margin:0; font-size:1.1rem; color:#1e293b;" data-cn="任務 1：辨識闡述技巧" data-cn-s="任务 1：辨识阐述技巧">Task 1: Identify the Elaboration Skill</h3>
+          <span id="quiz-score" style="font-size:0.85rem; font-weight:600; color:#475569; background:#e2e8f0; padding:4px 10px; border-radius:20px;">Score: 0 / 4</span>
+        </div>
+        <p style="font-size:0.9rem; color:#475569; margin:0 0 16px 0;" data-cn="個人完成。閱讀Jane和Martin對話中的每個Highlighted摘錄。辨識它屬於哪種闡述類別：Cause、Effect、Personal Feeling或Example。目標：4/4。完成後，與搭檔比較並說明你的答案。" data-cn-s="个人完成。阅读Jane和Martin对话中的每个Highlighted摘录。辨识它属于哪种阐述类别：Cause、Effect、Personal Feeling或Example。目标：4/4。完成后，与搭档比较并说明你的答案。">Work individually.<br>Read each excerpt taken from Jane and Martin's conversation.<br>Identify which elaboration category it represents: <strong>Cause</strong>, <strong>Effect</strong>, <strong>Personal Feeling</strong>, or <strong>Example</strong>.<br>Aim for 4/4. Once completed, compare and justify your answers with your partner.</p>
+        <div id="quiz-container" style="display:flex; flex-direction:column; gap:16px;"></div>
+      </section>
+
+      <section style="border-top:2px solid #eef2f6; padding-top:20px;">
+        <h3 style="margin:0 0 8px 0; font-size:1.1rem; color:#1e293b;" data-cn="任務 2：建立闡述性意見" data-cn-s="任务 2：建立阐述性意见">Task 2: Build an Elaborated Opinion</h3>
+        <p style="font-size:0.9rem; color:#475569; margin:0 0 16px 0;" data-cn="從每個下拉選單中選擇一個組件，以構建一個完整的論點來支持混合工作（立場與感受 → 原因 → 影響 → 例子）。聆聽：點擊「🔊 Play Generated Response」聆聽節奏、語調和過渡詞的停頓。" data-cn-s="从每个下拉菜单中选择一个组件，以构建一个完整的论点来支持混合工作（立场与感受 → 原因 → 影响 → 例子）。聆听：点击「🔊 Play Generated Response」聆听节奏、语调和过渡词的停顿。">Select one component from each dropdown menu below to build a complete argument supporting hybrid work (<strong>Stance &amp; Feeling → Cause → Effect → Example</strong>).<br><strong>Listen:</strong> Click "🔊 Play Generated Response" to listen to the rhythm, intonation, and pausing at transition words.</p>
+        <div style="display:grid; grid-template-columns:1fr; gap:12px; margin-bottom:16px;">
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px; color:#701a75;" data-cn="步驟 1：立場與個人感受" data-cn-s="步骤 1：立场与个人感受">Step 1: Stance &amp; Personal Feeling</label>
+            <select id="builder-feeling" onchange="updateBuiltArgument()" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.85rem; background:#fff;">
+              <option value="">-- Choose opening &amp; feeling --</option>
+              <option value="Personally speaking, I feel strongly in favor of flexible work arrangements.">"Personally speaking, I feel strongly in favor of flexible work arrangements."</option>
+              <option value="My personal feeling is that mandatory five-day office policies are outdated.">"My personal feeling is that mandatory five-day office policies are outdated."</option>
+              <option value="In my view, I really love the autonomy that hybrid schedules provide.">"In my view, I really love the autonomy that hybrid schedules provide."</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px; color:#166534;" data-cn="步驟 2：說明原因" data-cn-s="步骤 2：说明原因">Step 2: Stating Cause (The Reason)</label>
+            <select id="builder-cause" onchange="updateBuiltArgument()" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.85rem; background:#fff;">
+              <option value="">-- Choose cause --</option>
+              <option value="This is primarily because long daily commutes consume significant physical and mental energy.">"This is primarily because long daily commutes consume significant physical and mental energy."</option>
+              <option value="Since modern knowledge work relies heavily on digital collaboration tools, physical presence is less essential.">"Since modern knowledge work relies heavily on digital collaboration tools, physical presence is less essential."</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px; color:#1e40af;" data-cn="步驟 3：說明影響" data-cn-s="步骤 3：说明影响">Step 3: Stating Effect (The Outcome)</label>
+            <select id="builder-effect" onchange="updateBuiltArgument()" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.85rem; background:#fff;">
+              <option value="">-- Choose effect --</option>
+              <option value="As a consequence, team members can focus more deeply and report lower rates of burnout.">"As a consequence, team members can focus more deeply and report lower rates of burnout."</option>
+              <option value="This results in higher overall job satisfaction and makes recruitment far more competitive.">"This results in higher overall job satisfaction and makes recruitment far more competitive."</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px; color:#78350f;" data-cn="步驟 4：提供例子／經驗" data-cn-s="步骤 4：提供例子／经验">Step 4: Providing an Example / Experience</label>
+            <select id="builder-example" onchange="updateBuiltArgument()" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.85rem; background:#fff;">
+              <option value="">-- Choose example --</option>
+              <option value="In my own experience, having two remote focus days each week allowed our team to deliver projects ahead of deadline.">"In my own experience, having two remote focus days each week allowed our team to deliver projects ahead of deadline."</option>
+              <option value="For instance, several tech companies noticed a 20% surge in retention after introducing two remote days per week.">"For instance, several tech companies noticed a 20% surge in retention after introducing two remote days per week."</option>
+            </select>
+          </div>
+        </div>
+        <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:14px;">
+          <span style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:#64748b; letter-spacing:0.5px;" data-cn="你生成的回應：" data-cn-s="你生成的回应：">Your Generated Response:</span>
+          <p id="builder-result" style="margin:8px 0 0 0; font-size:0.95rem; line-height:1.6; color:#94a3b8; font-style:italic;">Select options above to see your combined opinion text here...</p>
+          <div style="margin-top:10px;">
+            <button class="btn-icon" onclick="speakText(document.getElementById('builder-result').textContent, this)" style="width:auto; padding:6px 12px; border-radius:6px; font-size:0.85rem; font-weight:600;" data-cn="播放生成的回應" data-cn-s="播放生成的回应">Play Generated Response</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+    (function() {
+      var quizQuestions = [
+        {
+          speaker: "Martin",
+          quote: "I love the convenience of having a fitness space right at the workplace...",
+          target: "I love the convenience...",
+          correct: "Personal Feeling",
+          explanation: "'I love' expresses a personal affective reaction and emotional attitude toward the benefit.",
+          explanationCn: "「我喜愛」表達了對該福利的個人情感反應和情感態度。",
+          explanationCnS: "「我喜爱」表达了对该福利的个人情感反应和情感态度。"
+        },
+        {
+          speaker: "Jane",
+          quote: "...opening a facility that only a fraction of employees will use is somewhat impractical.",
+          target: "that only a fraction of employees will use...",
+          correct: "Cause",
+          explanation: "This states the underlying reason or driver why Jane believes the gym is impractical.",
+          explanationCn: "這陳述了Jane認為健身房不實用的根本原因或驅動因素。",
+          explanationCnS: "这陈述了Jane认为健身房不实用的根本原因或驱动因素。"
+        },
+        {
+          speaker: "Martin",
+          quote: "...the nominal fee being charged makes it far more cost-effective than paying for a private gym membership.",
+          target: "makes it far more cost-effective...",
+          correct: "Effect",
+          explanation: "This explains the resulting financial outcome and practical consequence of the subsidized fee.",
+          explanationCn: "這解釋了補貼費用所帶來的財務結果和實際後果。",
+          explanationCnS: "这解释了补贴费用所带来的财务结果和实际后果。"
+        },
+        {
+          speaker: "Jane",
+          quote: "...creating shared areas where everyone can unwind—such as an outdoor seating area or a meditation room...",
+          target: "such as an outdoor seating area or a meditation room",
+          correct: "Example",
+          explanation: "'Such as...' introduces specific, concrete alternatives to clarify what kinds of spaces she has in mind.",
+          explanationCn: "「例如……」引入了具體的替代方案，以澄清她心中想要的空間類型。",
+          explanationCnS: "「例如……」引入了具体的替代方案，以澄清她心中想要的空间类型。"
+        }
+      ];
+
+      var categories = ["Cause", "Effect", "Personal Feeling", "Example"];
+      var container = document.getElementById("quiz-container");
+      var score = 0;
+      var answered = {};
+
+      quizQuestions.forEach(function(q, idx) {
+        var card = document.createElement("div");
+        card.style.cssText = "background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px;";
+
+        var quoteEl = document.createElement("p");
+        quoteEl.style.cssText = "margin:0 0 10px 0; font-size:0.92rem; line-height:1.5; color:#334155;";
+        quoteEl.innerHTML = "<strong>" + q.speaker + ':</strong> "' + q.quote.replace(q.target, '<span style="background:#fef08a; padding:2px 4px; border-radius:4px; font-weight:600;">' + q.target + "</span>") + '"';
+        card.appendChild(quoteEl);
+
+        var btnGroup = document.createElement("div");
+        btnGroup.style.cssText = "display:flex; flex-wrap:wrap; gap:8px; margin-bottom:8px;";
+
+        var feedbackEl = document.createElement("div");
+        feedbackEl.style.cssText = "display:none; font-size:0.85rem; padding:8px 10px; border-radius:6px; margin-top:6px;";
+
+        categories.forEach(function(cat) {
+          var btn = document.createElement("button");
+          btn.textContent = cat;
+          btn.style.cssText = "padding:6px 12px; font-size:0.8rem; border-radius:6px; border:1px solid #cbd5e1; background:#ffffff; cursor:pointer; color:#334155; transition:all 0.2s;";
+          btn.onmouseover = function() { if (!answered[idx]) btn.style.background = "#e2e8f0"; };
+          btn.onmouseout = function() { if (!answered[idx]) btn.style.background = "#ffffff"; };
+
+          btn.onclick = function() {
+            if (answered[idx]) return;
+            answered[idx] = true;
+            var isCorrect = (cat === q.correct);
+            if (isCorrect) {
+              score++;
+              btn.style.background = "#22c55e";
+              btn.style.borderColor = "#16a34a";
+              btn.style.color = "#ffffff";
+              feedbackEl.style.background = "#dcfce7";
+              feedbackEl.style.color = "#166534";
+              feedbackEl.innerHTML = "<strong>Correct!</strong> " + q.explanation + "<br><em style='color:#15803d;'>" + q.explanationCn + "</em>";
+            } else {
+              btn.style.background = "#ef4444";
+              btn.style.borderColor = "#dc2626";
+              btn.style.color = "#ffffff";
+              feedbackEl.style.background = "#fee2e2";
+              feedbackEl.style.color = "#991b1b";
+              feedbackEl.innerHTML = "<strong>Incorrect.</strong> Correct answer: <strong>" + q.correct + "</strong>. " + q.explanation + "<br><em style='color:#991b1b;'>" + q.explanationCn + "</em>";
+            }
+            feedbackEl.style.display = "block";
+            document.getElementById("quiz-score").textContent = "Score: " + score + " / " + quizQuestions.length;
+          };
+          btnGroup.appendChild(btn);
+        });
+
+        card.appendChild(btnGroup);
+        card.appendChild(feedbackEl);
+        container.appendChild(card);
+      });
+
+      window.updateBuiltArgument = function() {
+        var f = document.getElementById("builder-feeling").value;
+        var c = document.getElementById("builder-cause").value;
+        var e = document.getElementById("builder-effect").value;
+        var x = document.getElementById("builder-example").value;
+        var parts = [f, c, e, x].filter(Boolean);
+        var resultBox = document.getElementById("builder-result");
+        if (parts.length === 0) {
+          resultBox.style.color = "#94a3b8";
+          resultBox.style.fontStyle = "italic";
+          resultBox.textContent = "Select options above to see your combined opinion text here...";
+        } else {
+          resultBox.style.color = "#1e293b";
+          resultBox.style.fontStyle = "normal";
+          resultBox.textContent = parts.join(" ");
+        }
+      };
+    })();
+    </script>
+
+    <h2 data-cn="步驟 4：CA 口語練習 — 職場政策討論" data-cn-s="步骤 4：CA 口语练习 — 职场政策讨论">Step 4: CA Speaking Practice — Workplace Policy Discussion</h2>
+
+    <p style="font-size:0.95rem; color:#334155; margin:0 0 14px 0;" data-cn="分享公司政策：新工作場所制服政策（公司提供的Polo衫搭配正式長褲/裙；不允許穿牛仔褲和運動鞋）" data-cn-s="分享公司政策：新工作场所制服政策（公司提供的Polo衫搭配正式长裤/裙；不允许穿牛仔裤和运动鞋）">Sharing of a company policy: <strong>New Workplace Uniform Policy</strong> (Company-provided polo shirt with formal trousers/skirts; jeans and sneakers not allowed)</p>
+
+    <!-- Lead-In & Hook -->
+    <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:16px 20px; margin:16px 0;">
+      <h3 style="margin:0 0 8px 0; font-size:1.05rem; color:#92400e;" data-cn="Lead-In &amp; Hook：職場著裝辯論" data-cn-s="Lead-In &amp; Hook：职场着装辩论">Lead-In &amp; Hook: The Workplace Dress Code Debate</h3>
+      <p style="font-size:0.9rem; color:#78350f; margin:0 0 10px 0;" data-cn="在分析具體政策之前，觀看這個真實的商務英語視頻，探索職場著裝規範的優點和挑戰：" data-cn-s="在分析具体政策之前，观看这个真实的商务英语视频，探索职场着装规范的优点和挑战：">Before analysing the specific policy, watch this authentic business English video to explore the advantages and challenges of workplace dress codes:</p>
+      <p style="font-size:0.9rem; color:#78350f; margin:0 0 10px 0;"><strong>Video Resource:</strong> <a href="https://www.youtube.com/watch?v=ZYdnk1wAg6Q" target="_blank" style="color:#7c3aed; text-decoration:underline;">What Are the Pros and Cons of Dress Codes? | Beyond Borders Etiquette (3 mins 38 secs)</a></p>
+      <p style="font-size:0.9rem; color:#78350f; margin:0 0 6px 0;"><strong data-cn="預看暖身任務（Think-Pair-Share）：" data-cn-s="预看暖身任务（Think-Pair-Share）：">Pre-Viewing Warm-up Task (Think-Pair-Share):</strong></p>
+      <ul style="padding-left:20px; font-size:0.9rem; color:#78350f; margin:0 0 6px 0;">
+        <li data-cn="根據視頻，標準化工作場所著裝的兩個主要好處是什麼？" data-cn-s="根据视频，标准化工作场所着装的两个主要好处是什么？"><strong>Question 1:</strong> According to the video, what are two key benefits of standardized workplace attire (e.g., fostering team unity, projecting a professional image, workplace equality)?</li>
+        <li data-cn="提出了哪些潛在的關注或缺點？" data-cn-s="提出了哪些潜在的关注或缺点？"><strong>Question 2:</strong> What potential concerns or drawbacks were raised (e.g., restriction of personal expression, physical discomfort, practical inconvenience)?</li>
+      </ul>
+      <p style="font-size:0.9rem; color:#78350f; margin:0;"><strong data-cn="職場反思：" data-cn-s="职场反思：">Workplace Reflection:</strong> <span data-cn="強制性的Polo衫和正式長褲/裙政策會如何影響不同部門的員工？" data-cn-s="强制性的Polo衫和正式长裤/裙政策会如何影响不同部门的员工？">How would a mandatory polo shirt and formal trousers/skirt policy affect staff working in different departments (such as Public Relations vs. Facilities Management)?</span></p>
+    </div>
+
+    <!-- Vocabulary Builder -->
+    <h3 data-cn="專業詞彙建構：工作場所著裝搭配" data-cn-s="专业词汇建构：工作场所着装搭配">Professional Vocabulary Builder: Workplace Attire Collocations</h3>
+    <div style="overflow-x:auto; margin:10px 0 18px;">
+      <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+        <thead>
+          <tr style="background:#7c3aed; color:white;">
+            <th style="padding:8px 12px; text-align:left; border:1px solid #6d28d9;" data-cn="功能領域" data-cn-s="功能领域">Functional Domain</th>
+            <th style="padding:8px 12px; text-align:left; border:1px solid #6d28d9;" data-cn="搭配動詞" data-cn-s="搭配动词">Collocating Verbs</th>
+            <th style="padding:8px 12px; text-align:left; border:1px solid #6d28d9;" data-cn="目標名詞與短語" data-cn-s="目标名词与短语">Target Nouns &amp; Phrases</th>
+            <th style="padding:8px 12px; text-align:left; border:1px solid #6d28d9;" data-cn="職場語境句子" data-cn-s="职场语境句子">Workplace Context Sentence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f5f3ff;">
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="企業形象" data-cn-s="企业形象">Corporate Identity</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">project / reinforce / convey</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">a professional image, brand identity, a sense of unity</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-style:italic;">"The branded polo shirts will project a cohesive, professional image to visiting parents."</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="員工士氣與實用性" data-cn-s="员工士气与实用性">Staff Morale &amp; Practicality</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">restrict / compromise / foster</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">personal comfort, staff well-being, a sense of belonging</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-style:italic;">"Banning sneakers might compromise staff comfort during long school tours."</td>
+          </tr>
+          <tr style="background:#f5f3ff;">
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="政策與指南" data-cn-s="政策与指南">Policy &amp; Guidelines</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">implement / comply with / establish</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">clearer guidelines, dress code regulations, transitional arrangements</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-style:italic;">"Management should establish clearer guidelines for staff performing manual tasks."</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="日常運營" data-cn-s="日常运营">Day-to-day Operations</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">eliminate / cause / save</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;">morning wardrobe stress, physical fatigue, unnecessary expenses</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-style:italic;">"Wearing uniforms will eliminate morning wardrobe stress for frontline staff."</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Role Cards -->
+    <h3 data-cn="配對口語練習：角色卡" data-cn-s="配对口语练习：角色卡">Pair Speaking Practice: Role Cards</h3>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:12px 0 18px;">
+      <!-- Role Card A -->
+      <div style="background:#f0fdf4; border:2px solid #22c55e; border-radius:10px; padding:18px;">
+        <div style="background:#22c55e; color:white; text-align:center; padding:6px; border-radius:6px; font-weight:700; font-size:0.85rem; margin-bottom:10px;">ROLE CARD A</div>
+        <p style="font-size:1.1rem; font-weight:700; color:#166534; margin:0 0 4px 0;">Alex Liu</p>
+        <p style="font-size:0.85rem; color:#555; margin:0 0 10px 0;" data-cn="公共關係部職員" data-cn-s="公共关系部职员">Public Relations Officer</p>
+        <p style="font-size:0.85rem; color:#333; margin:0 0 10px 0;" data-cn="立場：支持政策（聚焦品牌一致性、客戶形象和平等性）。" data-cn-s="立场：支持政策（聚焦品牌一致性、客户形象和平等性）。"><strong>Assigned Stance:</strong> Supportive of the policy (Focus on brand consistency, client perception, and equality).</p>
+        <p style="font-size:0.85rem; color:#333; margin:0 0 6px 0;"><strong data-cn="關鍵要點：" data-cn-s="关键要点：">Key Talking Points:</strong></p>
+        <ul style="padding-left:18px; font-size:0.85rem; color:#333; margin:0 0 10px 0;">
+          <li data-cn="增強機構在家長諮詢和公共訪問期間的公共聲譽和專業形象。" data-cn-s="增强机构在家长咨询和公共访问期间的公共声誉和专业形象。"><strong>Benefit 1:</strong> Enhances the institution's public reputation and professionalism during parent consultations and public visits.</li>
+          <li data-cn="促進團隊凝聚力，消除員工之間的競爭性時尚或著裝焦慮。" data-cn-s="促进团队凝聚力，消除员工之间的竞争性时尚或着装焦虑。"><strong>Benefit 2:</strong> Fosters team cohesion and eliminates competitive fashion or dress anxiety among staff.</li>
+        </ul>
+        <p style="font-size:0.85rem; color:#333; margin:0 0 6px 0;"><strong data-cn="口語任務：" data-cn-s="口语任务：">Speaking Mission:</strong></p>
+        <ul style="padding-left:18px; font-size:0.85rem; color:#333; margin:0;">
+          <li data-cn="在討論完部門的開放日項目後，自然地引入政策話題。" data-cn-s="在讨论完部门的开放日项目后，自然地引入政策话题。">Initiate the policy topic naturally after discussing your department's Open Day project.</li>
+          <li data-cn="使用 Opinion + Cause + Effect 解釋品牌優勢。" data-cn-s="使用 Opinion + Cause + Effect 解释品牌优势。">Use Opinion + Cause + Effect to explain the branding advantage.</li>
+          <li data-cn="在提出協作結論之前，用讓步短語驗證 Ashley 的關注。" data-cn-s="在提出协作结论之前，用让步短语验证 Ashley 的关注。">Validate Ashley's concerns with a phrase of concession before suggesting a collaborative conclusion.</li>
+        </ul>
+      </div>
+
+      <!-- Role Card B -->
+      <div style="background:#fff7ed; border:2px solid #f97316; border-radius:10px; padding:18px;">
+        <div style="background:#f97316; color:white; text-align:center; padding:6px; border-radius:6px; font-weight:700; font-size:0.85rem; margin-bottom:10px;">ROLE CARD B</div>
+        <p style="font-size:1.1rem; font-weight:700; color:#9a3412; margin:0 0 4px 0;">Ashley Lam</p>
+        <p style="font-size:0.85rem; color:#555; margin:0 0 10px 0;" data-cn="設施部職員" data-cn-s="设施部职员">Facilities Officer</p>
+        <p style="font-size:0.85rem; color:#333; margin:0 0 10px 0;" data-cn="立場：建設性批評（聚焦舒適度、工作實用性和機動性）。" data-cn-s="立场：建设性批评（聚焦舒适度、工作实用性和机动性）。"><strong>Assigned Stance:</strong> Constructively critical (Focus on comfort, job practicality, and mobility).</p>
+        <p style="font-size:0.85rem; color:#333; margin:0 0 6px 0;"><strong data-cn="關鍵要點：" data-cn-s="关键要点：">Key Talking Points:</strong></p>
+        <ul style="padding-left:18px; font-size:0.85rem; color:#333; margin:0 0 10px 0;">
+          <li data-cn="嚴格的鞋類限制在體力任務中造成不適和安全問題。" data-cn-s="严格的鞋类限制在体力任务中造成不适和安全问题。"><strong>Drawback 1:</strong> Strict footwear restrictions cause discomfort and safety issues during physical tasks (renovation, maintenance, equipment transport).</li>
+          <li data-cn="潮濕的天氣和僵硬的正式長褲降低了日常人體工學和機動性。" data-cn-s="潮湿的天气和僵硬的正式长裤降低了日常人体工学和机动性。"><strong>Drawback 2:</strong> Humid weather and rigid formal slacks reduce day-to-day ergonomics and mobility.</li>
+        </ul>
+        <p style="font-size:0.85rem; color:#333; margin:0 0 6px 0;"><strong data-cn="口語任務：" data-cn-s="口语任务：">Speaking Mission:</strong></p>
+        <ul style="padding-left:18px; font-size:0.85rem; color:#333; margin:0;">
+          <li data-cn="用「I see what you mean, however...」承認 Alex 的品牌觀點。" data-cn-s="用「I see what you mean, however...」承认 Alex 的品牌观点。">Acknowledge Alex's perspective on branding ("I see what you mean, however...").</li>
+          <li data-cn="使用 Personal Feeling + Personal Experience + Example 說明設施人員的挑戰。" data-cn-s="使用 Personal Feeling + Personal Experience + Example 说明设施人员的挑战。">Use Personal Feeling + Personal Experience + Example to illustrate facility staff challenges.</li>
+          <li data-cn="提出合理的妥協方案。" data-cn-s="提出合理的妥协方案。">Propose a sensible compromise (e.g., department-specific exemptions or supportive black work shoes).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Script Drafting Guide -->
+    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px; padding:16px 20px; margin:16px 0;">
+      <h3 style="margin:0 0 10px 0; font-size:1.05rem; color:#0c4a6e;" data-cn="腳本起草引導問題與提示指南" data-cn-s="脚本起草引导问题与提示指南">Script Drafting Guided Questions &amp; Prompting Guide</h3>
+      <p style="font-size:0.9rem; color:#334155; margin:0 0 10px 0;" data-cn="與搭檔一起完成以下問題，逐輪結構化你的步驟 3 互動：" data-cn-s="与搭档一起完成以下问题，逐轮结构化你的步骤 3 互动：">Work through these questions with your partner to structure your Step 3 interaction turn-by-turn:</p>
+      <ul style="padding-left:20px; font-size:0.9rem; color:#334155; margin:0;">
+        <li data-cn="你將如何自然地過渡到制服政策話題？" data-cn-s="你将如何自然地过渡到制服政策话题？"><strong>The Bridge / Transition:</strong> How will you naturally transition from discussing your department projects to introducing the uniform policy? (e.g., "By the way, did you see the email circular regarding the new dress code?")</li>
+        <li data-cn="學生 A 將使用什麼開場意見短語和原因連接詞？" data-cn-s="学生 A 将使用什么开场意见短语和原因连接词？"><strong>Opening Stance &amp; Justification:</strong> What opening opinion phrase and cause connector will Student A use?</li>
+        <li data-cn="每位講者將引用什麼具體的運營職責或過去的事件來闡述論點？" data-cn-s="每位讲者将引用什么具体的运营职责或过去的事件来阐述论点？"><strong>Elaborated Evidence:</strong> What specific operational duty or past event will each speaker cite to illustrate their argument?</li>
+        <li data-cn="學生 B 將如何承認學生 A 論點的有效性，然後再提出實際的保留意見？" data-cn-s="学生 B 将如何承认学生 A 论点的有效性，然后再提出实际的保留意见？"><strong>Active Listening &amp; Concession:</strong> How will Student B acknowledge the validity of Student A's argument before presenting practical reservations?</li>
+        <li data-cn="兩位職員將如何在過渡到禮貌結束對話之前達成共識？" data-cn-s="两位职员将如何在过渡到礼貌结束对话之前达成共识？"><strong>Constructive Compromise &amp; Closing:</strong> How will both officers reach common ground before transitioning to the polite closing of the conversation?</li>
       </ul>
     </div>
 
-    <h2 data-cn="分享個人經驗" data-cn-s="分享个人经验">Sharing personal experiences</h2>
-    <div class="task-section">
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My position is that something.', this)"></button><span class="spoken" data-cn="我的立場是……" data-cn-s="我的立场是……">My position is that…</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('Personally speaking, something.', this)"></button><span class="spoken" data-cn="就個人而言，……" data-cn-s="就个人而言，……">Personally speaking, …</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My personal feeling is that something.', this)"></button><span class="spoken" data-cn="我個人的感覺是……" data-cn-s="我个人的感觉是……">My personal feeling is that…</span></span></div>
-      <div class="expr-text"><span class="utterance"><button class="btn-icon" onclick="speakText('My own experience is that something.', this)"></button><span class="spoken" data-cn="我自己的經驗是……" data-cn-s="我自己的经验是……">My own experience is that…</span></span></div>
-      <p style="color:#888; font-size:14px; margin-top:6px;"><strong data-cn="舉例說明：" data-cn-s="举例说明：">Giving examples:</strong> <span class="utterance"><button class="btn-icon" onclick="speakText('For example or instance, something.', this)"></button><span class="spoken" data-cn="例如／譬如，……" data-cn-s="例如／譬如，……">For example / instance, …</span></span></p>
+    <!-- Self-Check Rubric -->
+    <h3 data-cn="學生自檢與質量評估表" data-cn-s="学生自检与质量评估表">Student Self-Check &amp; Quality Rubric</h3>
+    <div style="overflow-x:auto; margin:10px 0 18px;">
+      <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+        <thead>
+          <tr style="background:#7c3aed; color:white;">
+            <th style="padding:8px 12px; text-align:left; border:1px solid #6d28d9;" data-cn="評估領域" data-cn-s="评估领域">Assessment Area</th>
+            <th style="padding:8px 12px; text-align:left; border:1px solid #6d28d9;" data-cn="質量檢查問題" data-cn-s="质量检查问题">Quality Checklist Question</th>
+            <th style="padding:8px 12px; text-align:left; border:1px solid #6d28d9;" data-cn="自審狀態" data-cn-s="自审状态">Self-Audit Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f5f3ff;">
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="立場與意見" data-cn-s="立场与意见">Stance &amp; Opinion</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;" data-cn="兩位講者是否都使用目標標記清楚表達了個人立場？" data-cn-s="两位讲者是否都使用目标标记清楚表达了个人立场？">Did both speakers clearly express their personal position using target markers ("In my view", "Personally speaking", "I believe")?</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; width:80px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="原因與影響" data-cn-s="原因与影响">Cause &amp; Effect</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;" data-cn="每次輪流是否都使用原因標記解釋了為什麼，並概述了影響？" data-cn-s="每次轮流是否都使用原因标记解释了为什么，并概述了影响？">Did each turn explain why using cause markers ("due to", "because", "since") and outline the impact ("which leads to", "resulting in")?</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;"></td>
+          </tr>
+          <tr style="background:#f5f3ff;">
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="個人經驗與感受" data-cn-s="个人经验与感受">Personal Experience &amp; Feeling</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;" data-cn="學生是否融入了真實的職場感受或與工作相關的經驗？" data-cn-s="学生是否融入了真实的职场感受或与工作相关的经验？">Did students incorporate genuine workplace feelings or job-related experiences ("In my own experience", "I feel concerned that")?</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;"></td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="具體例子" data-cn-s="具体例子">Concrete Examples</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;" data-cn="是否提供了真實的職場例證？" data-cn-s="是否提供了真实的职场例证？">Were real workplace illustrations provided (e.g., meeting parents, moving equipment, Open Day tours) using "for instance" or "such as"?</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;"></td>
+          </tr>
+          <tr style="background:#f5f3ff;">
+            <td style="padding:8px 12px; border:1px solid #e0e0e0; font-weight:600;" data-cn="主動聆聽與流暢度" data-cn-s="主动聆听与流畅度">Active Listening &amp; Flow</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;" data-cn="講者是否承認了對方的觀點而不是進行不連貫的獨白？" data-cn-s="讲者是否承认了对方的观点而不是进行不连贯的独白？">Did speakers acknowledge each other's points ("That's a fair point, but...") rather than speaking in disconnected monologues?</td>
+            <td style="padding:8px 12px; border:1px solid #e0e0e0;"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <h2 data-cn="例子" data-cn-s="例子">Examples</h2>
 
-    <h3 data-cn="Work From Home (WFH) Policy" data-cn-s="Work From Home (WFH) Policy">Work From Home (WFH) Policy</h3>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Alex Lam):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我認為這是一個非常積極的進步，因為它給我更多的靈活性和更好的工作與生活平衡。在旅行上節省更多時間是一個巨大的優勢，在家工作政策的日子通常壓力較小。下班後我也應該有更多的時間進行個人活動，所以它可以增強我的整體幸福感。" data-cn-s="我认为这是一个非常积极的进步，因为它给我更多的灵活性和更好的工作与生活平衡。在旅行上节省更多时间是一个巨大的优势，在家工作政策的日子通常压力较小。下班后我也应该有更多的时间进行个人活动，所以它可以增强我的整体幸福感。">I think it's a very positive step forward because it gives me more flexibility and a better work–life balance. Saving more time on travelling is a huge plus and Work From Home days are generally less stressful. I should also have more time for personal activities after work so it can enhance my overall well-being.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong style="color:#9a3412;" data-cn="負面關注" data-cn-s="负面关注">Concern (Jacob Wong):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="它似乎在許多公司越來越受歡迎。我認為它可以提高一些同事的生產力。但是，我擔心在處理工作相關事務時與團隊成員溝通可能會很有挑戰性。當我們在家工作時，擁有適當的溝通渠道對於確保有效的團隊合作非常重要。" data-cn-s="它似乎在许多公司越来越受欢迎。我认为它可以提高一些同事的生产力。但是，我担心在处理工作相关事务时与团队成员沟通可能会很有挑战性。当我们在家工作时，拥有适当的沟通渠道对于确保有效的团队合作非常重要。">It seems to be increasingly popular in many companies. I think it can improve productivity for some colleagues. However, I'm worried that it might be challenging to communicate with my team members on work-related matters. It's important to have proper communication channels when we work from home to ensure effective teamwork.</span></div>
-    </div>
 
-    <h3 data-cn="Professional Development Policy" data-cn-s="Professional Development Policy">Professional Development Policy</h3>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Charlie Chan):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="提供免費的線上課程和培訓研討會將使我們能夠在沒有任何額外費用的情況下提高我們的技能。此外，這是提高員工士氣和個人成長的好方法。" data-cn-s="提供免费的在线课程和培训研讨会将使我们能够在没有任何额外费用的情况下提高我们的技能。此外，这是提高员工士气和个人成长的好方法。">Offering free online courses and training workshops will allow us to improve our skills without any additional costs. Plus, it's a great way to boost employee morale and personal growth.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong style="color:#9a3412;" data-cn="負面關注" data-cn-s="负面关注">Concern (Parker Leung):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="然而，我可以理解一些員工可能會因為要在工作量中增加更多內容而感到不知所措。要平衡工作和學習可能很困難。" data-cn-s="然而，我可以理解一些员工可能会因为要在工作量中增加更多内容而感到不知所措。要平衡工作和学习可能很困难。">However, I can see how some employees might feel overwhelmed by the idea of adding more to their workload. It could be tough to balance work and learning.</span></div>
-    </div>
 
-    <h3 data-cn="Denim Outfits on Fridays Policy" data-cn-s="Denim Outfits on Fridays Policy">Denim Outfits on Fridays Policy</h3>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Samantha Lee):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="作為一個有創造力的人，我喜歡穿最能代表我並反映我獨特風格的衣服。這項新政策無疑會增強我的創造力和工作效率。" data-cn-s="作为一个有创造力的人，我喜欢穿最能代表我并反映我独特风格的衣服。这项新政策无疑会增强我的创造力和工作效率。">As a creative person I would love to wear clothes that best represent me and reflect my unique style. This new policy will undoubtedly enhance my creativity and work efficiency.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Vincent Chan):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我完全同意。星期五穿牛仔布可以讓我們表達獨特的風格，培養積極的工作環境。這項新政策與我的衣櫃完美搭配，讓我在辦公室展示我的個人風格。" data-cn-s="我完全同意。星期五穿牛仔布可以让我们表达独特的风格，培养积极的工作环境。这项新政策与我的衣柜完美搭配，让我在办公室展示我的个人风格。">I couldn't agree more. Dressing in denim on Fridays allows us to express our unique style, fostering a positive work environment. This new policy is a perfect match for my wardrobe and allows me to showcase my personal style in the office.</span></div>
-    </div>
+</div>
 
-    <h3 data-cn="Flexi Lunch Break Policy" data-cn-s="Flexi Lunch Break Policy">Flexi Lunch Break Policy</h3>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Gladys Yeung):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="這項新政策讓我可以在中午更早吃午飯，以便為下午的工作恢復精力。更重要的是，我發現自己被授權對自己的時間表做出決定。" data-cn-s="这项新政策让我可以在中午更早吃午饭，以便为下午的工作恢复精力。更重要的是，我发现自己被授权对自己的时间表做出决定。">The new policy allows me to have my lunch earlier so that I can refresh myself for the afternoon work. More importantly, I find myself empowered to make the decisions about my own schedules.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong style="color:#9a3412;" data-cn="負面關注" data-cn-s="负面关注">Concern (Edith Li):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="我同意這項政策可以提高員工的生產力和歸屬感。但我最擔心的是與同事協調的困難。當午休時間變得靈活時，可能會導致時間安排衝突或工作流程中斷。" data-cn-s="我同意这项政策可以提高员工的生产力和归属感。但我最担心的是与同事协调的困难。当午休时间变得灵活时，可能会导致时间安排冲突或工作流程中断。">I agree that the policy could improve employees' productivity and sense of belonging. What I concern the most is the difficulty in coordinating with colleagues. When lunch breaks become flexible, it could lead to scheduling conflicts or disruptions in workflow.</span></div>
-    </div>
+<script src="audio-data.js"></script>
+<script>
+let synth = window.speechSynthesis;
+let currentWordEl = null;
+let currentWordAudio = null;
 
-    <h3 data-cn="Remote Office Policy" data-cn-s="Remote Office Policy">Remote Office Policy</h3>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Alex Cheung):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="這項政策讓我有更多靈活性，可以更接近我的家人。我相信這將使我能夠更專注於提供高品質的工作，而不必擔心我的家人。" data-cn-s="这项政策让我有更多灵活性，可以更接近我的家人。我相信这将使我能够更专注于提供高品质的工作，而不必担心我的家人。">This policy allows me to have more flexibility to be in close proximity with my family. I believe this will enable me to be more focused in delivering quality work without having to worry about my family.</span></div>
-    </div>
-    <div class="task-box">
-      <p><strong style="color:#2f6b3a;" data-cn="正面意見" data-cn-s="正面意见">Positive (Jamie Chau):</strong></p>
-      <div class="expr-text"><span class="spoken" data-cn="它不僅可以提高我們的員工士氣，而且我認為從長遠來看它可以降低流失率。對於那些住在遠處的人來說，它還可以節省我們大量的通勤時間，讓我們不會因為通勤而感到疲倦。它也可以更容易地管理工作與生活的平衡。" data-cn-s="它不仅可以提高我们的员工士气，而且我认为从长远来看它可以降低流失率。对于那些住在远处的人来说，它还可以节省我们大量的通勤时间，让我们不会因为通勤而感到疲倦。它也可以更容易地管理工作与生活的平衡。">Not only can it improve our staff morale but I think it could decrease the turnover rate in the long run. It'll also be easier to manage work-life balance. Not to mention the policy itself would save us a lot of commute time for those who live afar, allowing us to be less tired from commuting. It'll also be easier to manage work life balance as well.</span></div>
-    </div>
+function switchTab(index) {
+  if (typeof stopAll === 'function') stopAll();
+  const contents = document.querySelectorAll('.tab-content');
+  const buttons = document.querySelectorAll('.tab-btn');
+  contents.forEach(c => c.classList.remove('active'));
+  buttons.forEach(b => b.classList.remove('active'));
+  contents[index].classList.add('active');
+  buttons[index].classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Chinese translation toggle
+let cnScript = 'trad'; // 'trad' = Traditional Chinese, 'simp' = Simplified Chinese
+
+function toggleAllCN(show) {
+  document.querySelector('.container').classList.toggle('cn-active', show);
+  document.getElementById('cnScriptToggle').classList.toggle('visible', show);
+}
+
+function setCNScript(script) {
+  cnScript = script;
+  document.querySelectorAll('.cn-script-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.script === script);
+  });
+  // Each .cn-translation node is inserted immediately after its source [data-cn] element.
+  document.querySelectorAll('.cn-translation').forEach(trans => {
+    const source = trans.previousElementSibling;
+    if (!source || !source.dataset || !source.dataset.cn) return;
+    trans.textContent = script === 'simp' ? (source.dataset.cnS || source.dataset.cn) : source.dataset.cn;
+  });
+}
+
+function initTranslations() {
+  document.querySelectorAll('[data-cn]').forEach(el => {
+    if (el.dataset.cnProcessed) return;
+    el.dataset.cnProcessed = '1';
+    const trans = document.createElement('div');
+    trans.className = 'cn-translation';
+    trans.textContent = cnScript === 'simp' ? (el.dataset.cnS || el.dataset.cn) : el.dataset.cn;
+    el.after(trans);
+  });
+}
+
+// Word pronunciation (browser TTS)
+function wrapWordsInEl(el) {
+  el.normalize();
+  Array.from(el.childNodes).forEach(node => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const words = node.textContent.split(/(\s+)/);
+      const frag = document.createDocumentFragment();
+      words.forEach(w => {
+        if (w.trim() === '') {
+          frag.appendChild(document.createTextNode(w));
+        } else {
+          const wordSpan = document.createElement('span');
+          wordSpan.className = 'word';
+          wordSpan.textContent = w;
+          wordSpan.addEventListener('click', function(e) {
+            e.stopPropagation();
+            speakWord(w.replace(/[^a-zA-Z'-]/g, ''), this);
+          });
+          frag.appendChild(wordSpan);
+        }
+      });
+      node.parentNode.replaceChild(frag, node);
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      wrapWordsInEl(node);
+    }
+  });
+}
+
+function initWordClick() {
+  document.querySelectorAll('.expr-text .spoken, .task-box .spoken, .task-section .spoken').forEach(wrapWordsInEl);
+}
+
+// Get Edge natural sounding British voice
+function getEdgeVoice(gender) {
+  const voices = synth.getVoices();
+  
+  // British female voices
+  const femaleBritish = [
+    'Microsoft Sonia',
+    'Microsoft Zira',
+    'en-GB-SoniaNeural',
+    'en-GB-Female'
+  ];
+  
+  // British male voices
+  const maleBritish = [
+    'Microsoft Ryan',
+    'Microsoft David',
+    'en-GB-RyanNeural',
+    'en-GB-Male'
+  ];
+  
+  if (gender === 'male') {
+    for (const name of maleBritish) {
+      const found = voices.find(v => v.name && v.name.includes(name));
+      if (found) return found;
+    }
+  } else if (gender === 'female') {
+    for (const name of femaleBritish) {
+      const found = voices.find(v => v.name && v.name.includes(name));
+      if (found) return found;
+    }
+  }
+  
+  // Default: try female first, then male
+  for (const name of [...femaleBritish, ...maleBritish]) {
+    const found = voices.find(v => v.name && v.name.includes(name));
+    if (found) return found;
+  }
+  
+  // Fallback to any British English voice
+  return voices.find(v => v.lang && v.lang.startsWith('en-GB')) || 
+         voices.find(v => v.lang && v.lang.startsWith('en')) || null;
+}
+
+function speakWord(word, el, gender) {
+  if (!word) return;
+  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
+  const key = word + '|' + selectedGender;
+  const b64 = window.AUDIO_DATA && window.AUDIO_DATA.words[key];
+
+  // Toggle off if the same word is clicked again while it's playing
+  if (currentWordEl === el && (currentWordAudio || synth.speaking)) {
+    if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
+    if (synth.speaking) synth.cancel();
+    el.classList.remove('speaking');
+    currentWordEl = null;
+    return;
+  }
+
+  // Stop any other audio/speech currently playing
+  if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
+  if (synth.speaking) synth.cancel();
+  if (currentWordEl) currentWordEl.classList.remove('speaking');
+  if (currentAudio) { currentAudio.pause(); if (currentBtn) resetBtn(currentBtn); currentAudio = null; currentBtn = null; }
+  if (isPlayingAll) stopAll();
+
+  el.classList.add('speaking');
+  currentWordEl = el;
+
+  if (b64) {
+    const audio = new Audio('data:audio/mp3;base64,' + b64);
+    currentWordAudio = audio;
+    audio.onended = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; currentWordAudio = null; };
+    audio.onerror = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; currentWordAudio = null; speakWordFallback(word, el, selectedGender); };
+    audio.play();
+    return;
+  }
+  speakWordFallback(word, el, selectedGender);
+}
+
+// Browser TTS fallback, only used if a natural-voice clip isn't available for this word
+function speakWordFallback(word, el, selectedGender) {
+  const utter = new SpeechSynthesisUtterance(word);
+  utter.rate = 0.85;
+  utter.pitch = 1;
+  const v = getEdgeVoice(selectedGender);
+  if (v) utter.voice = v;
+  utter.onend = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; };
+  utter.onerror = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; };
+  synth.speak(utter);
+}
+
+// Speak text for button click
+function speakText(text, btn, gender) {
+  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
+  const key = text + '|' + selectedGender;
+  const b64 = window.AUDIO_DATA && window.AUDIO_DATA.phrases[key];
+
+  // Stop any word-level audio/speech that might be playing
+  if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
+  if (synth.speaking) synth.cancel();
+  if (currentWordEl) { currentWordEl.classList.remove('speaking'); currentWordEl = null; }
+
+  if (b64) {
+    playAudio('data:audio/mp3;base64,' + b64, btn);
+    return;
+  }
+
+  // Browser TTS fallback, only used if a natural-voice clip isn't available for this phrase
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = 0.85;
+  utter.pitch = 1;
+  const v = getEdgeVoice(selectedGender);
+  if (v) utter.voice = v;
+
+  btn.classList.add('playing');
+  btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="7" y="5" width="4" height="14"/><rect x="13" y="5" width="4" height="14"/></svg>';
+
+  utter.onend = function() {
+    btn.classList.remove('playing');
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+  };
+  utter.onerror = function() {
+    btn.classList.remove('playing');
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+  };
+  synth.speak(utter);
+}
+
+// Audio playback (MP3 per expression)
+let currentAudio = null;
+let currentBtn = null;
+let playlist = [];
+let playlistIdx = 0;
+let isPlayingAll = false;
+
+function getSpeed() {
+  return parseFloat(document.getElementById('speedSlider').value);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.getElementById('speedSlider');
+  slider.addEventListener('input', function() {
+    document.getElementById('speedDisplay').textContent = this.value + 'x';
+    if (currentAudio && !currentAudio.paused) {
+      currentAudio.playbackRate = getSpeed();
+    }
+  });
+});
+
+function resetBtn(btn) {
+  if (!btn) return;
+  btn.classList.remove('playing');
+  if (btn.classList.contains('btn-icon')) {
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+  }
+}
+
+function setBtnPause(btn) {
+  btn.classList.add('playing');
+  if (btn.classList.contains('btn-icon')) {
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="7" y="5" width="4" height="14"/><rect x="13" y="5" width="4" height="14"/></svg>';
+  }
+}
+
+function playAudio(src, btn) {
+  if (isPlayingAll) stopAll();
+
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    if (currentBtn && currentBtn !== btn) resetBtn(currentBtn);
+    if (currentBtn === btn) {
+      currentAudio = null;
+      currentBtn = null;
+      return;
+    }
+  }
+
+  currentAudio = new Audio(src);
+  currentAudio.playbackRate = getSpeed();
+  currentBtn = btn;
+  setBtnPause(btn);
+  currentAudio.play();
+
+  currentAudio.addEventListener('ended', function() {
+    resetBtn(btn);
+    currentAudio = null;
+    currentBtn = null;
+  });
+}
+
+function visibleBtns() {
+  const active = document.querySelector('.tab-content.active');
+  return active ? active.querySelectorAll('.btn-icon') : [];
+}
+
+function playAll() {
+  if (isPlayingAll) return;
+  isPlayingAll = true;
+  document.getElementById('playAllBtn').disabled = true;
+  document.getElementById('pauseAllBtn').disabled = false;
+  document.getElementById('stopAllBtn').disabled = false;
+
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    if (currentBtn) resetBtn(currentBtn);
+  }
+
+  playlist = [];
+  visibleBtns().forEach(b => playlist.push(b.getAttribute('data-src')));
+  playlistIdx = 0;
+  playNext();
+}
+
+function playNext() {
+  if (!isPlayingAll || playlistIdx >= playlist.length) {
+    stopAll();
+    return;
+  }
+  const src = playlist[playlistIdx];
+  const btns = visibleBtns();
+  const btn = btns[playlistIdx];
+
+  if (currentAudio) {
+    currentAudio.pause();
+    if (currentBtn) resetBtn(currentBtn);
+  }
+
+  currentAudio = new Audio(src);
+  currentAudio.playbackRate = getSpeed();
+  currentBtn = btn;
+  setBtnPause(btn);
+  currentAudio.play();
+
+  currentAudio.addEventListener('ended', function() {
+    resetBtn(btn);
+    playlistIdx++;
+    if (isPlayingAll && playlistIdx < playlist.length) {
+      playNext();
+    } else {
+      stopAll();
+    }
+  });
+}
+
+function pauseAll() {
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+  }
+  document.getElementById('pauseAllBtn').disabled = true;
+  document.getElementById('playAllBtn').disabled = false;
+  document.getElementById('playAllBtn').innerHTML = '<svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg> Resume';
+}
+
+function stopAll() {
+  isPlayingAll = false;
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  if (currentBtn) {
+    resetBtn(currentBtn);
+    currentBtn = null;
+  }
+  document.getElementById('playAllBtn').disabled = false;
+  document.getElementById('playAllBtn').innerHTML = '<svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg> Play All';
+  document.getElementById('pauseAllBtn').disabled = true;
+  document.getElementById('stopAllBtn').disabled = true;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  initTranslations();
+  if (synth.getVoices().length) initWordClick();
+  else synth.addEventListener('voiceschanged', initWordClick, { once: true });
+  
+  // Accordion functionality
+  initAccordion();
+});
+
+function initAccordion() {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  
+  // Add click handlers to accordion headers
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    if (header) {
+      header.addEventListener('click', () => {
+        toggleAccordionItem(item);
+      });
+    }
+  });
+  
+  // Add click handlers to expand/collapse all buttons
+  const expandAllBtn = document.getElementById('expandAll');
+  const collapseAllBtn = document.getElementById('collapseAll');
+  
+  if (expandAllBtn) {
+    expandAllBtn.addEventListener('click', () => {
+      accordionItems.forEach(item => {
+        if (!item.classList.contains('active')) {
+          item.classList.add('active');
+        }
+      });
+    });
+  }
+  
+  if (collapseAllBtn) {
+    collapseAllBtn.addEventListener('click', () => {
+      accordionItems.forEach(item => {
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+        }
+      });
+    });
+  }
+}
+
+function toggleAccordionItem(item) {
+  const isActive = item.classList.contains('active');
+  
+  // Toggle the clicked item
+  if (isActive) {
+    item.classList.remove('active');
+  } else {
+    item.classList.add('active');
+  }
+}
+
+function toggleAccordion(btn) {
+  const item = btn.closest('.accordion-item');
+  const tab = btn.closest('.tab-content');
+  const wasActive = item.classList.contains('active');
+  if (tab) {
+    tab.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+  }
+  if (!wasActive) {
+    item.classList.add('active');
+  }
+}
+
+function expandAllInTab(tabIndex) {
+  const tab = document.getElementById('tab-' + tabIndex);
+  if (!tab) return;
+  tab.querySelectorAll('.accordion-item').forEach(item => {
+    item.classList.add('active');
+  });
+}
+
+function collapseAllInTab(tabIndex) {
+  const tab = document.getElementById('tab-' + tabIndex);
+  if (!tab) return;
+  tab.querySelectorAll('.accordion-item').forEach(item => {
+    item.classList.remove('active');
+  });
+}
+
+function toggleOralPractice(btn) {
+  const practice = btn.closest('.oral-practice');
+  practice.classList.toggle('open');
+}
+
+// Collocation Matcher Game
+const collocationData = [
+  { id: 1,  domain: "Tech",     verb: "install / upgrade",                   noun: "a computer software" },
+  { id: 2,  domain: "Tech",     verb: "create / design",                     noun: "a mobile app" },
+  { id: 3,  domain: "Tech",     verb: "design / maintain / update",          noun: "our webpage" },
+  { id: 4,  domain: "Products", verb: "launch / introduce / set up",         noun: "a membership scheme" },
+  { id: 5,  domain: "Products", verb: "create / design / develop / launch",  noun: "a new product / service" },
+  { id: 6,  domain: "Products", verb: "place / make",                        noun: "an order" },
+  { id: 7,  domain: "Products", verb: "arrange",                             noun: "delivery" },
+  { id: 8,  domain: "Promo",    verb: "promote",                             noun: "a product / service" },
+  { id: 9,  domain: "Promo",    verb: "host / organise / hold",              noun: "webinars / campaign / contests / events" },
+  { id: 10, domain: "Promo",    verb: "give away / offer",                   noun: "souvenirs / coupons / vouchers / samples" },
+  { id: 11, domain: "Promo",    verb: "reach",                               noun: "target customers" },
+  { id: 12, domain: "Planning", verb: "plan",                                noun: "a budget" },
+  { id: 13, domain: "Planning", verb: "create / make / finalise",            noun: "a plan" },
+  { id: 14, domain: "Planning", verb: "conduct",                             noun: "research" },
+  { id: 15, domain: "Planning", verb: "contact / identify",                  noun: "a supplier" },
+  { id: 16, domain: "Planning", verb: "schedule / arrange",                  noun: "a meeting" },
+  { id: 17, domain: "Planning", verb: "allocate",                            noun: "resources" },
+  { id: 18, domain: "Social",   verb: "create",                              noun: "social media posts" },
+  { id: 19, domain: "Social",   verb: "engage / attract",                    noun: "followers" },
+  { id: 20, domain: "Social",   verb: "boost",                               noun: "engagement" }
+];
+
+let selVerb = null;
+let selNoun = null;
+let matchCount = 0;
+
+function shuffleArr(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
+}
+
+function initCollocationGame() {
+  selVerb = null;
+  selNoun = null;
+  matchCount = 0;
+  document.getElementById('collocation-score').textContent = 'Matched: 0 / ' + collocationData.length;
+
+  const verbsCol = document.getElementById('verbs-col');
+  const nounsCol = document.getElementById('nouns-col');
+
+  verbsCol.querySelectorAll('.card').forEach(c => c.remove());
+  nounsCol.querySelectorAll('.card').forEach(c => c.remove());
+
+  shuffleArr(collocationData).forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.id = item.id;
+    card.innerHTML = item.verb + ' <span class="domain-tag">' + item.domain + '</span>';
+    card.onclick = function() { selectGameCard(card, 'verb'); };
+    verbsCol.appendChild(card);
+  });
+
+  shuffleArr(collocationData).forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.dataset.id = item.id;
+    card.innerHTML = item.noun + ' <span class="domain-tag">' + item.domain + '</span>';
+    card.onclick = function() { selectGameCard(card, 'noun'); };
+    nounsCol.appendChild(card);
+  });
+}
+
+function selectGameCard(card, type) {
+  if (card.classList.contains('matched')) return;
+
+  if (type === 'verb') {
+    if (selVerb) selVerb.classList.remove('selected');
+    selVerb = card;
+    card.classList.add('selected');
+  } else {
+    if (selNoun) selNoun.classList.remove('selected');
+    selNoun = card;
+    card.classList.add('selected');
+  }
+
+  if (selVerb && selNoun) checkGameMatch();
+}
+
+function checkGameMatch() {
+  const isMatch = selVerb.dataset.id === selNoun.dataset.id;
+
+  if (isMatch) {
+    selVerb.classList.remove('selected');
+    selNoun.classList.remove('selected');
+    selVerb.classList.add('matched');
+    selNoun.classList.add('matched');
+    selVerb = null;
+    selNoun = null;
+    matchCount++;
+    document.getElementById('collocation-score').textContent = 'Matched: ' + matchCount + ' / ' + collocationData.length;
+  } else {
+    const v = selVerb;
+    const n = selNoun;
+    v.classList.add('wrong');
+    n.classList.add('wrong');
+    setTimeout(function() {
+      v.classList.remove('wrong', 'selected');
+      n.classList.remove('wrong', 'selected');
+    }, 500);
+    selVerb = null;
+    selNoun = null;
+  }
+}
+</script>
+
+</body>
+</html
+          </div>
+        </div>
+      </div>
+    </div><!-- end .accordion -->
   </div>
 
 
@@ -2807,7 +3734,14 @@ function toggleAccordionItem(item) {
 
 function toggleAccordion(btn) {
   const item = btn.closest('.accordion-item');
-  toggleAccordionItem(item);
+  const tab = btn.closest('.tab-content');
+  const wasActive = item.classList.contains('active');
+  if (tab) {
+    tab.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+  }
+  if (!wasActive) {
+    item.classList.add('active');
+  }
 }
 
 function expandAllInTab(tabIndex) {
