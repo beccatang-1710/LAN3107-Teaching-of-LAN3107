@@ -2330,6 +2330,7 @@ table.reminder-table td {
         <li data-cn="表達意見" data-cn-s="表达意见">express opinions</li>
         <li data-cn="通過說明原因、影響、個人感受和例子來解釋你的觀點" data-cn-s="通过说明原因、影响、个人感受和例子来解释你的观点">explain your opinions by stating causes, effects, personal feelings, and examples</li>
       </ul>
+      </div>
     
 
     <div class="accordion-controls">
@@ -2604,8 +2605,223 @@ table.reminder-table td {
       };
     })();
     </script>
+          </div>
+        </div>
+      </div>
+    </div><!-- end .accordion -->
+
 
     <h2 data-cn="步驟 4：CA 口語練習 — 職場政策討論" data-cn-s="步骤 4：CA 口语练习 — 职场政策讨论">Step 4: CA Speaking Practice — Workplace Policy Discussion</h2>
+
+    <!-- ================================================================= -->
+    <!-- LAN3107 Interactive Task: Workplace Collocations Word Sequencer  -->
+    <!-- ================================================================= -->
+    <div id="collocation-sequencer-app" class="c-seq-container">
+      <div class="c-seq-header">
+        <div class="c-seq-badge">LAN3107 Oral Practice Drill</div>
+        <h2 class="c-seq-title">Collocation Word Sequencing</h2>
+        <p class="c-seq-subtitle">Tap the words in the correct grammatical order to form a natural workplace sentence using the target collocations.</p>
+
+        <div class="c-seq-progress-bar-bg">
+          <div id="c-seq-progress-fill" class="c-seq-progress-fill" style="width: 20%;"></div>
+        </div>
+        <div class="c-seq-meta">
+          <span id="c-seq-step-indicator">Question 1 of 5</span>
+          <span id="c-seq-score-indicator">Score: 0 / 5</span>
+        </div>
+      </div>
+
+      <div class="c-seq-card">
+        <div class="c-seq-collocation-hint">
+          <strong>Target Collocation:</strong> <span id="c-seq-hint-text">project + a professional image</span>
+        </div>
+
+        <div class="c-seq-section-label">Your Constructed Sentence:</div>
+        <div id="c-seq-answer-zone" class="c-seq-tile-zone c-seq-dropzone">
+          <span class="c-seq-placeholder">Tap the words below to construct your sentence...</span>
+        </div>
+
+        <div class="c-seq-section-label">Word Bank:</div>
+        <div id="c-seq-bank-zone" class="c-seq-tile-zone c-seq-bank"></div>
+
+        <div id="c-seq-feedback" class="c-seq-feedback" style="display: none;"></div>
+
+        <div class="c-seq-actions">
+          <button id="c-seq-btn-reset" class="c-seq-btn c-seq-btn-secondary" type="button">Reset</button>
+          <button id="c-seq-btn-check" class="c-seq-btn c-seq-btn-primary" type="button">Check Answer</button>
+          <button id="c-seq-btn-next" class="c-seq-btn c-seq-btn-success" type="button" style="display: none;">Next Question →</button>
+        </div>
+      </div>
+    </div>
+
+    <style>
+    .c-seq-container { max-width: 760px; margin: 20px auto; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #2d3748; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06); overflow: hidden; }
+    .c-seq-header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: #ffffff; padding: 24px 28px 20px; }
+    .c-seq-badge { display: inline-block; background: rgba(255, 255, 255, 0.2); color: #ffffff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 20px; margin-bottom: 8px; }
+    .c-seq-title { margin: 0 0 6px 0; font-size: 22px; font-weight: 700; }
+    .c-seq-subtitle { margin: 0 0 16px 0; font-size: 13.5px; opacity: 0.9; line-height: 1.4; }
+    .c-seq-progress-bar-bg { background: rgba(255, 255, 255, 0.25); height: 6px; border-radius: 3px; overflow: hidden; margin-bottom: 10px; }
+    .c-seq-progress-fill { background: #10b981; height: 100%; transition: width 0.3s ease; }
+    .c-seq-meta { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; opacity: 0.95; }
+    .c-seq-card { padding: 24px 28px; }
+    .c-seq-collocation-hint { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 10px 14px; border-radius: 4px; font-size: 13.5px; color: #1e40af; margin-bottom: 20px; }
+    .c-seq-section-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #64748b; margin-bottom: 8px; }
+    .c-seq-tile-zone { min-height: 68px; padding: 12px; border-radius: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 20px; }
+    .c-seq-dropzone { background: #f8fafc; border: 2px dashed #cbd5e1; transition: border-color 0.2s ease, background-color 0.2s ease; }
+    .c-seq-dropzone.has-items { border-color: #94a3b8; background: #ffffff; }
+    .c-seq-bank { background: #f1f5f9; border: 1px solid #e2e8f0; }
+    .c-seq-placeholder { color: #94a3b8; font-size: 13px; font-style: italic; user-select: none; }
+    .c-seq-chip { display: inline-flex; align-items: center; background: #ffffff; color: #1e293b; border: 1px solid #cbd5e1; border-radius: 6px; padding: 8px 14px; font-size: 14.5px; font-weight: 500; cursor: pointer; user-select: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); transition: all 0.15s ease-in-out; }
+    .c-seq-chip:hover { border-color: #3b82f6; color: #1d4ed8; transform: translateY(-1px); box-shadow: 0 3px 6px rgba(59, 130, 246, 0.15); }
+    .c-seq-chip:active { transform: translateY(0); }
+    .c-seq-dropzone .c-seq-chip { background: #3b82f6; color: #ffffff; border-color: #2563eb; }
+    .c-seq-dropzone .c-seq-chip:hover { background: #2563eb; color: #ffffff; }
+    .c-seq-feedback { padding: 12px 16px; border-radius: 8px; font-size: 13.5px; line-height: 1.4; margin-bottom: 20px; }
+    .c-seq-feedback.correct { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+    .c-seq-feedback.incorrect { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    .c-seq-actions { display: flex; justify-content: flex-end; gap: 12px; }
+    .c-seq-btn { border: none; border-radius: 6px; padding: 10px 18px; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.2s ease, opacity 0.2s ease; }
+    .c-seq-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .c-seq-btn-primary { background: #2563eb; color: #ffffff; }
+    .c-seq-btn-primary:hover:not(:disabled) { background: #1d4ed8; }
+    .c-seq-btn-secondary { background: #e2e8f0; color: #334155; }
+    .c-seq-btn-secondary:hover:not(:disabled) { background: #cbd5e1; }
+    .c-seq-btn-success { background: #10b981; color: #ffffff; }
+    .c-seq-btn-success:hover:not(:disabled) { background: #059669; }
+    </style>
+
+    <script>
+    (function () {
+      const seqQuestions = [
+        { targetCollocation: "project + a professional image", words: ["Wearing", "the", "company", "polo", "shirt", "will", "project", "a", "professional", "image", "to", "parents."], solution: "Wearing the company polo shirt will project a professional image to parents." },
+        { targetCollocation: "compromise + personal comfort", words: ["Banning", "sneakers", "might", "compromise", "personal", "comfort", "for", "active", "facilities", "staff."], solution: "Banning sneakers might compromise personal comfort for active facilities staff." },
+        { targetCollocation: "eliminate + morning wardrobe stress", words: ["A", "standard", "workplace", "uniform", "helps", "eliminate", "morning", "wardrobe", "stress", "for", "employees."], solution: "A standard workplace uniform helps eliminate morning wardrobe stress for employees." },
+        { targetCollocation: "establish + clearer guidelines", words: ["Management", "should", "establish", "clearer", "guidelines", "for", "outdoor", "campus", "duties."], solution: "Management should establish clearer guidelines for outdoor campus duties." },
+        { targetCollocation: "foster + a sense of belonging", words: ["Standardized", "attire", "can", "foster", "a", "sense", "of", "belonging", "across", "all", "departments."], solution: "Standardized attire can foster a sense of belonging across all departments." }
+      ];
+
+      let seqCurrentIdx = 0;
+      let seqScore = 0;
+      let seqBankTokens = [];
+      let seqAnswerTokens = [];
+
+      const seqBankZone = document.getElementById("c-seq-bank-zone");
+      const seqAnswerZone = document.getElementById("c-seq-answer-zone");
+      const seqFeedbackBox = document.getElementById("c-seq-feedback");
+      const seqHintText = document.getElementById("c-seq-hint-text");
+      const seqStepIndicator = document.getElementById("c-seq-step-indicator");
+      const seqScoreIndicator = document.getElementById("c-seq-score-indicator");
+      const seqProgressFill = document.getElementById("c-seq-progress-fill");
+      const seqBtnCheck = document.getElementById("c-seq-btn-check");
+      const seqBtnReset = document.getElementById("c-seq-btn-reset");
+      const seqBtnNext = document.getElementById("c-seq-btn-next");
+
+      function seqShuffle(arr) {
+        const copy = [...arr];
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+      }
+
+      function seqLoadQuestion(index) {
+        const q = seqQuestions[index];
+        seqCurrentIdx = index;
+        seqHintText.textContent = q.targetCollocation;
+        seqStepIndicator.textContent = `Question ${index + 1} of ${seqQuestions.length}`;
+        seqProgressFill.style.width = `${((index + 1) / seqQuestions.length) * 100}%`;
+        seqFeedbackBox.style.display = "none";
+        seqFeedbackBox.className = "c-seq-feedback";
+        seqFeedbackBox.innerHTML = "";
+        seqBtnCheck.style.display = "inline-block";
+        seqBtnCheck.disabled = false;
+        seqBtnReset.disabled = false;
+        seqBtnNext.style.display = "none";
+        seqAnswerTokens = [];
+        seqBankTokens = seqShuffle(q.words.map((w, i) => ({ id: `${index}-${i}-${w}`, text: w })));
+        seqRender();
+      }
+
+      function seqRender() {
+        seqAnswerZone.innerHTML = "";
+        if (seqAnswerTokens.length === 0) {
+          seqAnswerZone.classList.remove("has-items");
+          const placeholder = document.createElement("span");
+          placeholder.className = "c-seq-placeholder";
+          placeholder.textContent = "Tap words below to construct your sentence...";
+          seqAnswerZone.appendChild(placeholder);
+        } else {
+          seqAnswerZone.classList.add("has-items");
+          seqAnswerTokens.forEach((token, pos) => {
+            const chip = seqCreateChip(token.text, () => seqMoveToBank(pos));
+            seqAnswerZone.appendChild(chip);
+          });
+        }
+        seqBankZone.innerHTML = "";
+        seqBankTokens.forEach((token, pos) => {
+          const chip = seqCreateChip(token.text, () => seqMoveToAnswer(pos));
+          seqBankZone.appendChild(chip);
+        });
+      }
+
+      function seqCreateChip(text, onClick) {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "c-seq-chip";
+        chip.textContent = text;
+        chip.addEventListener("click", onClick);
+        return chip;
+      }
+
+      function seqMoveToAnswer(bankPos) {
+        const item = seqBankTokens.splice(bankPos, 1)[0];
+        seqAnswerTokens.push(item);
+        seqRender();
+      }
+
+      function seqMoveToBank(answerPos) {
+        const item = seqAnswerTokens.splice(answerPos, 1)[0];
+        seqBankTokens.push(item);
+        seqRender();
+      }
+
+      seqBtnReset.addEventListener("click", () => { seqLoadQuestion(seqCurrentIdx); });
+
+      seqBtnCheck.addEventListener("click", () => {
+        if (seqAnswerTokens.length === 0) return;
+        const currentSentence = seqAnswerTokens.map(t => t.text).join(" ");
+        const expectedSentence = seqQuestions[seqCurrentIdx].solution;
+        seqFeedbackBox.style.display = "block";
+        if (currentSentence.trim() === expectedSentence.trim()) {
+          seqScore++;
+          seqScoreIndicator.textContent = `Score: ${seqScore} / ${seqQuestions.length}`;
+          seqFeedbackBox.className = "c-seq-feedback correct";
+          seqFeedbackBox.innerHTML = `<strong>Correct!</strong> Excellent phrasing.<br><em>Key Collocation applied:</em> <code>${seqQuestions[seqCurrentIdx].targetCollocation}</code>`;
+          seqBtnCheck.style.display = "none";
+          seqBtnReset.disabled = true;
+          if (seqCurrentIdx < seqQuestions.length - 1) {
+            seqBtnNext.textContent = "Next Question →";
+            seqBtnNext.style.display = "inline-block";
+          } else {
+            seqBtnNext.textContent = "Activity Completed!";
+            seqBtnNext.style.display = "inline-block";
+            seqBtnNext.disabled = true;
+          }
+        } else {
+          seqFeedbackBox.className = "c-seq-feedback incorrect";
+          seqFeedbackBox.innerHTML = `<strong>Not quite.</strong> Check the subject, verb position, or preposition placement.<br><em>Tip:</em> Remember the core collocation: <strong>${seqQuestions[seqCurrentIdx].targetCollocation}</strong>.`;
+        }
+      });
+
+      seqBtnNext.addEventListener("click", () => {
+        if (seqCurrentIdx < seqQuestions.length - 1) { seqLoadQuestion(seqCurrentIdx + 1); }
+      });
+
+      seqLoadQuestion(0);
+    })();
+    </script>
+
 
     <p style="font-size:0.95rem; color:#334155; margin:0 0 14px 0;" data-cn="分享公司政策：新工作場所制服政策（公司提供的Polo衫搭配正式長褲/裙；不允許穿牛仔褲和運動鞋）" data-cn-s="分享公司政策：新工作场所制服政策（公司提供的Polo衫搭配正式长裤/裙；不允许穿牛仔裤和运动鞋）">Sharing of a company policy: <strong>New Workplace Uniform Policy</strong> (Company-provided polo shirt with formal trousers/skirts; jeans and sneakers not allowed)</p>
 
@@ -2764,565 +2980,7 @@ table.reminder-table td {
 
 
 </div>
-
-<script src="audio-data.js"></script>
-<script>
-let synth = window.speechSynthesis;
-let currentWordEl = null;
-let currentWordAudio = null;
-
-function switchTab(index) {
-  if (typeof stopAll === 'function') stopAll();
-  const contents = document.querySelectorAll('.tab-content');
-  const buttons = document.querySelectorAll('.tab-btn');
-  contents.forEach(c => c.classList.remove('active'));
-  buttons.forEach(b => b.classList.remove('active'));
-  contents[index].classList.add('active');
-  buttons[index].classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Chinese translation toggle
-let cnScript = 'trad'; // 'trad' = Traditional Chinese, 'simp' = Simplified Chinese
-
-function toggleAllCN(show) {
-  document.querySelector('.container').classList.toggle('cn-active', show);
-  document.getElementById('cnScriptToggle').classList.toggle('visible', show);
-}
-
-function setCNScript(script) {
-  cnScript = script;
-  document.querySelectorAll('.cn-script-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.script === script);
-  });
-  // Each .cn-translation node is inserted immediately after its source [data-cn] element.
-  document.querySelectorAll('.cn-translation').forEach(trans => {
-    const source = trans.previousElementSibling;
-    if (!source || !source.dataset || !source.dataset.cn) return;
-    trans.textContent = script === 'simp' ? (source.dataset.cnS || source.dataset.cn) : source.dataset.cn;
-  });
-}
-
-function initTranslations() {
-  document.querySelectorAll('[data-cn]').forEach(el => {
-    if (el.dataset.cnProcessed) return;
-    el.dataset.cnProcessed = '1';
-    const trans = document.createElement('div');
-    trans.className = 'cn-translation';
-    trans.textContent = cnScript === 'simp' ? (el.dataset.cnS || el.dataset.cn) : el.dataset.cn;
-    el.after(trans);
-  });
-}
-
-// Word pronunciation (browser TTS)
-function wrapWordsInEl(el) {
-  el.normalize();
-  Array.from(el.childNodes).forEach(node => {
-    if (node.nodeType === Node.TEXT_NODE) {
-      const words = node.textContent.split(/(\s+)/);
-      const frag = document.createDocumentFragment();
-      words.forEach(w => {
-        if (w.trim() === '') {
-          frag.appendChild(document.createTextNode(w));
-        } else {
-          const wordSpan = document.createElement('span');
-          wordSpan.className = 'word';
-          wordSpan.textContent = w;
-          wordSpan.addEventListener('click', function(e) {
-            e.stopPropagation();
-            speakWord(w.replace(/[^a-zA-Z'-]/g, ''), this);
-          });
-          frag.appendChild(wordSpan);
-        }
-      });
-      node.parentNode.replaceChild(frag, node);
-    } else if (node.nodeType === Node.ELEMENT_NODE) {
-      wrapWordsInEl(node);
-    }
-  });
-}
-
-function initWordClick() {
-  document.querySelectorAll('.expr-text .spoken, .task-box .spoken, .task-section .spoken').forEach(wrapWordsInEl);
-}
-
-// Get Edge natural sounding British voice
-function getEdgeVoice(gender) {
-  const voices = synth.getVoices();
-  
-  // British female voices
-  const femaleBritish = [
-    'Microsoft Sonia',
-    'Microsoft Zira',
-    'en-GB-SoniaNeural',
-    'en-GB-Female'
-  ];
-  
-  // British male voices
-  const maleBritish = [
-    'Microsoft Ryan',
-    'Microsoft David',
-    'en-GB-RyanNeural',
-    'en-GB-Male'
-  ];
-  
-  if (gender === 'male') {
-    for (const name of maleBritish) {
-      const found = voices.find(v => v.name && v.name.includes(name));
-      if (found) return found;
-    }
-  } else if (gender === 'female') {
-    for (const name of femaleBritish) {
-      const found = voices.find(v => v.name && v.name.includes(name));
-      if (found) return found;
-    }
-  }
-  
-  // Default: try female first, then male
-  for (const name of [...femaleBritish, ...maleBritish]) {
-    const found = voices.find(v => v.name && v.name.includes(name));
-    if (found) return found;
-  }
-  
-  // Fallback to any British English voice
-  return voices.find(v => v.lang && v.lang.startsWith('en-GB')) || 
-         voices.find(v => v.lang && v.lang.startsWith('en')) || null;
-}
-
-function speakWord(word, el, gender) {
-  if (!word) return;
-  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
-  const key = word + '|' + selectedGender;
-  const b64 = window.AUDIO_DATA && window.AUDIO_DATA.words[key];
-
-  // Toggle off if the same word is clicked again while it's playing
-  if (currentWordEl === el && (currentWordAudio || synth.speaking)) {
-    if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
-    if (synth.speaking) synth.cancel();
-    el.classList.remove('speaking');
-    currentWordEl = null;
-    return;
-  }
-
-  // Stop any other audio/speech currently playing
-  if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
-  if (synth.speaking) synth.cancel();
-  if (currentWordEl) currentWordEl.classList.remove('speaking');
-  if (currentAudio) { currentAudio.pause(); if (currentBtn) resetBtn(currentBtn); currentAudio = null; currentBtn = null; }
-  if (isPlayingAll) stopAll();
-
-  el.classList.add('speaking');
-  currentWordEl = el;
-
-  if (b64) {
-    const audio = new Audio('data:audio/mp3;base64,' + b64);
-    currentWordAudio = audio;
-    audio.onended = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; currentWordAudio = null; };
-    audio.onerror = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; currentWordAudio = null; speakWordFallback(word, el, selectedGender); };
-    audio.play();
-    return;
-  }
-  speakWordFallback(word, el, selectedGender);
-}
-
-// Browser TTS fallback, only used if a natural-voice clip isn't available for this word
-function speakWordFallback(word, el, selectedGender) {
-  const utter = new SpeechSynthesisUtterance(word);
-  utter.rate = 0.85;
-  utter.pitch = 1;
-  const v = getEdgeVoice(selectedGender);
-  if (v) utter.voice = v;
-  utter.onend = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; };
-  utter.onerror = function() { el.classList.remove('speaking'); if (currentWordEl === el) currentWordEl = null; };
-  synth.speak(utter);
-}
-
-// Speak text for button click
-function speakText(text, btn, gender) {
-  const selectedGender = gender || document.getElementById('voiceSelect').value || 'female';
-  const key = text + '|' + selectedGender;
-  const b64 = window.AUDIO_DATA && window.AUDIO_DATA.phrases[key];
-
-  // Stop any word-level audio/speech that might be playing
-  if (currentWordAudio) { currentWordAudio.pause(); currentWordAudio = null; }
-  if (synth.speaking) synth.cancel();
-  if (currentWordEl) { currentWordEl.classList.remove('speaking'); currentWordEl = null; }
-
-  if (b64) {
-    playAudio('data:audio/mp3;base64,' + b64, btn);
-    return;
-  }
-
-  // Browser TTS fallback, only used if a natural-voice clip isn't available for this phrase
-  const utter = new SpeechSynthesisUtterance(text);
-  utter.rate = 0.85;
-  utter.pitch = 1;
-  const v = getEdgeVoice(selectedGender);
-  if (v) utter.voice = v;
-
-  btn.classList.add('playing');
-  btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="7" y="5" width="4" height="14"/><rect x="13" y="5" width="4" height="14"/></svg>';
-
-  utter.onend = function() {
-    btn.classList.remove('playing');
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
-  };
-  utter.onerror = function() {
-    btn.classList.remove('playing');
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
-  };
-  synth.speak(utter);
-}
-
-// Audio playback (MP3 per expression)
-let currentAudio = null;
-let currentBtn = null;
-let playlist = [];
-let playlistIdx = 0;
-let isPlayingAll = false;
-
-function getSpeed() {
-  return parseFloat(document.getElementById('speedSlider').value);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.getElementById('speedSlider');
-  slider.addEventListener('input', function() {
-    document.getElementById('speedDisplay').textContent = this.value + 'x';
-    if (currentAudio && !currentAudio.paused) {
-      currentAudio.playbackRate = getSpeed();
-    }
-  });
-});
-
-function resetBtn(btn) {
-  if (!btn) return;
-  btn.classList.remove('playing');
-  if (btn.classList.contains('btn-icon')) {
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
-  }
-}
-
-function setBtnPause(btn) {
-  btn.classList.add('playing');
-  if (btn.classList.contains('btn-icon')) {
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><rect x="7" y="5" width="4" height="14"/><rect x="13" y="5" width="4" height="14"/></svg>';
-  }
-}
-
-function playAudio(src, btn) {
-  if (isPlayingAll) stopAll();
-
-  if (currentAudio && !currentAudio.paused) {
-    currentAudio.pause();
-    if (currentBtn && currentBtn !== btn) resetBtn(currentBtn);
-    if (currentBtn === btn) {
-      currentAudio = null;
-      currentBtn = null;
-      return;
-    }
-  }
-
-  currentAudio = new Audio(src);
-  currentAudio.playbackRate = getSpeed();
-  currentBtn = btn;
-  setBtnPause(btn);
-  currentAudio.play();
-
-  currentAudio.addEventListener('ended', function() {
-    resetBtn(btn);
-    currentAudio = null;
-    currentBtn = null;
-  });
-}
-
-function visibleBtns() {
-  const active = document.querySelector('.tab-content.active');
-  return active ? active.querySelectorAll('.btn-icon') : [];
-}
-
-function playAll() {
-  if (isPlayingAll) return;
-  isPlayingAll = true;
-  document.getElementById('playAllBtn').disabled = true;
-  document.getElementById('pauseAllBtn').disabled = false;
-  document.getElementById('stopAllBtn').disabled = false;
-
-  if (currentAudio && !currentAudio.paused) {
-    currentAudio.pause();
-    if (currentBtn) resetBtn(currentBtn);
-  }
-
-  playlist = [];
-  visibleBtns().forEach(b => playlist.push(b.getAttribute('data-src')));
-  playlistIdx = 0;
-  playNext();
-}
-
-function playNext() {
-  if (!isPlayingAll || playlistIdx >= playlist.length) {
-    stopAll();
-    return;
-  }
-  const src = playlist[playlistIdx];
-  const btns = visibleBtns();
-  const btn = btns[playlistIdx];
-
-  if (currentAudio) {
-    currentAudio.pause();
-    if (currentBtn) resetBtn(currentBtn);
-  }
-
-  currentAudio = new Audio(src);
-  currentAudio.playbackRate = getSpeed();
-  currentBtn = btn;
-  setBtnPause(btn);
-  currentAudio.play();
-
-  currentAudio.addEventListener('ended', function() {
-    resetBtn(btn);
-    playlistIdx++;
-    if (isPlayingAll && playlistIdx < playlist.length) {
-      playNext();
-    } else {
-      stopAll();
-    }
-  });
-}
-
-function pauseAll() {
-  if (currentAudio && !currentAudio.paused) {
-    currentAudio.pause();
-  }
-  document.getElementById('pauseAllBtn').disabled = true;
-  document.getElementById('playAllBtn').disabled = false;
-  document.getElementById('playAllBtn').innerHTML = '<svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg> Resume';
-}
-
-function stopAll() {
-  isPlayingAll = false;
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio = null;
-  }
-  if (currentBtn) {
-    resetBtn(currentBtn);
-    currentBtn = null;
-  }
-  document.getElementById('playAllBtn').disabled = false;
-  document.getElementById('playAllBtn').innerHTML = '<svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg> Play All';
-  document.getElementById('pauseAllBtn').disabled = true;
-  document.getElementById('stopAllBtn').disabled = true;
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  initTranslations();
-  if (synth.getVoices().length) initWordClick();
-  else synth.addEventListener('voiceschanged', initWordClick, { once: true });
-  
-  // Accordion functionality
-  initAccordion();
-});
-
-function initAccordion() {
-  const accordionItems = document.querySelectorAll('.accordion-item');
-  
-  // Add click handlers to accordion headers
-  accordionItems.forEach(item => {
-    const header = item.querySelector('.accordion-header');
-    if (header) {
-      header.addEventListener('click', () => {
-        toggleAccordionItem(item);
-      });
-    }
-  });
-  
-  // Add click handlers to expand/collapse all buttons
-  const expandAllBtn = document.getElementById('expandAll');
-  const collapseAllBtn = document.getElementById('collapseAll');
-  
-  if (expandAllBtn) {
-    expandAllBtn.addEventListener('click', () => {
-      accordionItems.forEach(item => {
-        if (!item.classList.contains('active')) {
-          item.classList.add('active');
-        }
-      });
-    });
-  }
-  
-  if (collapseAllBtn) {
-    collapseAllBtn.addEventListener('click', () => {
-      accordionItems.forEach(item => {
-        if (item.classList.contains('active')) {
-          item.classList.remove('active');
-        }
-      });
-    });
-  }
-}
-
-function toggleAccordionItem(item) {
-  const isActive = item.classList.contains('active');
-  
-  // Toggle the clicked item
-  if (isActive) {
-    item.classList.remove('active');
-  } else {
-    item.classList.add('active');
-  }
-}
-
-function toggleAccordion(btn) {
-  const item = btn.closest('.accordion-item');
-  const tab = btn.closest('.tab-content');
-  const wasActive = item.classList.contains('active');
-  if (tab) {
-    tab.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-  }
-  if (!wasActive) {
-    item.classList.add('active');
-  }
-}
-
-function expandAllInTab(tabIndex) {
-  const tab = document.getElementById('tab-' + tabIndex);
-  if (!tab) return;
-  tab.querySelectorAll('.accordion-item').forEach(item => {
-    item.classList.add('active');
-  });
-}
-
-function collapseAllInTab(tabIndex) {
-  const tab = document.getElementById('tab-' + tabIndex);
-  if (!tab) return;
-  tab.querySelectorAll('.accordion-item').forEach(item => {
-    item.classList.remove('active');
-  });
-}
-
-function toggleOralPractice(btn) {
-  const practice = btn.closest('.oral-practice');
-  practice.classList.toggle('open');
-}
-
-// Collocation Matcher Game
-const collocationData = [
-  { id: 1,  domain: "Tech",     verb: "install / upgrade",                   noun: "a computer software" },
-  { id: 2,  domain: "Tech",     verb: "create / design",                     noun: "a mobile app" },
-  { id: 3,  domain: "Tech",     verb: "design / maintain / update",          noun: "our webpage" },
-  { id: 4,  domain: "Products", verb: "launch / introduce / set up",         noun: "a membership scheme" },
-  { id: 5,  domain: "Products", verb: "create / design / develop / launch",  noun: "a new product / service" },
-  { id: 6,  domain: "Products", verb: "place / make",                        noun: "an order" },
-  { id: 7,  domain: "Products", verb: "arrange",                             noun: "delivery" },
-  { id: 8,  domain: "Promo",    verb: "promote",                             noun: "a product / service" },
-  { id: 9,  domain: "Promo",    verb: "host / organise / hold",              noun: "webinars / campaign / contests / events" },
-  { id: 10, domain: "Promo",    verb: "give away / offer",                   noun: "souvenirs / coupons / vouchers / samples" },
-  { id: 11, domain: "Promo",    verb: "reach",                               noun: "target customers" },
-  { id: 12, domain: "Planning", verb: "plan",                                noun: "a budget" },
-  { id: 13, domain: "Planning", verb: "create / make / finalise",            noun: "a plan" },
-  { id: 14, domain: "Planning", verb: "conduct",                             noun: "research" },
-  { id: 15, domain: "Planning", verb: "contact / identify",                  noun: "a supplier" },
-  { id: 16, domain: "Planning", verb: "schedule / arrange",                  noun: "a meeting" },
-  { id: 17, domain: "Planning", verb: "allocate",                            noun: "resources" },
-  { id: 18, domain: "Social",   verb: "create",                              noun: "social media posts" },
-  { id: 19, domain: "Social",   verb: "engage / attract",                    noun: "followers" },
-  { id: 20, domain: "Social",   verb: "boost",                               noun: "engagement" }
-];
-
-let selVerb = null;
-let selNoun = null;
-let matchCount = 0;
-
-function shuffleArr(arr) {
-  return [...arr].sort(() => Math.random() - 0.5);
-}
-
-function initCollocationGame() {
-  selVerb = null;
-  selNoun = null;
-  matchCount = 0;
-  document.getElementById('collocation-score').textContent = 'Matched: 0 / ' + collocationData.length;
-
-  const verbsCol = document.getElementById('verbs-col');
-  const nounsCol = document.getElementById('nouns-col');
-
-  verbsCol.querySelectorAll('.card').forEach(c => c.remove());
-  nounsCol.querySelectorAll('.card').forEach(c => c.remove());
-
-  shuffleArr(collocationData).forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.dataset.id = item.id;
-    card.innerHTML = item.verb + ' <span class="domain-tag">' + item.domain + '</span>';
-    card.onclick = function() { selectGameCard(card, 'verb'); };
-    verbsCol.appendChild(card);
-  });
-
-  shuffleArr(collocationData).forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.dataset.id = item.id;
-    card.innerHTML = item.noun + ' <span class="domain-tag">' + item.domain + '</span>';
-    card.onclick = function() { selectGameCard(card, 'noun'); };
-    nounsCol.appendChild(card);
-  });
-}
-
-function selectGameCard(card, type) {
-  if (card.classList.contains('matched')) return;
-
-  if (type === 'verb') {
-    if (selVerb) selVerb.classList.remove('selected');
-    selVerb = card;
-    card.classList.add('selected');
-  } else {
-    if (selNoun) selNoun.classList.remove('selected');
-    selNoun = card;
-    card.classList.add('selected');
-  }
-
-  if (selVerb && selNoun) checkGameMatch();
-}
-
-function checkGameMatch() {
-  const isMatch = selVerb.dataset.id === selNoun.dataset.id;
-
-  if (isMatch) {
-    selVerb.classList.remove('selected');
-    selNoun.classList.remove('selected');
-    selVerb.classList.add('matched');
-    selNoun.classList.add('matched');
-    selVerb = null;
-    selNoun = null;
-    matchCount++;
-    document.getElementById('collocation-score').textContent = 'Matched: ' + matchCount + ' / ' + collocationData.length;
-  } else {
-    const v = selVerb;
-    const n = selNoun;
-    v.classList.add('wrong');
-    n.classList.add('wrong');
-    setTimeout(function() {
-      v.classList.remove('wrong', 'selected');
-      n.classList.remove('wrong', 'selected');
-    }, 500);
-    selVerb = null;
-    selNoun = null;
-  }
-}
-</script>
-
-</body>
-</html
-          </div>
-        </div>
-      </div>
-    </div><!-- end .accordion -->
-  </div>
-
-
-
-</div>
+  </div><!-- close .container -->
 
 <script src="audio-data.js"></script>
 <script>
