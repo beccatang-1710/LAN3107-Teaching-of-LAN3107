@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LAN3107 Useful Expressions for CA Assignment</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -2889,7 +2889,141 @@ table.reminder-table td {
     .c-seq-btn-secondary:hover:not(:disabled) { background: #cbd5e1; }
     .c-seq-btn-success { background: #10b981; color: #ffffff; }
     .c-seq-btn-success:hover:not(:disabled) { background: #059669; }
-    </style>
+    
+/* =====================================================================
+   RESPONSIVE LAYER (phone / iPad / laptop / desktop)
+   Placed in the LAST <style> block so it overrides everything above it.
+   ===================================================================== */
+:root{--page-max:1100px;--gutter:clamp(12px,3vw,28px);--pad-card:clamp(14px,3vw,30px);--fs-base:clamp(15px,0.9rem + 0.25vw,18px)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-size:var(--fs-base);padding-left:env(safe-area-inset-left,0);padding-right:env(safe-area-inset-right,0);padding-bottom:env(safe-area-inset-bottom,0);overflow-wrap:break-word}
+img{max-width:100%}
+.tab-content img:not(.hobby-img){height:auto}
+
+.page-header h1{font-size:clamp(19px,1.1rem + 1vw,30px)}
+.page-header p{font-size:clamp(14px,0.85rem + 0.4vw,19px)}
+.page-header .presented-by{font-size:clamp(12px,0.8rem + 0.2vw,15px)}
+h1{font-size:clamp(19px,1.05rem + 0.8vw,28px)}
+h2{font-size:clamp(17px,1rem + 0.5vw,22px)}
+h3{font-size:clamp(15px,0.95rem + 0.3vw,19px)}
+
+.banner img{max-height:clamp(120px,24vw,340px)}
+.qr-banner,.page-header,.container{max-width:var(--page-max)}
+.container{padding:var(--gutter)}
+.qr-banner,.page-header{padding-left:var(--gutter);padding-right:var(--gutter)}
+.tab-content{padding:var(--pad-card)}
+.tabs{gap:4px}
+.tab-btn{font-size:clamp(13px,0.8rem + 0.15vw,15px);line-height:1.25}
+.cn-toggle-wrap{justify-content:center}
+
+/* tables scroll inside their own box instead of widening the page */
+.table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0}
+table.words th,table.words td,.script-table th,.script-table td,table.reminder-table td,.oral-practice-table th,.oral-practice-table td{overflow-wrap:anywhere}
+
+/* accordion/oral-practice: never clip tall content on narrow screens */
+.oral-practice.open .oral-practice-content{max-height:3000px}
+.accordion-item.active .accordion-content{max-height:12000px}
+
+.controls-bar input[type="range"]{min-width:90px}
+.blank,.fill{max-width:100%}
+.tab-content,.role-card,.task-box,.expr-text,.collocation-game,.c-seq-container{min-width:0}
+.collocation-game .card,.c-seq-chip{overflow-wrap:anywhere}
+
+/* readability fix: heading sat purple-on-blue */
+.c-seq-title{color:#fff}
+
+/* ---------- Large desktop ---------- */
+@media(min-width:1440px){:root{--page-max:1280px}}
+@media(min-width:1900px){:root{--page-max:1400px}}
+
+/* ---------- Laptop / iPad landscape ---------- */
+@media(min-width:1024px){
+  .tab-btn{padding:12px 20px}
+  .collocation-game .game-board{gap:32px}
+}
+
+/* ---------- iPad portrait (769-1023): keep 2-col games, slightly tighter ---------- */
+@media(min-width:769px) and (max-width:1023px){
+  .tab-btn{padding:11px 14px}
+  .collocation-game{padding:20px}
+}
+
+/* ---------- Tablet down ---------- */
+@media(max-width:768px){
+  .controls-bar{gap:8px;padding:10px 12px}
+  .controls-bar .separator{display:none}
+  .controls-bar input[type="range"]{flex:1 1 120px;max-width:none}
+  .cn-toggle-wrap{justify-content:center}
+  .role-card{padding:14px}
+  .role-card-header{font-size:16px}
+  .role-card-name{font-size:18px}
+  .collocation-game{padding:16px}
+  .c-seq-header{padding:18px 18px 16px}
+  .c-seq-card{padding:18px}
+  .c-seq-title{font-size:19px}
+}
+
+/* ---------- Phone ---------- */
+@media(max-width:640px){
+  .tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-snap-type:x proximity;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter)}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab-btn{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start}
+  .tab-content{border-radius:0 0 10px 10px}
+
+  .controls-bar label{flex:0 0 auto}
+  .controls-bar input[type="range"]{flex:1 1 120px;min-width:120px}
+  .controls-bar .speed-val{min-width:36px}
+  .controls-bar .ctrl-btn{flex:1 1 28%;justify-content:center;padding:10px 8px}
+  .controls-bar #voiceSelect{flex:1 1 auto;min-width:0}
+
+  /* wide tables keep readable columns and scroll sideways */
+  .table-scroll.cols-wide>table{min-width:540px}
+  table.words th,table.words td,.script-table th,.script-table td,table.reminder-table td,.oral-practice-table th,.oral-practice-table td{padding:8px 10px;font-size:14px}
+  table.words.tenses.flow td.flow-arrow{width:24px;font-size:18px}
+
+  /* inline two-column grids collapse to one column */
+  [style*="grid-template-columns: 1fr 1fr"],[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+
+  .task-box{padding:12px 14px}
+  .expr-text{padding:10px 12px}
+  .char-card img{width:96px}
+  .hobby-img{width:56px;height:56px;margin-left:8px}
+  .learning-objectives,.oral-practice-toggle{padding-left:14px;padding-right:14px}
+  .oral-practice.open .oral-practice-content{padding:12px 14px}
+  .accordion-header{font-size:15px}
+  .tense-legend{gap:8px;padding:10px 12px}
+
+  .collocation-game{padding:12px;margin:14px 0}
+  .collocation-game .status-bar{gap:10px;flex-wrap:wrap}
+  .collocation-game .card{padding:12px 14px}
+  .c-seq-container{margin:14px auto;border-radius:10px}
+  .c-seq-header{padding:16px 14px 14px}
+  .c-seq-card{padding:14px}
+  .c-seq-actions{flex-wrap:wrap}
+  .c-seq-actions .c-seq-btn{flex:1 1 auto}
+  .c-seq-tile-zone{padding:10px;gap:6px}
+}
+@media(max-width:380px){.tab-btn{padding:10px 10px;font-size:12.5px}.ctrl-btn{font-size:12px}}
+
+/* ---------- Touch devices (phones + iPads): comfortable tap targets ---------- */
+@media(pointer:coarse){
+  .tab-btn,.ctrl-btn,.cn-script-btn,.accordion-btn,.c-seq-btn,.reset-btn{min-height:44px}
+  .btn-icon{width:36px;height:36px}
+  .btn-icon svg{width:15px;height:15px}
+  .c-seq-chip{min-height:42px;padding:10px 14px}
+  .collocation-game .card{min-height:46px}
+  .oral-practice-toggle,.accordion-header{min-height:48px}
+  .cn-toggle input{width:48px;height:26px}
+  .cn-toggle input::before{width:22px;height:22px}
+  .cn-toggle input:checked::before{transform:translateX(22px)}
+  .controls-bar input[type="range"]{height:32px}
+  .blank,.fill{min-height:1.6em}
+}
+@media(hover:none){.word:hover,.cn-word:hover,.c-seq-chip:hover{background:inherit;transform:none}}
+@media(orientation:landscape) and (max-height:500px){.banner img{max-height:90px}}
+@media(prefers-reduced-motion:reduce){.banner img,body::after{animation:none!important}.oral-practice-content,.accordion-content{transition:none!important}}
+@media print{body::before,body::after,.controls-bar,.tabs,.banner{display:none!important}.tab-content{display:block!important;box-shadow:none;page-break-after:always}.oral-practice-content,.accordion-content{max-height:none!important}}
+</style>
 
     <script>
     (function () {
@@ -3982,5 +4116,28 @@ function checkGameMatch() {
 }
 </script>
 
+
+<script>
+/* Responsive helpers (layout only; no change to content, audio, games or translation logic) */
+(function () {
+  document.querySelectorAll('.tab-content table').forEach(function (t) {
+    if (t.parentElement.classList.contains('table-scroll')) return;
+    var w = document.createElement('div');
+    w.className = 'table-scroll';
+    var first = t.querySelector('tr');
+    if (first && first.children.length >= 3) w.classList.add('cols-wide');
+    t.parentNode.insertBefore(w, t);
+    w.appendChild(t);
+  });
+  var _switch = window.switchTab;
+  if (typeof _switch === 'function') {
+    window.switchTab = function (i) {
+      _switch(i);
+      var b = document.querySelectorAll('.tab-btn')[i];
+      if (b && b.scrollIntoView) b.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    };
+  }
+})();
+</script>
 </body>
 </html>
